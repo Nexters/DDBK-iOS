@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		31D0B63AC8888C13D956D8B9 /* Pods_team2zUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF3E6B8BB15948E54AB8058D /* Pods_team2zUITests.framework */; };
 		97AA108221F4A0F900357553 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AA108121F4A0F900357553 /* AppDelegate.swift */; };
-		97AA108921F4A0FD00357553 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97AA108821F4A0FD00357553 /* Assets.xcassets */; };
 		97AA108C21F4A0FD00357553 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97AA108A21F4A0FD00357553 /* LaunchScreen.storyboard */; };
 		97AA109721F4A0FD00357553 /* team2zTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AA109621F4A0FD00357553 /* team2zTests.swift */; };
 		97AA10A221F4A0FD00357553 /* team2zUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AA10A121F4A0FD00357553 /* team2zUITests.swift */; };
@@ -29,6 +28,13 @@
 		97E437C32217E00E0063419A /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E437C22217E00E0063419A /* AddViewController.swift */; };
 		AD7478074A96C40DD655C2E7 /* Pods_team2z.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A90DE216234C44BC4B6D73E6 /* Pods_team2z.framework */; };
 		B8E11A43221819F2007FBD5E /* NewFeedGoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E11A42221819F2007FBD5E /* NewFeedGoViewController.swift */; };
+		C5945A6C2217F78A0095FAB4 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5945A6A2217F78A0095FAB4 /* MyTableViewCell.swift */; };
+		C5945A6D2217F78A0095FAB4 /* MyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5945A6B2217F78A0095FAB4 /* MyTableViewCell.xib */; };
+		C5945A702218175D0095FAB4 /* MypageDefaultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5945A6E2218175D0095FAB4 /* MypageDefaultTableViewCell.swift */; };
+		C5945A712218175D0095FAB4 /* MypageDefaultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5945A6F2218175D0095FAB4 /* MypageDefaultTableViewCell.xib */; };
+		C5945A73221821DF0095FAB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5945A72221821DF0095FAB4 /* Assets.xcassets */; };
+		C5945A77221835370095FAB4 /* GradeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5945A75221835370095FAB4 /* GradeViewController.swift */; };
+		C5945A78221835370095FAB4 /* GradeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5945A76221835370095FAB4 /* GradeViewController.xib */; };
 		DABF8A5DA998B0CA3E116233 /* Pods_team2zTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D94A64219EBE7665305B0C /* Pods_team2zTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,7 +64,6 @@
 		89EBBB3DDB1BD485E3AF6818 /* Pods-team2z.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-team2z.release.xcconfig"; path = "Pods/Target Support Files/Pods-team2z/Pods-team2z.release.xcconfig"; sourceTree = "<group>"; };
 		97AA107E21F4A0F800357553 /* team2z.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = team2z.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97AA108121F4A0F900357553 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		97AA108821F4A0FD00357553 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		97AA108B21F4A0FD00357553 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		97AA108D21F4A0FD00357553 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		97AA109221F4A0FD00357553 /* team2zTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = team2zTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,6 +89,13 @@
 		A5F23959D8E89D52535E34EB /* Pods-team2zUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-team2zUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-team2zUITests/Pods-team2zUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A90DE216234C44BC4B6D73E6 /* Pods_team2z.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_team2z.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8E11A42221819F2007FBD5E /* NewFeedGoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFeedGoViewController.swift; sourceTree = "<group>"; };
+		C5945A6A2217F78A0095FAB4 /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
+		C5945A6B2217F78A0095FAB4 /* MyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTableViewCell.xib; sourceTree = "<group>"; };
+		C5945A6E2218175D0095FAB4 /* MypageDefaultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageDefaultTableViewCell.swift; sourceTree = "<group>"; };
+		C5945A6F2218175D0095FAB4 /* MypageDefaultTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MypageDefaultTableViewCell.xib; sourceTree = "<group>"; };
+		C5945A72221821DF0095FAB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C5945A75221835370095FAB4 /* GradeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeViewController.swift; sourceTree = "<group>"; };
+		C5945A76221835370095FAB4 /* GradeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GradeViewController.xib; sourceTree = "<group>"; };
 		DF3E6B8BB15948E54AB8058D /* Pods_team2zUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_team2zUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -155,10 +167,11 @@
 		97AA108021F4A0F900357553 /* team2z */ = {
 			isa = PBXGroup;
 			children = (
+				C5945A74221835120095FAB4 /* mypage */,
+				C5945A72221821DF0095FAB4 /* Assets.xcassets */,
 				97AA108121F4A0F900357553 /* AppDelegate.swift */,
 				97E437AE2216C1F40063419A /* BaseViewController.swift */,
 				97E437B22217C7C90063419A /* BaseTabBarController.swift */,
-				97AA108821F4A0FD00357553 /* Assets.xcassets */,
 				97AA108A21F4A0FD00357553 /* LaunchScreen.storyboard */,
 				97AA108D21F4A0FD00357553 /* Info.plist */,
 				97E437A82216B67F0063419A /* TestOneViewController.swift */,
@@ -172,6 +185,10 @@
 				97E437BC2217CB200063419A /* MyPageViewController.swift */,
 				97E437C22217E00E0063419A /* AddViewController.swift */,
 				B8E11A42221819F2007FBD5E /* NewFeedGoViewController.swift */,
+				C5945A6A2217F78A0095FAB4 /* MyTableViewCell.swift */,
+				C5945A6B2217F78A0095FAB4 /* MyTableViewCell.xib */,
+				C5945A6E2218175D0095FAB4 /* MypageDefaultTableViewCell.swift */,
+				C5945A6F2218175D0095FAB4 /* MypageDefaultTableViewCell.xib */,
 			);
 			path = team2z;
 			sourceTree = "<group>";
@@ -203,6 +220,15 @@
 				DF3E6B8BB15948E54AB8058D /* Pods_team2zUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C5945A74221835120095FAB4 /* mypage */ = {
+			isa = PBXGroup;
+			children = (
+				C5945A75221835370095FAB4 /* GradeViewController.swift */,
+				C5945A76221835370095FAB4 /* GradeViewController.xib */,
+			);
+			path = mypage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,8 +341,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				97AA108C21F4A0FD00357553 /* LaunchScreen.storyboard in Resources */,
-				97AA108921F4A0FD00357553 /* Assets.xcassets in Resources */,
+				C5945A6D2217F78A0095FAB4 /* MyTableViewCell.xib in Resources */,
+				C5945A78221835370095FAB4 /* GradeViewController.xib in Resources */,
+				C5945A712218175D0095FAB4 /* MypageDefaultTableViewCell.xib in Resources */,
 				97AA10B021F4CBC400357553 /* Carthage in Resources */,
+				C5945A73221821DF0095FAB4 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,12 +480,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				97E437B32217C7C90063419A /* BaseTabBarController.swift in Sources */,
+				C5945A702218175D0095FAB4 /* MypageDefaultTableViewCell.swift in Sources */,
 				97E437B12217255B0063419A /* TestViewController.swift in Sources */,
 				97E437A92216B67F0063419A /* TestOneViewController.swift in Sources */,
 				97AA108221F4A0F900357553 /* AppDelegate.swift in Sources */,
 				97E437B52217CAE30063419A /* HomeViewController.swift in Sources */,
+				C5945A77221835370095FAB4 /* GradeViewController.swift in Sources */,
 				97E437BF2217CB9E0063419A /* MapViewController.swift in Sources */,
 				97E437AB2216B68C0063419A /* TestTwoViewController.swift in Sources */,
+				C5945A6C2217F78A0095FAB4 /* MyTableViewCell.swift in Sources */,
 				97E437BD2217CB200063419A /* MyPageViewController.swift in Sources */,
 				97E437AD2216B6950063419A /* TestThreeViewController.swift in Sources */,
 				97E437BB2217CB170063419A /* NewFeedViewController.swift in Sources */,
