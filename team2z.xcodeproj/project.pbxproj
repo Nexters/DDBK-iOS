@@ -28,6 +28,7 @@
 		97E437BF2217CB9E0063419A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E437BE2217CB9E0063419A /* MapViewController.swift */; };
 		97E437C32217E00E0063419A /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E437C22217E00E0063419A /* AddViewController.swift */; };
 		AD7478074A96C40DD655C2E7 /* Pods_team2z.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A90DE216234C44BC4B6D73E6 /* Pods_team2z.framework */; };
+		B8E11A43221819F2007FBD5E /* NewFeedGoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E11A42221819F2007FBD5E /* NewFeedGoViewController.swift */; };
 		DABF8A5DA998B0CA3E116233 /* Pods_team2zTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D94A64219EBE7665305B0C /* Pods_team2zTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +83,7 @@
 		97E437C22217E00E0063419A /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		A5F23959D8E89D52535E34EB /* Pods-team2zUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-team2zUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-team2zUITests/Pods-team2zUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A90DE216234C44BC4B6D73E6 /* Pods_team2z.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_team2z.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8E11A42221819F2007FBD5E /* NewFeedGoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFeedGoViewController.swift; sourceTree = "<group>"; };
 		DF3E6B8BB15948E54AB8058D /* Pods_team2zUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_team2zUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -169,6 +171,7 @@
 				97E437BE2217CB9E0063419A /* MapViewController.swift */,
 				97E437BC2217CB200063419A /* MyPageViewController.swift */,
 				97E437C22217E00E0063419A /* AddViewController.swift */,
+				B8E11A42221819F2007FBD5E /* NewFeedGoViewController.swift */,
 			);
 			path = team2z;
 			sourceTree = "<group>";
@@ -426,7 +429,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-team2z/Pods-team2z-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-team2z/Pods-team2z-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -437,7 +440,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-team2z/Pods-team2z-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-team2z/Pods-team2z-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -460,6 +463,7 @@
 				97E437AF2216C1F40063419A /* BaseViewController.swift in Sources */,
 				97E437C32217E00E0063419A /* AddViewController.swift in Sources */,
 				97E437B72217CAF00063419A /* DiscoveryViewController.swift in Sources */,
+				B8E11A43221819F2007FBD5E /* NewFeedGoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

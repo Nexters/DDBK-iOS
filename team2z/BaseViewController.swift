@@ -29,7 +29,7 @@ class BaseViewController: UIViewController {
         
         let HomeVC = HomeViewController()
         let DiscoveryVC = DiscoveryViewController()
-        let NewFeedVC = NewFeedViewController()
+        let NewFeedVC = NewFeedGoViewController()
         let MapVC = MapViewController()
         let MyPageVC = MyPageViewController()
         
