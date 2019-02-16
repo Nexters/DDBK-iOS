@@ -246,4 +246,5 @@ playground.xcworkspace
 # 2Z team
 .DS_Store
 *.xcuserstate
-
+team2z.xcodeproj/project.pbxproj
+Podfile.lock
