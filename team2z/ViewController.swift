@@ -7,14 +7,35 @@
 //
 
 import UIKit
+import Alamofire
+import AlamofireImage
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        /* AF.request("https://httpbin.org/image/png").responseImage { response in
+            debugPrint(response)
+            
+            print(response.request)
+            print(response.response)
+            debugPrint(response.result)
+            
+            if let image = response.result.value {
+                print("image downloaded: \(image)")
+            }
+        } */
+        
+        var testURL : String = "https://jsonplaceholder.typicode.com/todos/1"
+        AF.request(testURL)
+            .responseJSON { response in
+                guard let json = response.result.value as? [String: Any] else {
+                    print("didn't get todo object as JSON from API")
+                    print("Error: \(response.result.error)")
+                    return
+                }
+                print(json)
+        }
     }
-
-
 }
 
