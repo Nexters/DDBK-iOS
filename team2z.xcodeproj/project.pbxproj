@@ -9,14 +9,23 @@
 /* Begin PBXBuildFile section */
 		31D0B63AC8888C13D956D8B9 /* Pods_team2zUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF3E6B8BB15948E54AB8058D /* Pods_team2zUITests.framework */; };
 		97AA108221F4A0F900357553 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AA108121F4A0F900357553 /* AppDelegate.swift */; };
-		97AA108421F4A0F900357553 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AA108321F4A0F900357553 /* ViewController.swift */; };
-		97AA108721F4A0F900357553 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97AA108521F4A0F900357553 /* Main.storyboard */; };
 		97AA108921F4A0FD00357553 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97AA108821F4A0FD00357553 /* Assets.xcassets */; };
 		97AA108C21F4A0FD00357553 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97AA108A21F4A0FD00357553 /* LaunchScreen.storyboard */; };
 		97AA109721F4A0FD00357553 /* team2zTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AA109621F4A0FD00357553 /* team2zTests.swift */; };
 		97AA10A221F4A0FD00357553 /* team2zUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AA10A121F4A0FD00357553 /* team2zUITests.swift */; };
 		97AA10B021F4CBC400357553 /* Carthage in Resources */ = {isa = PBXBuildFile; fileRef = 97AA10AF21F4CBC400357553 /* Carthage */; };
 		97AA10B321F4D21600357553 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97AA10B221F4D21600357553 /* SnapKit.framework */; };
+		97E437A92216B67F0063419A /* TestOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E437A82216B67F0063419A /* TestOneViewController.swift */; };
+		97E437AB2216B68C0063419A /* TestTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E437AA2216B68C0063419A /* TestTwoViewController.swift */; };
+		97E437AD2216B6950063419A /* TestThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E437AC2216B6950063419A /* TestThreeViewController.swift */; };
+		97E437AF2216C1F40063419A /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E437AE2216C1F40063419A /* BaseViewController.swift */; };
+		97E437B12217255B0063419A /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E437B02217255B0063419A /* TestViewController.swift */; };
+		97E437B32217C7C90063419A /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E437B22217C7C90063419A /* BaseTabBarController.swift */; };
+		97E437B52217CAE30063419A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E437B42217CAE30063419A /* HomeViewController.swift */; };
+		97E437B72217CAF00063419A /* DiscoveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E437B62217CAF00063419A /* DiscoveryViewController.swift */; };
+		97E437BB2217CB170063419A /* NewFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E437BA2217CB170063419A /* NewFeedViewController.swift */; };
+		97E437BD2217CB200063419A /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E437BC2217CB200063419A /* MyPageViewController.swift */; };
+		97E437BF2217CB9E0063419A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E437BE2217CB9E0063419A /* MapViewController.swift */; };
 		AD7478074A96C40DD655C2E7 /* Pods_team2z.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A90DE216234C44BC4B6D73E6 /* Pods_team2z.framework */; };
 		DABF8A5DA998B0CA3E116233 /* Pods_team2zTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D94A64219EBE7665305B0C /* Pods_team2zTests.framework */; };
 /* End PBXBuildFile section */
@@ -47,8 +56,6 @@
 		89EBBB3DDB1BD485E3AF6818 /* Pods-team2z.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-team2z.release.xcconfig"; path = "Pods/Target Support Files/Pods-team2z/Pods-team2z.release.xcconfig"; sourceTree = "<group>"; };
 		97AA107E21F4A0F800357553 /* team2z.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = team2z.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97AA108121F4A0F900357553 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		97AA108321F4A0F900357553 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		97AA108621F4A0F900357553 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		97AA108821F4A0FD00357553 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		97AA108B21F4A0FD00357553 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		97AA108D21F4A0FD00357553 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -60,6 +67,17 @@
 		97AA10A321F4A0FD00357553 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		97AA10AF21F4CBC400357553 /* Carthage */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Carthage; sourceTree = "<group>"; };
 		97AA10B221F4D21600357553 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
+		97E437A82216B67F0063419A /* TestOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestOneViewController.swift; sourceTree = "<group>"; };
+		97E437AA2216B68C0063419A /* TestTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTwoViewController.swift; sourceTree = "<group>"; };
+		97E437AC2216B6950063419A /* TestThreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestThreeViewController.swift; sourceTree = "<group>"; };
+		97E437AE2216C1F40063419A /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		97E437B02217255B0063419A /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		97E437B22217C7C90063419A /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
+		97E437B42217CAE30063419A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		97E437B62217CAF00063419A /* DiscoveryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryViewController.swift; sourceTree = "<group>"; };
+		97E437BA2217CB170063419A /* NewFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFeedViewController.swift; sourceTree = "<group>"; };
+		97E437BC2217CB200063419A /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
+		97E437BE2217CB9E0063419A /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		A5F23959D8E89D52535E34EB /* Pods-team2zUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-team2zUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-team2zUITests/Pods-team2zUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A90DE216234C44BC4B6D73E6 /* Pods_team2z.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_team2z.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF3E6B8BB15948E54AB8058D /* Pods_team2zUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_team2zUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,11 +152,20 @@
 			isa = PBXGroup;
 			children = (
 				97AA108121F4A0F900357553 /* AppDelegate.swift */,
-				97AA108321F4A0F900357553 /* ViewController.swift */,
-				97AA108521F4A0F900357553 /* Main.storyboard */,
+				97E437AE2216C1F40063419A /* BaseViewController.swift */,
+				97E437B22217C7C90063419A /* BaseTabBarController.swift */,
 				97AA108821F4A0FD00357553 /* Assets.xcassets */,
 				97AA108A21F4A0FD00357553 /* LaunchScreen.storyboard */,
 				97AA108D21F4A0FD00357553 /* Info.plist */,
+				97E437A82216B67F0063419A /* TestOneViewController.swift */,
+				97E437AA2216B68C0063419A /* TestTwoViewController.swift */,
+				97E437AC2216B6950063419A /* TestThreeViewController.swift */,
+				97E437B02217255B0063419A /* TestViewController.swift */,
+				97E437B42217CAE30063419A /* HomeViewController.swift */,
+				97E437B62217CAF00063419A /* DiscoveryViewController.swift */,
+				97E437BA2217CB170063419A /* NewFeedViewController.swift */,
+				97E437BE2217CB9E0063419A /* MapViewController.swift */,
+				97E437BC2217CB200063419A /* MyPageViewController.swift */,
 			);
 			path = team2z;
 			sourceTree = "<group>";
@@ -283,7 +310,6 @@
 			files = (
 				97AA108C21F4A0FD00357553 /* LaunchScreen.storyboard in Resources */,
 				97AA108921F4A0FD00357553 /* Assets.xcassets in Resources */,
-				97AA108721F4A0F900357553 /* Main.storyboard in Resources */,
 				97AA10B021F4CBC400357553 /* Carthage in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -397,7 +423,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-team2z/Pods-team2z-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-team2z/Pods-team2z-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -408,7 +434,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-team2z/Pods-team2z-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-team2z/Pods-team2z-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -418,8 +444,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97AA108421F4A0F900357553 /* ViewController.swift in Sources */,
+				97E437B32217C7C90063419A /* BaseTabBarController.swift in Sources */,
+				97E437B12217255B0063419A /* TestViewController.swift in Sources */,
+				97E437A92216B67F0063419A /* TestOneViewController.swift in Sources */,
 				97AA108221F4A0F900357553 /* AppDelegate.swift in Sources */,
+				97E437B52217CAE30063419A /* HomeViewController.swift in Sources */,
+				97E437BF2217CB9E0063419A /* MapViewController.swift in Sources */,
+				97E437AB2216B68C0063419A /* TestTwoViewController.swift in Sources */,
+				97E437BD2217CB200063419A /* MyPageViewController.swift in Sources */,
+				97E437AD2216B6950063419A /* TestThreeViewController.swift in Sources */,
+				97E437BB2217CB170063419A /* NewFeedViewController.swift in Sources */,
+				97E437AF2216C1F40063419A /* BaseViewController.swift in Sources */,
+				97E437B72217CAF00063419A /* DiscoveryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,14 +491,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		97AA108521F4A0F900357553 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				97AA108621F4A0F900357553 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		97AA108A21F4A0FD00357553 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

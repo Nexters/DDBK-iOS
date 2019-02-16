@@ -1,2 +1,6 @@
 github "SnapKit/SnapKit" ~> 4.0.0
+<<<<<<< Updated upstream
 github "Alamofire/AlamofireImage" ~> 3.5
+=======
+
+>>>>>>> Stashed changes
