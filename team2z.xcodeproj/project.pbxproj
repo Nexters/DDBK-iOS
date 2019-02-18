@@ -35,6 +35,10 @@
 		C5945A73221821DF0095FAB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5945A72221821DF0095FAB4 /* Assets.xcassets */; };
 		C5945A77221835370095FAB4 /* GradeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5945A75221835370095FAB4 /* GradeViewController.swift */; };
 		C5945A78221835370095FAB4 /* GradeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5945A76221835370095FAB4 /* GradeViewController.xib */; };
+		C5ECA448221898CC00BFFBD7 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ECA446221898CC00BFFBD7 /* TableViewCell.swift */; };
+		C5ECA449221898CC00BFFBD7 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5ECA447221898CC00BFFBD7 /* TableViewCell.xib */; };
+		C5ECA450221AA3FB00BFFBD7 /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ECA44E221AA3FB00BFFBD7 /* SetupViewController.swift */; };
+		C5ECA451221AA3FB00BFFBD7 /* SetupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5ECA44F221AA3FB00BFFBD7 /* SetupViewController.xib */; };
 		DABF8A5DA998B0CA3E116233 /* Pods_team2zTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D94A64219EBE7665305B0C /* Pods_team2zTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -96,6 +100,10 @@
 		C5945A72221821DF0095FAB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C5945A75221835370095FAB4 /* GradeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeViewController.swift; sourceTree = "<group>"; };
 		C5945A76221835370095FAB4 /* GradeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GradeViewController.xib; sourceTree = "<group>"; };
+		C5ECA446221898CC00BFFBD7 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		C5ECA447221898CC00BFFBD7 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		C5ECA44E221AA3FB00BFFBD7 /* SetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
+		C5ECA44F221AA3FB00BFFBD7 /* SetupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SetupViewController.xib; sourceTree = "<group>"; };
 		DF3E6B8BB15948E54AB8058D /* Pods_team2zUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_team2zUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -227,6 +235,10 @@
 			children = (
 				C5945A75221835370095FAB4 /* GradeViewController.swift */,
 				C5945A76221835370095FAB4 /* GradeViewController.xib */,
+				C5ECA446221898CC00BFFBD7 /* TableViewCell.swift */,
+				C5ECA447221898CC00BFFBD7 /* TableViewCell.xib */,
+				C5ECA44E221AA3FB00BFFBD7 /* SetupViewController.swift */,
+				C5ECA44F221AA3FB00BFFBD7 /* SetupViewController.xib */,
 			);
 			path = mypage;
 			sourceTree = "<group>";
@@ -340,10 +352,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5ECA451221AA3FB00BFFBD7 /* SetupViewController.xib in Resources */,
 				97AA108C21F4A0FD00357553 /* LaunchScreen.storyboard in Resources */,
 				C5945A6D2217F78A0095FAB4 /* MyTableViewCell.xib in Resources */,
 				C5945A78221835370095FAB4 /* GradeViewController.xib in Resources */,
 				C5945A712218175D0095FAB4 /* MypageDefaultTableViewCell.xib in Resources */,
+				C5ECA449221898CC00BFFBD7 /* TableViewCell.xib in Resources */,
 				97AA10B021F4CBC400357553 /* Carthage in Resources */,
 				C5945A73221821DF0095FAB4 /* Assets.xcassets in Resources */,
 			);
@@ -458,7 +472,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-team2z/Pods-team2z-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-team2z/Pods-team2z-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -469,7 +483,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-team2z/Pods-team2z-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-team2z/Pods-team2z-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -483,6 +497,7 @@
 				C5945A702218175D0095FAB4 /* MypageDefaultTableViewCell.swift in Sources */,
 				97E437B12217255B0063419A /* TestViewController.swift in Sources */,
 				97E437A92216B67F0063419A /* TestOneViewController.swift in Sources */,
+				C5ECA448221898CC00BFFBD7 /* TableViewCell.swift in Sources */,
 				97AA108221F4A0F900357553 /* AppDelegate.swift in Sources */,
 				97E437B52217CAE30063419A /* HomeViewController.swift in Sources */,
 				C5945A77221835370095FAB4 /* GradeViewController.swift in Sources */,
@@ -492,6 +507,7 @@
 				97E437BD2217CB200063419A /* MyPageViewController.swift in Sources */,
 				97E437AD2216B6950063419A /* TestThreeViewController.swift in Sources */,
 				97E437BB2217CB170063419A /* NewFeedViewController.swift in Sources */,
+				C5ECA450221AA3FB00BFFBD7 /* SetupViewController.swift in Sources */,
 				97E437AF2216C1F40063419A /* BaseViewController.swift in Sources */,
 				97E437C32217E00E0063419A /* AddViewController.swift in Sources */,
 				97E437B72217CAF00063419A /* DiscoveryViewController.swift in Sources */,
