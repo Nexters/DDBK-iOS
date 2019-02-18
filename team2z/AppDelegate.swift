@@ -8,6 +8,7 @@
 
 import UIKit
 import SnapKit
+import DropDown
 
 protocol AppSplashController {
     var splashView: UIView { get }
@@ -25,6 +26,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AppSplashController {
     }()
 
     var splashView: UIView = UIView()
+    
+    func applicationDidFinishLaunching(_ application: UIApplication) {
+        DropDown.startListeningToKeyboard()
+    }
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.

@@ -19,29 +19,28 @@ class MyPageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.title = "MyPage"
+        self.title = "마이페이지"
         
+        // 테이블뷰 생성 및 설정
         self.myTableView.dataSource = self
         self.myTableView.delegate = self
         self.myTableView.isScrollEnabled = false
-//        self.myTableView.separatorStyle = .none
         self.myTableView.register(UITableViewCell.self, forCellReuseIdentifier: "TableViewCell")
-//        self.myTableView.backgroundColor = UIColor.clear
         let HEADER_HEIGHT = 100
         myTableView.tableHeaderView?.frame.size = CGSize(width: myTableView.frame.width, height: CGFloat(HEADER_HEIGHT))
         self.view.addSubview(self.myTableView)
-        
-//        let subview = UIView()
-//        view.addSubview(subview)
         self.myTableView.snp.makeConstraints { (make) in
             make.top.bottom.left.right.equalTo(self.view)
-//            make.edges.equalTo(self.view).inset(UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20))
         }
         
+        // xib register
         let nibName_0 = UINib(nibName: "MyTableViewCell", bundle: nil)
         let nibName_1 = UINib(nibName: "MypageDefaultTableViewCell", bundle: nil)
+        
         myTableView.register(nibName_0, forCellReuseIdentifier: "MypageCell1")
         myTableView.register(nibName_1, forCellReuseIdentifier: "myPageDefaultCell")
+        
+        navigationController?.interactivePopGestureRecognizer?.delegate = nil
         
     }
     
@@ -49,6 +48,7 @@ class MyPageViewController: UIViewController {
 //        self.view.frame = CGRect(x: CGFloat(0), y: CGFloat(0), width: CGFloat(200), height: CGFloat(200))
 //        super.viewWillAppear(animated)
 //    }
+    
 }
 
 extension MyPageViewController: UITableViewDataSource, UITableViewDelegate {
@@ -120,9 +120,21 @@ extension MyPageViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.section {
         case 1:
-            print("hi")
+            switch indexPath.row {
+            case 0:
+                let vc = MypageCommonViewController(nibName: "MypageCommonViewController", bundle: nil)
+                vc.customTitle = "떡볶이 일진님의 갔다왔어요"
+                self.navigationController?.pushViewController(vc, animated: true)
+                break
+            case 1:
+                let vc = MypageCommonViewController(nibName: "MypageCommonViewController", bundle: nil)
+                vc.customTitle = "떡볶이 일진님의 가고싶어요"
+                self.navigationController?.pushViewController(vc, animated: true)
+                break
+            default:
+                break
+            }
 //            self.hidesBottomBarWhenPushed = true
-            self.navigationController?.pushViewController(GradeViewController(), animated: true)
 //            tableView.deselectRow(at: indexPath, animated: true)
         case 2:
             self.navigationController?.pushViewController(SetupViewController(), animated: true)
@@ -148,13 +160,8 @@ extension MyPageViewController: UITableViewDataSource, UITableViewDelegate {
         if section == 0 {
             return CGFloat.leastNormalMagnitude
         }
-        return 10.0
-
-//        return CGFloat.leastNormalMagnitude
+        return 5.0
     }
-//    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-//        return 10.0
-//    }
     
     @objc func handleTap_0(sender: UITapGestureRecognizer) {
         print("tap0 in mpvc")

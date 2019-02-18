@@ -17,6 +17,15 @@ class SetupViewController: UIViewController {
         super.viewDidLoad()
 
         self.title = "설정"
+        // custom back button 설정
+//        let backbutton = UIButton(type: .custom)
+//        backbutton.setImage(UIImage(named: "left_arrow.png"), for: .normal) // Image can be downloaded from here below link
+//        backbutton.setTitle("", for: .normal)
+//        backbutton.setTitleColor(backbutton.tintColor, for: .normal) // You can change the TitleColor
+//        backbutton.addTarget(self, action: #selector("backActionTest"), for: .touchUpInside)
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: makeBackButton())
+        
+        // 테이블뷰 생성 및 설정
         self.myTableView.dataSource = self
         self.myTableView.delegate = self
         self.myTableView.isScrollEnabled = false
@@ -33,6 +42,20 @@ class SetupViewController: UIViewController {
         myTableView.register(nibName_0, forCellReuseIdentifier: "SetupTableViewCell")
     }
 
+    func makeBackButton() -> UIButton {
+//        let backButtonImage = UIImage(named: "left_arrow.png")?.withRenderingMode(.alwaysTemplate)
+        let backButton = UIButton(type: .custom)
+        backButton.setImage(UIImage(named: "left_arrow.png"), for: .normal)
+        backButton.setTitle("", for: .normal)
+        backButton.setTitleColor(backButton.tintColor, for: .normal)
+        backButton.addTarget(self, action: #selector(self.backButtonPressed), for: .touchUpInside)
+        return backButton
+    }
+    
+    @objc func backButtonPressed() {
+//        dismiss(animated: true, completion: nil)
+                navigationController?.popViewController(animated: true)
+    }
 }
 
 

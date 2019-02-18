@@ -44,7 +44,7 @@ class BaseViewController: UIViewController {
             tabBarItem.selectedImage = UIImage(named: tabBarIcon[tabBarIndex] + "_active")?.withRenderingMode(.alwaysOriginal)
             tabBarIndex += 1
         }
-        
+         
         self.view.addSubview(baseTabBar.view)
     }
 }
