@@ -28,6 +28,7 @@
 		97E437C32217E00E0063419A /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E437C22217E00E0063419A /* AddViewController.swift */; };
 		AD7478074A96C40DD655C2E7 /* Pods_team2z.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A90DE216234C44BC4B6D73E6 /* Pods_team2z.framework */; };
 		B8E11A43221819F2007FBD5E /* NewFeedGoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E11A42221819F2007FBD5E /* NewFeedGoViewController.swift */; };
+		B8E11A45221A9668007FBD5E /* SearchStoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E11A44221A9668007FBD5E /* SearchStoreTableViewCell.swift */; };
 		C5945A6C2217F78A0095FAB4 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5945A6A2217F78A0095FAB4 /* MyTableViewCell.swift */; };
 		C5945A6D2217F78A0095FAB4 /* MyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5945A6B2217F78A0095FAB4 /* MyTableViewCell.xib */; };
 		C5945A702218175D0095FAB4 /* MypageDefaultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5945A6E2218175D0095FAB4 /* MypageDefaultTableViewCell.swift */; };
@@ -39,7 +40,6 @@
 		C5ECA449221898CC00BFFBD7 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5ECA447221898CC00BFFBD7 /* TableViewCell.xib */; };
 		C5ECA450221AA3FB00BFFBD7 /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ECA44E221AA3FB00BFFBD7 /* SetupViewController.swift */; };
 		C5ECA451221AA3FB00BFFBD7 /* SetupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5ECA44F221AA3FB00BFFBD7 /* SetupViewController.xib */; };
-		B8E11A45221A9668007FBD5E /* SearchStoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E11A44221A9668007FBD5E /* SearchStoreTableViewCell.swift */; };
 		DABF8A5DA998B0CA3E116233 /* Pods_team2zTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D94A64219EBE7665305B0C /* Pods_team2zTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -94,6 +94,7 @@
 		A5F23959D8E89D52535E34EB /* Pods-team2zUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-team2zUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-team2zUITests/Pods-team2zUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A90DE216234C44BC4B6D73E6 /* Pods_team2z.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_team2z.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8E11A42221819F2007FBD5E /* NewFeedGoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFeedGoViewController.swift; sourceTree = "<group>"; };
+		B8E11A44221A9668007FBD5E /* SearchStoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchStoreTableViewCell.swift; sourceTree = "<group>"; };
 		C5945A6A2217F78A0095FAB4 /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 		C5945A6B2217F78A0095FAB4 /* MyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTableViewCell.xib; sourceTree = "<group>"; };
 		C5945A6E2218175D0095FAB4 /* MypageDefaultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageDefaultTableViewCell.swift; sourceTree = "<group>"; };
@@ -105,7 +106,6 @@
 		C5ECA447221898CC00BFFBD7 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		C5ECA44E221AA3FB00BFFBD7 /* SetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
 		C5ECA44F221AA3FB00BFFBD7 /* SetupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SetupViewController.xib; sourceTree = "<group>"; };
-		B8E11A44221A9668007FBD5E /* SearchStoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchStoreTableViewCell.swift; sourceTree = "<group>"; };
 		DF3E6B8BB15948E54AB8058D /* Pods_team2zUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_team2zUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -475,7 +475,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-team2z/Pods-team2z-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-team2z/Pods-team2z-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -486,7 +486,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-team2z/Pods-team2z-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-team2z/Pods-team2z-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
