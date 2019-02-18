@@ -13,8 +13,12 @@ class NewFeedGoViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         let NewFeedView: NewFeedViewController = NewFeedViewController()
-        self.present(NewFeedView, animated: true, completion: nil)
+//        self.navigationController?.pushViewController(NewFeedView, animated: true)
+        let navc = UINavigationController(rootViewController: NewFeedView)
+        self.present(navc, animated:true, completion: nil)
+        
     }
+    
 
 
 }

@@ -19,20 +19,24 @@ class NewFeedViewController: UIViewController, UISearchBarDelegate, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationBarLayout()
+        self.navigationItem.title = "리뷰 쓰기"
+//        self.navigationItem.backBarButtonItem = UIBarButtonItem(image: UIImage(named: "backbutton.png"), style: .plain, target: self, action: nil)
+//        let backbutton = UIBarButtonItem()
+//        backbutton.title = "뒤로가기"
+//        backbutton.setBackgroundImage(UIImage(named: "backbutton.png"), for: .normal, style: .plain, barMetrics: .default)
+        
+//        backbutton.setImage(UIImage(named: "backbutton.png"), for: .normal)
+//        backbutton.addTarget(self, action: #selector(self.backAction(_:)), for: .touchUpInside)
+        
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "뒤로가기", style: .plain, target: self, action: #selector(self.backAction(_:)))
+        
         initItems()
         setSnapKitLayout()
     }
     
-    // navigation
-    func navigationBarLayout(){
-        self.naviBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 44))
-        let backBarButton = UIBarButtonItem(title: "뒤로가기", style: .plain, target: self, action: nil)
-        let navigationItem = UINavigationItem()
-        navigationItem.title = "리뷰 쓰기"
-        navigationItem.leftBarButtonItem = backBarButton
-        naviBar.items = [navigationItem]
-        self.view.addSubview(naviBar)
+    @IBAction func backAction(_ sender: UIButton) {
+//        self.navigationController?.popViewController(animated: true)
+        self.dismiss(animated: true, completion: nil)
     }
     
     // init
@@ -50,43 +54,21 @@ class NewFeedViewController: UIViewController, UISearchBarDelegate, UITableViewD
         self.searchResultTableView.register(SearchStoreTableViewCell.self, forCellReuseIdentifier: "search")
         self.searchResultTableView.rowHeight = 90
         
-        
         storeIcon.image = UIImage(named: "store.png")
         self.view.backgroundColor = UIColor.white
         
-        
-        //self.view.addSubview(storeIcon)
         self.view.addSubview(searchStoreBar)
         self.view.addSubview(searchResultTableView)
     }
 
     func setSnapKitLayout(){
         
-        /*self.storeIcon.snp.makeConstraints { (make) in
-            make.left.equalTo(self.view).offset(15)
-            make.top.equalTo(self.naviBar).offset(60)
-            make.width.equalTo(30)
-            make.height.equalTo(30)
-        }
-        
-        self.searchStoreBar.snp.makeConstraints { (make) in
-            make.left.equalTo(self.storeIcon).offset(40)
-            make.top.equalTo(self.naviBar).offset(60)
-            make.width.equalTo(310)
-            make.height.equalTo(30)
-        }*/
-        
         self.searchStoreBar.snp.makeConstraints { (make) in
             make.left.equalTo(self.view)
-            make.top.equalTo(self.self.naviBar).offset(60)
+            make.top.equalTo(self.view).offset(80)
             make.width.equalTo(self.view)
             make.height.equalTo(40)
         }
-        
-        /*self.searchResultTableView.snp.makeConstraints { (make) in
-            make.top.equalTo(self.storeIcon).offset(35)
-            make.left.width.height.equalTo(self.view)
-        }*/
         
         self.searchResultTableView.snp.makeConstraints { (make) in
             make.top.equalTo(self.searchStoreBar).offset(50)
@@ -98,6 +80,7 @@ class NewFeedViewController: UIViewController, UISearchBarDelegate, UITableViewD
     //가게 이름 검색할 때
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         print(searchText)
+        self.searchResultTableView.reloadData()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -113,6 +96,10 @@ class NewFeedViewController: UIViewController, UISearchBarDelegate, UITableViewD
         cell.storeScore.text = "2.0"
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //self.navigationController?.pushViewController(GradeViewController(), animated: true)
     }
    
 }
