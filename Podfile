@@ -7,6 +7,7 @@ target 'team2z' do
 
   # Pods for team2z
   pod 'Alamofire', '~> 5.0.0.beta.1'
+  pod 'DropDown'
 
   target 'team2zTests' do
     inherit! :search_paths
