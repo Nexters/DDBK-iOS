@@ -19,7 +19,7 @@ class SetupViewController: UIViewController {
         self.title = "설정"
         self.myTableView.dataSource = self
         self.myTableView.delegate = self
-        //        self.myTableView.separatorStyle = .none
+        self.myTableView.isScrollEnabled = false
         self.myTableView.register(UITableViewCell.self, forCellReuseIdentifier: "TableViewCell")
         self.view.addSubview(self.myTableView)
         
@@ -56,6 +56,14 @@ extension SetupViewController: UITableViewDataSource {
         cell.setupLabel?.text = menuLabels[indexPath.row]
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "   "
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return CGFloat.leastNormalMagnitude
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

@@ -12,6 +12,7 @@ import UIKit
 class BaseViewController: UIViewController {
     
 //    let baseTabBar = UITabBarController()
+    let tabBarIcon = ["tab_icon01", "tab_icon02", "tab_icon03", "tab_icon04", "tab_icon05"]
     lazy var baseTabBar = {
         BaseTabBarController()
     }()
@@ -32,15 +33,17 @@ class BaseViewController: UIViewController {
         let NewFeedVC = NewFeedGoViewController()
         let MapVC = MapViewController()
         let MyPageVC = MyPageViewController()
-        
-        HomeVC.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 0)
-        DiscoveryVC.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 1)
-        NewFeedVC.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 2)
-        MapVC.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 3)
-        MyPageVC.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 4)
  
         let controllerArray = [HomeVC, DiscoveryVC, NewFeedVC, MapVC, MyPageVC]
         baseTabBar.viewControllers = controllerArray.map{ UINavigationController.init(rootViewController: $0) }
+        
+        var tabBarIndex = 0
+        for tabBarItem in baseTabBar.tabBar.items! {
+            tabBarItem.title = ""
+            tabBarItem.image = UIImage(named: tabBarIcon[tabBarIndex])?.withRenderingMode(.alwaysOriginal)
+            tabBarItem.selectedImage = UIImage(named: tabBarIcon[tabBarIndex] + "_active")?.withRenderingMode(.alwaysOriginal)
+            tabBarIndex += 1
+        }
         
         self.view.addSubview(baseTabBar.view)
     }

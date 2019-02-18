@@ -36,6 +36,7 @@
                 </subviews>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
             <connections>
                 <outlet property="arrowLabel" destination="fSI-Mq-ALk" id="Hqh-7j-5p4"/>
                 <outlet property="setupLabel" destination="Se6-ch-xmR" id="KjR-Bf-pI3"/>

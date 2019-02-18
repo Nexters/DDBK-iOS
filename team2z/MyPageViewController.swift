@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 
 class MyPageViewController: UIViewController {
-    let myTableView: UITableView = UITableView(frame: CGRect.zero, style: .grouped)
+    var myTableView: UITableView = UITableView(frame: CGRect.zero, style: .grouped)
     let items: [String] = ["작성리뷰", "위시리스트", "좋아요"]
     let menuIcons: [String] = ["mypage_went.png", "mypage_pin.png", "mypage_like.png", "mypage_setup.png"]
     let menuLabels: [String] = ["갔다 왔어요", "가고 싶어요", "좋아요한 리뷰", "설정"]
@@ -23,8 +23,12 @@ class MyPageViewController: UIViewController {
         
         self.myTableView.dataSource = self
         self.myTableView.delegate = self
+        self.myTableView.isScrollEnabled = false
 //        self.myTableView.separatorStyle = .none
         self.myTableView.register(UITableViewCell.self, forCellReuseIdentifier: "TableViewCell")
+//        self.myTableView.backgroundColor = UIColor.clear
+        let HEADER_HEIGHT = 100
+        myTableView.tableHeaderView?.frame.size = CGSize(width: myTableView.frame.width, height: CGFloat(HEADER_HEIGHT))
         self.view.addSubview(self.myTableView)
         
 //        let subview = UIView()
@@ -47,11 +51,7 @@ class MyPageViewController: UIViewController {
 //    }
 }
 
-
-extension MyPageViewController: UITableViewDelegate {
-    
-}
-extension MyPageViewController: UITableViewDataSource {
+extension MyPageViewController: UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 3
@@ -100,14 +100,18 @@ extension MyPageViewController: UITableViewDataSource {
             cell.iconImageView.image = UIImage(named: menuIcons[indexPath.row])
             cell.mainLabel?.text = menuLabels[indexPath.row]
             cell.numberLabel?.text = "20"
-            
+            cell.selectionStyle = .none
+//            cell.contentView.backgroundColor = UIColor.clear
+//            if (isHighlighted == true){
+//                cellToDeSelect?.contentView.backgroundColor = UIColor.grayColor()
+//
+//            }
             return cell
         default://myPageDefaultCell
             let cell = tableView.dequeueReusableCell(withIdentifier: "myPageDefaultCell") as! MypageDefaultTableViewCell
-            
             cell.iconImageView.image = UIImage(named: menuIcons[3])
             cell.mainLabel?.text = menuLabels[3]
-            
+            cell.numberLabel?.text = ""
             return cell
         }
         
@@ -118,7 +122,8 @@ extension MyPageViewController: UITableViewDataSource {
         case 1:
             print("hi")
 //            self.hidesBottomBarWhenPushed = true
-        self.navigationController?.pushViewController(GradeViewController(), animated: true)
+            self.navigationController?.pushViewController(GradeViewController(), animated: true)
+//            tableView.deselectRow(at: indexPath, animated: true)
         case 2:
             self.navigationController?.pushViewController(SetupViewController(), animated: true)
         default:
@@ -134,16 +139,21 @@ extension MyPageViewController: UITableViewDataSource {
             return 50
         }
     }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "   "
+    }
+    
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-//        if section == 0 {
-//            return CGFloat.leastNormalMagnitude
-//        }
-//        return tableView.sectionHeaderHeight
-        
-        return CGFloat.leastNormalMagnitude
+        if section == 0 {
+            return CGFloat.leastNormalMagnitude
+        }
+        return 10.0
+
+//        return CGFloat.leastNormalMagnitude
     }
 //    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-//        return 30.0
+//        return 10.0
 //    }
     
     @objc func handleTap_0(sender: UITapGestureRecognizer) {

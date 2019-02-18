@@ -196,10 +196,6 @@
 				97E437BC2217CB200063419A /* MyPageViewController.swift */,
 				97E437C22217E00E0063419A /* AddViewController.swift */,
 				B8E11A42221819F2007FBD5E /* NewFeedGoViewController.swift */,
-				C5945A6A2217F78A0095FAB4 /* MyTableViewCell.swift */,
-				C5945A6B2217F78A0095FAB4 /* MyTableViewCell.xib */,
-				C5945A6E2218175D0095FAB4 /* MypageDefaultTableViewCell.swift */,
-				C5945A6F2218175D0095FAB4 /* MypageDefaultTableViewCell.xib */,
 			);
 			path = team2z;
 			sourceTree = "<group>";
@@ -236,6 +232,11 @@
 		C5945A74221835120095FAB4 /* mypage */ = {
 			isa = PBXGroup;
 			children = (
+				C5ECA452221ACF7700BFFBD7 /* setup */,
+				C5945A6A2217F78A0095FAB4 /* MyTableViewCell.swift */,
+				C5945A6B2217F78A0095FAB4 /* MyTableViewCell.xib */,
+				C5945A6E2218175D0095FAB4 /* MypageDefaultTableViewCell.swift */,
+				C5945A6F2218175D0095FAB4 /* MypageDefaultTableViewCell.xib */,
 				C5945A75221835370095FAB4 /* GradeViewController.swift */,
 				C5945A76221835370095FAB4 /* GradeViewController.xib */,
 				C5ECA446221898CC00BFFBD7 /* TableViewCell.swift */,
@@ -244,6 +245,13 @@
 				C5ECA44F221AA3FB00BFFBD7 /* SetupViewController.xib */,
 			);
 			path = mypage;
+			sourceTree = "<group>";
+		};
+		C5ECA452221ACF7700BFFBD7 /* setup */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = setup;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
