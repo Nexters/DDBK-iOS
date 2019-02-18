@@ -9,35 +9,19 @@
 import UIKit
 import SnapKit
 
-class NewFeedViewController: UIViewController, UISearchBarDelegate{
+class NewFeedViewController: UIViewController, UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource{
     
     // variable
     private var naviBar: UINavigationBar!
-    private var storeIcon: UIButton!
-    /*private var storeImageView: UIImageView! // 가게 or 음식 사진 (1장)
-    private var reviewTextView: UITextView! // 리뷰 작성칸
-    private var storeName: UILabel! // 가게 이름
-    private var saveButton: UIButton! // 저장 버튼
-    private var storeGrade: Float? // 점수*/
-    
+    private var storeIcon: UIImageView!
     private var searchStoreBar: UISearchBar!
+    private var searchResultTableView: UITableView!
     
-    
-    /*private lazy var storeImagePicker: UIImagePickerController = {
-        let picker: UIImagePickerController = UIImagePickerController()
-        picker.sourceType = .photoLibrary
-        picker.delegate = self
-        picker.allowsEditing = true
-        return picker
-    }()*/
-
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationBarLayout()
-        initLayout()
-        setAutoLayout()
-        
-        //clickEvent()
+        initItems()
+        setSnapKitLayout()
     }
     
     // navigation
@@ -52,33 +36,33 @@ class NewFeedViewController: UIViewController, UISearchBarDelegate{
     }
     
     // init
-    func initLayout(){
+    func initItems(){
         searchStoreBar = UISearchBar()
+        storeIcon = UIImageView()
+        searchResultTableView = UITableView()
+        
         self.searchStoreBar.delegate = self
         self.searchStoreBar.placeholder = "스토어를 검색하세요"
-        storeIcon = UIButton()
+        self.searchStoreBar.searchBarStyle = UISearchBar.Style.minimal
         
-        storeIcon.backgroundColor = UIColor.black
+        self.searchResultTableView.delegate = self
+        self.searchResultTableView.dataSource = self
+        self.searchResultTableView.register(SearchStoreTableViewCell.self, forCellReuseIdentifier: "search")
+        self.searchResultTableView.rowHeight = 90
+        
+        
+        storeIcon.image = UIImage(named: "store.png")
         self.view.backgroundColor = UIColor.white
         
         
-        self.view.addSubview(storeIcon)
+        //self.view.addSubview(storeIcon)
         self.view.addSubview(searchStoreBar)
-        /*storeImageView = UIImageView()
-        reviewTextView = UITextView()
-        
-        self.reviewTextView.delegate = self
-        storeImageView.isUserInteractionEnabled = true
-        
-        self.view.addSubview(baseView)
-        self.baseView.addSubview(storeImageView)
-        self.baseView.addSubview(reviewTextView)*/
+        self.view.addSubview(searchResultTableView)
     }
-    
-    // 배치헬프 ㅜ
-    func setAutoLayout(){
+
+    func setSnapKitLayout(){
         
-        self.storeIcon.snp.makeConstraints { (make) in
+        /*self.storeIcon.snp.makeConstraints { (make) in
             make.left.equalTo(self.view).offset(15)
             make.top.equalTo(self.naviBar).offset(60)
             make.width.equalTo(30)
@@ -90,38 +74,45 @@ class NewFeedViewController: UIViewController, UISearchBarDelegate{
             make.top.equalTo(self.naviBar).offset(60)
             make.width.equalTo(310)
             make.height.equalTo(30)
+        }*/
+        
+        self.searchStoreBar.snp.makeConstraints { (make) in
+            make.left.equalTo(self.view)
+            make.top.equalTo(self.self.naviBar).offset(60)
+            make.width.equalTo(self.view)
+            make.height.equalTo(40)
+        }
+        
+        /*self.searchResultTableView.snp.makeConstraints { (make) in
+            make.top.equalTo(self.storeIcon).offset(35)
+            make.left.width.height.equalTo(self.view)
+        }*/
+        
+        self.searchResultTableView.snp.makeConstraints { (make) in
+            make.top.equalTo(self.searchStoreBar).offset(50)
+            make.left.width.height.equalTo(self.view)
         }
         
     }
     
+    //가게 이름 검색할 때
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         print(searchText)
     }
     
-    /*
-    
-    // click event & target-action
-    func clickEvent(){
-        let imageTapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.selectStoreImage(_:)))
-        self.storeImageView.addGestureRecognizer(imageTapGesture)
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
     }
     
-    @IBAction func selectStoreImage(_ sender:UITapGestureRecognizer){
-        self.present(self.storeImagePicker, animated: true, completion: nil)
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: SearchStoreTableViewCell = tableView.dequeueReusableCell(withIdentifier: "search", for: indexPath) as! SearchStoreTableViewCell
+        
+        cell.storeName.text = "엽기 떡볶이 신촌점"
+        cell.storeAddress.text = "서울특별시 중구"
+        cell.starImage.image = UIImage(named: "star.png")
+        cell.storeScore.text = "2.0"
+        
+        return cell
     }
-    
-    
-    // imagePicker method
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        self.dismiss(animated: true, completion: nil)
-    }
-    
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        if let selectImage: UIImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
-            self.storeImageView.image = selectImage
-        }
-        self.dismiss(animated: true, completion: nil)
-    }
- 
- */
+   
 }
