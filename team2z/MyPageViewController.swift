@@ -123,12 +123,12 @@ extension MyPageViewController: UITableViewDataSource, UITableViewDelegate {
             switch indexPath.row {
             case 0:
                 let vc = MypageCommonViewController(nibName: "MypageCommonViewController", bundle: nil)
-                vc.customTitle = "떡볶이 일진님의 갔다왔어요"
+                vc.customTitle = "떡볶이일진" + "님의 갔다왔어요"
                 self.navigationController?.pushViewController(vc, animated: true)
                 break
             case 1:
                 let vc = MypageCommonViewController(nibName: "MypageCommonViewController", bundle: nil)
-                vc.customTitle = "떡볶이 일진님의 가고싶어요"
+                vc.customTitle = "떡볶이일진" + "님의 가고싶어요"
                 self.navigationController?.pushViewController(vc, animated: true)
                 break
             default:

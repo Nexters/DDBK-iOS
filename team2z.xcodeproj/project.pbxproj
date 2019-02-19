@@ -46,6 +46,10 @@
 		C5ECA460221B168900BFFBD7 /* CosmosDistrib.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ECA45F221B168900BFFBD7 /* CosmosDistrib.swift */; };
 		C5ECA463221B1A9500BFFBD7 /* MypageCommonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ECA461221B1A9500BFFBD7 /* MypageCommonViewController.swift */; };
 		C5ECA464221B1A9500BFFBD7 /* MypageCommonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5ECA462221B1A9500BFFBD7 /* MypageCommonViewController.xib */; };
+		C5ECA466221BEC4600BFFBD7 /* CustomStoreUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ECA465221BEC4600BFFBD7 /* CustomStoreUIView.swift */; };
+		C5ECA468221BED8900BFFBD7 /* CustomStoreUIView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5ECA467221BED8900BFFBD7 /* CustomStoreUIView.xib */; };
+		C5ECA46B221BF5E700BFFBD7 /* StoreCommonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ECA469221BF5E700BFFBD7 /* StoreCommonTableViewCell.swift */; };
+		C5ECA46C221BF5E700BFFBD7 /* StoreCommonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5ECA46A221BF5E700BFFBD7 /* StoreCommonTableViewCell.xib */; };
 		DABF8A5DA998B0CA3E116233 /* Pods_team2zTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D94A64219EBE7665305B0C /* Pods_team2zTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -118,6 +122,10 @@
 		C5ECA45F221B168900BFFBD7 /* CosmosDistrib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CosmosDistrib.swift; sourceTree = "<group>"; };
 		C5ECA461221B1A9500BFFBD7 /* MypageCommonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageCommonViewController.swift; sourceTree = "<group>"; };
 		C5ECA462221B1A9500BFFBD7 /* MypageCommonViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MypageCommonViewController.xib; sourceTree = "<group>"; };
+		C5ECA465221BEC4600BFFBD7 /* CustomStoreUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStoreUIView.swift; sourceTree = "<group>"; };
+		C5ECA467221BED8900BFFBD7 /* CustomStoreUIView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomStoreUIView.xib; sourceTree = "<group>"; };
+		C5ECA469221BF5E700BFFBD7 /* StoreCommonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCommonTableViewCell.swift; sourceTree = "<group>"; };
+		C5ECA46A221BF5E700BFFBD7 /* StoreCommonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoreCommonTableViewCell.xib; sourceTree = "<group>"; };
 		DF3E6B8BB15948E54AB8058D /* Pods_team2zUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_team2zUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -284,6 +292,10 @@
 			children = (
 				C5ECA45B221B11AC00BFFBD7 /* CommonStoreTableViewCell.swift */,
 				C5ECA45C221B11AC00BFFBD7 /* CommonStoreTableViewCell.xib */,
+				C5ECA465221BEC4600BFFBD7 /* CustomStoreUIView.swift */,
+				C5ECA467221BED8900BFFBD7 /* CustomStoreUIView.xib */,
+				C5ECA469221BF5E700BFFBD7 /* StoreCommonTableViewCell.swift */,
+				C5ECA46A221BF5E700BFFBD7 /* StoreCommonTableViewCell.xib */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -399,11 +411,13 @@
 			files = (
 				C5ECA451221AA3FB00BFFBD7 /* SetupViewController.xib in Resources */,
 				97AA108C21F4A0FD00357553 /* LaunchScreen.storyboard in Resources */,
+				C5ECA46C221BF5E700BFFBD7 /* StoreCommonTableViewCell.xib in Resources */,
 				C5945A6D2217F78A0095FAB4 /* MyTableViewCell.xib in Resources */,
 				C5945A78221835370095FAB4 /* GradeViewController.xib in Resources */,
 				C5ECA45E221B11AC00BFFBD7 /* CommonStoreTableViewCell.xib in Resources */,
 				C5945A712218175D0095FAB4 /* MypageDefaultTableViewCell.xib in Resources */,
 				C5ECA449221898CC00BFFBD7 /* TableViewCell.xib in Resources */,
+				C5ECA468221BED8900BFFBD7 /* CustomStoreUIView.xib in Resources */,
 				97AA10B021F4CBC400357553 /* Carthage in Resources */,
 				C5ECA464221B1A9500BFFBD7 /* MypageCommonViewController.xib in Resources */,
 				C5945A73221821DF0095FAB4 /* Assets.xcassets in Resources */,
@@ -563,6 +577,8 @@
 				C5ECA450221AA3FB00BFFBD7 /* SetupViewController.swift in Sources */,
 				97E437AF2216C1F40063419A /* BaseViewController.swift in Sources */,
 				C5ECA463221B1A9500BFFBD7 /* MypageCommonViewController.swift in Sources */,
+				C5ECA466221BEC4600BFFBD7 /* CustomStoreUIView.swift in Sources */,
+				C5ECA46B221BF5E700BFFBD7 /* StoreCommonTableViewCell.swift in Sources */,
 				97E437C32217E00E0063419A /* AddViewController.swift in Sources */,
 				97E437B72217CAF00063419A /* DiscoveryViewController.swift in Sources */,
 				B8E11A43221819F2007FBD5E /* NewFeedGoViewController.swift in Sources */,

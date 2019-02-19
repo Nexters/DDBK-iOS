@@ -54,6 +54,7 @@ class CommonStoreTableViewCell: UITableViewCell {
             make.leading.equalTo(self.snp.leading).offset(20)
         }
         // 별 그림 설정
+        cosmosView.settings.updateOnTouch = false // 조절 못하게 설정
         cosmosView.settings.fillMode = .precise // full, half, precise
         cosmosView.settings.starMargin = 0.1
         cosmosView.snp.makeConstraints { (make) in
@@ -63,7 +64,7 @@ class CommonStoreTableViewCell: UITableViewCell {
         // 매운단계, 떡종류 뷰 설정
         makeRoundedView(redpepperView)
         makeRoundedView(ddukView)
-        
+
         ddukView.snp.makeConstraints { (make) in
             make.width.equalTo(self.snp.width).multipliedBy(0.2)
             make.height.equalTo(self.snp.height).multipliedBy(0.21)
@@ -94,6 +95,9 @@ class CommonStoreTableViewCell: UITableViewCell {
             make.centerY.equalTo(redpepperView.snp.centerY)
         }
         
+        
+//        let view = CustomStoreUIView(frame: self.view.frame)
+//        self.view.addSubview(view)
     }
     
     func makeRoundedView(_ view: UIView) {
