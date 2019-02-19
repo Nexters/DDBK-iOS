@@ -17,19 +17,14 @@ class MyTableViewCell: UITableViewCell {
     @IBOutlet weak var profileNimLabel: UILabel!
     
     @IBOutlet var profileSubViews: [UIView]!
+    @IBOutlet var subImageViews: [UIImageView]!
+    @IBOutlet var subImageLabels: [UILabel]!
+    @IBOutlet var subVarLabels: [UILabel]!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         self.selectionStyle = .none
-        
-//        self.contentView.layer.masksToBounds = true
-//        self.layer.shadowColor = UIColor.black.cgColor
-//        self.layer.shadowOffset = CGSize(width: 20, height: 0)
-//        self.layer.shadowRadius = 15.0
-//        self.layer.shadowOpacity = 0.4
-//        self.layer.masksToBounds = false
-//        self.layer.shadowPath = UIBezierPath(roundedRect:         self.contentView.bounds, cornerRadius: self.contentView.layer.cornerRadius).cgPath
         
         // 프로필 사진 이미지 뷰
         profileImageView.layer.borderWidth = 2

@@ -19,6 +19,7 @@ class MypageCommonViewController: UIViewController {
     let dropDown = DropDown()
     let dropDownMenu = ["최신 등록순", "별점순", "맵기순", "떡순"]
     let myTableView: UITableView = UITableView(frame: CGRect.zero, style: .grouped)
+    
     @IBAction func showFilterButtonDropDown(_ sender: Any) {
         dropDown.cancelAction = {
             self.dropDownIconImageView.image = UIImage(named: "expand-1.png")
@@ -124,7 +125,7 @@ extension MypageCommonViewController: UITableViewDelegate {
 extension MypageCommonViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 10
+        return 2
     }
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -155,7 +156,7 @@ extension MypageCommonViewController: UITableViewDataSource {
         return view
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //        self.navigationController?.pushViewController(SetupViewController(), animated: true)
+        self.navigationController?.pushViewController(StoreDetailViewController(), animated: true)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
