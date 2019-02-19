@@ -14,6 +14,8 @@ class StoreCommonTableViewCell: UITableViewCell {
     @IBOutlet weak var arrowLabel: UILabel!
     @IBOutlet weak var centerLineView: UIView!
     @IBOutlet weak var StoreFooterUIView: CustomStoreUIView!
+    @IBOutlet weak var verticalLineView: UIView!
+    @IBOutlet weak var phoneNumberLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,6 +28,19 @@ class StoreCommonTableViewCell: UITableViewCell {
         addressLabel.snp.makeConstraints { (make) in
             make.top.equalTo(nameLabel.snp.bottom).offset(7)
             make.leading.equalTo(self.snp.leading).offset(20)
+        }
+        // 주소 옆 수직선 뷰 설정
+        verticalLineView.snp.makeConstraints { (make) in
+            make.width.equalTo(1)
+            make.height.equalTo(addressLabel.snp.height)
+            make.top.equalTo(nameLabel.snp.bottom).offset(7)
+            make.leading.equalTo(addressLabel.snp.trailing).offset(12)
+        }
+        verticalLineView.backgroundColor = .white
+        // 전화번호 뷰 설정
+        phoneNumberLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(nameLabel.snp.bottom).offset(7)
+            make.leading.equalTo(verticalLineView.snp.trailing).offset(12)
         }
         // 화살표 레이블 설정
         arrowLabel.snp.makeConstraints { (make) in

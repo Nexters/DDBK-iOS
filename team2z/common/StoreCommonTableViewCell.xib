@@ -50,6 +50,18 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uov-H6-2kq">
+                        <rect key="frame" x="220" y="42" width="84" height="16"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zAE-Pm-h3y">
+                        <rect key="frame" x="167" y="42" width="30" height="16"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
                 </subviews>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -59,6 +71,8 @@
                 <outlet property="arrowLabel" destination="Y8B-qR-06Z" id="neR-aM-EZc"/>
                 <outlet property="centerLineView" destination="fbT-t8-8AD" id="vd5-vf-NK2"/>
                 <outlet property="nameLabel" destination="F6u-la-smS" id="H7A-6f-8cI"/>
+                <outlet property="phoneNumberLabel" destination="uov-H6-2kq" id="Ztm-Wj-SUh"/>
+                <outlet property="verticalLineView" destination="zAE-Pm-h3y" id="5wN-0i-BjT"/>
             </connections>
             <point key="canvasLocation" x="100.8" y="79.610194902548727"/>
         </tableViewCell>

@@ -44,8 +44,6 @@
 		C5ECA450221AA3FB00BFFBD7 /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ECA44E221AA3FB00BFFBD7 /* SetupViewController.swift */; };
 		C5ECA451221AA3FB00BFFBD7 /* SetupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5ECA44F221AA3FB00BFFBD7 /* SetupViewController.xib */; };
 		C5ECA455221B063400BFFBD7 /* CustomBackButtonMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ECA454221B063400BFFBD7 /* CustomBackButtonMaker.swift */; };
-		C5ECA45D221B11AC00BFFBD7 /* CommonStoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ECA45B221B11AC00BFFBD7 /* CommonStoreTableViewCell.swift */; };
-		C5ECA45E221B11AC00BFFBD7 /* CommonStoreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5ECA45C221B11AC00BFFBD7 /* CommonStoreTableViewCell.xib */; };
 		C5ECA460221B168900BFFBD7 /* CosmosDistrib.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ECA45F221B168900BFFBD7 /* CosmosDistrib.swift */; };
 		C5ECA463221B1A9500BFFBD7 /* MypageCommonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ECA461221B1A9500BFFBD7 /* MypageCommonViewController.swift */; };
 		C5ECA464221B1A9500BFFBD7 /* MypageCommonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5ECA462221B1A9500BFFBD7 /* MypageCommonViewController.xib */; };
@@ -55,6 +53,8 @@
 		C5ECA46C221BF5E700BFFBD7 /* StoreCommonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5ECA46A221BF5E700BFFBD7 /* StoreCommonTableViewCell.xib */; };
 		C5ECA470221C0E9800BFFBD7 /* StoreDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ECA46E221C0E9800BFFBD7 /* StoreDetailViewController.swift */; };
 		C5ECA471221C0E9800BFFBD7 /* StoreDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5ECA46F221C0E9800BFFBD7 /* StoreDetailViewController.xib */; };
+		C5ECA478221C869000BFFBD7 /* UserFollowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ECA476221C869000BFFBD7 /* UserFollowTableViewCell.swift */; };
+		C5ECA479221C869000BFFBD7 /* UserFollowTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5ECA477221C869000BFFBD7 /* UserFollowTableViewCell.xib */; };
 		DABF8A5DA998B0CA3E116233 /* Pods_team2zTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D94A64219EBE7665305B0C /* Pods_team2zTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -125,8 +125,6 @@
 		C5ECA44E221AA3FB00BFFBD7 /* SetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
 		C5ECA44F221AA3FB00BFFBD7 /* SetupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SetupViewController.xib; sourceTree = "<group>"; };
 		C5ECA454221B063400BFFBD7 /* CustomBackButtonMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBackButtonMaker.swift; sourceTree = "<group>"; };
-		C5ECA45B221B11AC00BFFBD7 /* CommonStoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonStoreTableViewCell.swift; sourceTree = "<group>"; };
-		C5ECA45C221B11AC00BFFBD7 /* CommonStoreTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommonStoreTableViewCell.xib; sourceTree = "<group>"; };
 		C5ECA45F221B168900BFFBD7 /* CosmosDistrib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CosmosDistrib.swift; sourceTree = "<group>"; };
 		C5ECA461221B1A9500BFFBD7 /* MypageCommonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageCommonViewController.swift; sourceTree = "<group>"; };
 		C5ECA462221B1A9500BFFBD7 /* MypageCommonViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MypageCommonViewController.xib; sourceTree = "<group>"; };
@@ -136,6 +134,8 @@
 		C5ECA46A221BF5E700BFFBD7 /* StoreCommonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoreCommonTableViewCell.xib; sourceTree = "<group>"; };
 		C5ECA46E221C0E9800BFFBD7 /* StoreDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreDetailViewController.swift; sourceTree = "<group>"; };
 		C5ECA46F221C0E9800BFFBD7 /* StoreDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoreDetailViewController.xib; sourceTree = "<group>"; };
+		C5ECA476221C869000BFFBD7 /* UserFollowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFollowTableViewCell.swift; sourceTree = "<group>"; };
+		C5ECA477221C869000BFFBD7 /* UserFollowTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserFollowTableViewCell.xib; sourceTree = "<group>"; };
 		DF3E6B8BB15948E54AB8058D /* Pods_team2zUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_team2zUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -312,12 +312,12 @@
 		C5ECA456221B113200BFFBD7 /* common */ = {
 			isa = PBXGroup;
 			children = (
-				C5ECA45B221B11AC00BFFBD7 /* CommonStoreTableViewCell.swift */,
-				C5ECA45C221B11AC00BFFBD7 /* CommonStoreTableViewCell.xib */,
 				C5ECA465221BEC4600BFFBD7 /* CustomStoreUIView.swift */,
 				C5ECA467221BED8900BFFBD7 /* CustomStoreUIView.xib */,
 				C5ECA469221BF5E700BFFBD7 /* StoreCommonTableViewCell.swift */,
 				C5ECA46A221BF5E700BFFBD7 /* StoreCommonTableViewCell.xib */,
+				C5ECA476221C869000BFFBD7 /* UserFollowTableViewCell.swift */,
+				C5ECA477221C869000BFFBD7 /* UserFollowTableViewCell.xib */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -444,9 +444,9 @@
 				97AA108C21F4A0FD00357553 /* LaunchScreen.storyboard in Resources */,
 				C5ECA471221C0E9800BFFBD7 /* StoreDetailViewController.xib in Resources */,
 				C5ECA46C221BF5E700BFFBD7 /* StoreCommonTableViewCell.xib in Resources */,
+				C5ECA479221C869000BFFBD7 /* UserFollowTableViewCell.xib in Resources */,
 				C5945A6D2217F78A0095FAB4 /* MyTableViewCell.xib in Resources */,
 				C5945A78221835370095FAB4 /* GradeViewController.xib in Resources */,
-				C5ECA45E221B11AC00BFFBD7 /* CommonStoreTableViewCell.xib in Resources */,
 				C5945A712218175D0095FAB4 /* MypageDefaultTableViewCell.xib in Resources */,
 				C5ECA449221898CC00BFFBD7 /* TableViewCell.xib in Resources */,
 				C5ECA468221BED8900BFFBD7 /* CustomStoreUIView.xib in Resources */,
@@ -568,6 +568,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-team2z/Pods-team2z-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework",
+				"${BUILT_PRODUCTS_DIR}/SMSegmentView/SMSegmentView.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -575,6 +576,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DropDown.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SMSegmentView.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -598,12 +600,12 @@
 				97AA108221F4A0F900357553 /* AppDelegate.swift in Sources */,
 				C5ECA455221B063400BFFBD7 /* CustomBackButtonMaker.swift in Sources */,
 				97E437B52217CAE30063419A /* HomeViewController.swift in Sources */,
-				C5ECA45D221B11AC00BFFBD7 /* CommonStoreTableViewCell.swift in Sources */,
 				C5945A77221835370095FAB4 /* GradeViewController.swift in Sources */,
 				97E437BF2217CB9E0063419A /* MapViewController.swift in Sources */,
 				97E437AB2216B68C0063419A /* TestTwoViewController.swift in Sources */,
 				C5945A6C2217F78A0095FAB4 /* MyTableViewCell.swift in Sources */,
 				97E437BD2217CB200063419A /* MyPageViewController.swift in Sources */,
+				C5ECA478221C869000BFFBD7 /* UserFollowTableViewCell.swift in Sources */,
 				C5ECA460221B168900BFFBD7 /* CosmosDistrib.swift in Sources */,
 				C5ECA470221C0E9800BFFBD7 /* StoreDetailViewController.swift in Sources */,
 				B8E11A45221A9668007FBD5E /* SearchStoreTableViewCell.swift in Sources */,
