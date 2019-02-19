@@ -53,6 +53,8 @@
 		C5ECA468221BED8900BFFBD7 /* CustomStoreUIView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5ECA467221BED8900BFFBD7 /* CustomStoreUIView.xib */; };
 		C5ECA46B221BF5E700BFFBD7 /* StoreCommonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ECA469221BF5E700BFFBD7 /* StoreCommonTableViewCell.swift */; };
 		C5ECA46C221BF5E700BFFBD7 /* StoreCommonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5ECA46A221BF5E700BFFBD7 /* StoreCommonTableViewCell.xib */; };
+		C5ECA470221C0E9800BFFBD7 /* StoreDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ECA46E221C0E9800BFFBD7 /* StoreDetailViewController.swift */; };
+		C5ECA471221C0E9800BFFBD7 /* StoreDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5ECA46F221C0E9800BFFBD7 /* StoreDetailViewController.xib */; };
 		DABF8A5DA998B0CA3E116233 /* Pods_team2zTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D94A64219EBE7665305B0C /* Pods_team2zTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -132,6 +134,8 @@
 		C5ECA467221BED8900BFFBD7 /* CustomStoreUIView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomStoreUIView.xib; sourceTree = "<group>"; };
 		C5ECA469221BF5E700BFFBD7 /* StoreCommonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCommonTableViewCell.swift; sourceTree = "<group>"; };
 		C5ECA46A221BF5E700BFFBD7 /* StoreCommonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoreCommonTableViewCell.xib; sourceTree = "<group>"; };
+		C5ECA46E221C0E9800BFFBD7 /* StoreDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreDetailViewController.swift; sourceTree = "<group>"; };
+		C5ECA46F221C0E9800BFFBD7 /* StoreDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoreDetailViewController.xib; sourceTree = "<group>"; };
 		DF3E6B8BB15948E54AB8058D /* Pods_team2zUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_team2zUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -203,6 +207,7 @@
 		97AA108021F4A0F900357553 /* team2z */ = {
 			isa = PBXGroup;
 			children = (
+				C5ECA46D221C07F400BFFBD7 /* store */,
 				C5ECA456221B113200BFFBD7 /* common */,
 				C5ECA453221B060400BFFBD7 /* util */,
 				B8E11A46221BE056007FBD5E /* newFeed */,
@@ -317,6 +322,15 @@
 			path = common;
 			sourceTree = "<group>";
 		};
+		C5ECA46D221C07F400BFFBD7 /* store */ = {
+			isa = PBXGroup;
+			children = (
+				C5ECA46E221C0E9800BFFBD7 /* StoreDetailViewController.swift */,
+				C5ECA46F221C0E9800BFFBD7 /* StoreDetailViewController.xib */,
+			);
+			path = store;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -428,6 +442,7 @@
 			files = (
 				C5ECA451221AA3FB00BFFBD7 /* SetupViewController.xib in Resources */,
 				97AA108C21F4A0FD00357553 /* LaunchScreen.storyboard in Resources */,
+				C5ECA471221C0E9800BFFBD7 /* StoreDetailViewController.xib in Resources */,
 				C5ECA46C221BF5E700BFFBD7 /* StoreCommonTableViewCell.xib in Resources */,
 				C5945A6D2217F78A0095FAB4 /* MyTableViewCell.xib in Resources */,
 				C5945A78221835370095FAB4 /* GradeViewController.xib in Resources */,
@@ -590,6 +605,7 @@
 				C5945A6C2217F78A0095FAB4 /* MyTableViewCell.swift in Sources */,
 				97E437BD2217CB200063419A /* MyPageViewController.swift in Sources */,
 				C5ECA460221B168900BFFBD7 /* CosmosDistrib.swift in Sources */,
+				C5ECA470221C0E9800BFFBD7 /* StoreDetailViewController.swift in Sources */,
 				B8E11A45221A9668007FBD5E /* SearchStoreTableViewCell.swift in Sources */,
 				B8E11A4A221BE8E3007FBD5E /* ResultStoreTableViewCell.swift in Sources */,
 				97E437AD2216B6950063419A /* TestThreeViewController.swift in Sources */,

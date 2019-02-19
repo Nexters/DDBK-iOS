@@ -80,7 +80,7 @@ class CustomStoreUIView: UIView {
         view.backgroundColor = .clear
         view.layer.cornerRadius = 10
         view.layer.borderWidth = 1
-        view.layer.borderColor = UIColor(red: 151.0/255.0, green: 151.0/255.0, blue: 151.0/255.0, alpha: 1.0).cgColor
+        view.layer.borderColor = UIColor(red: 236.0/255.0, green: 236.0/255.0, blue: 236.0/255.0, alpha: 1.0).cgColor
         view.snp.makeConstraints { (make) in
             make.size.equalTo(CGSize(width: 66.5, height: 22))
         }

@@ -169,6 +169,14 @@
                 <outletCollection property="profileSubViews" destination="mXr-g1-phq" collectionClass="NSMutableArray" id="DFF-hz-SWo"/>
                 <outletCollection property="profileSubViews" destination="k10-Up-CTg" collectionClass="NSMutableArray" id="oV6-rx-xfy"/>
                 <outletCollection property="profileSubViews" destination="wAa-EV-UJS" collectionClass="NSMutableArray" id="ui3-l6-kI8"/>
+                <outletCollection property="subImageViews" destination="yXi-D9-oYG" collectionClass="NSMutableArray" id="vCo-2h-WkN"/>
+                <outletCollection property="subImageViews" destination="RIl-KU-Rrf" collectionClass="NSMutableArray" id="yDE-CS-a9w"/>
+                <outletCollection property="subImageLabels" destination="CnY-lc-3uZ" collectionClass="NSMutableArray" id="ZnM-sF-4s8"/>
+                <outletCollection property="subImageLabels" destination="ZDs-HW-YTs" collectionClass="NSMutableArray" id="gvk-0f-6bf"/>
+                <outletCollection property="subImageLabels" destination="3Bs-xd-bD7" collectionClass="NSMutableArray" id="xkg-03-UYX"/>
+                <outletCollection property="subVarLabels" destination="2XB-fJ-Prh" collectionClass="NSMutableArray" id="qRO-hX-b9S"/>
+                <outletCollection property="subVarLabels" destination="9L5-Ta-319" collectionClass="NSMutableArray" id="l03-3P-eR2"/>
+                <outletCollection property="subVarLabels" destination="hlN-Qc-Qro" collectionClass="NSMutableArray" id="OhW-zp-Y5Q"/>
             </connections>
             <point key="canvasLocation" x="221.59999999999999" y="268.96551724137936"/>
         </tableViewCell>
