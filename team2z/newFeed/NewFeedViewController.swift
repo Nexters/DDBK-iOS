@@ -12,14 +12,14 @@ import SnapKit
 class NewFeedViewController: UIViewController, UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource{
     
     // variable
-    private var naviBar: UINavigationBar!
     private var storeIcon: UIImageView!
     private var searchStoreBar: UISearchBar!
     private var searchResultTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = "리뷰 쓰기"
+        //self.navigationItem.title = "리뷰 쓰기"
+        self.title = "리뷰 쓰기"
 //        self.navigationItem.backBarButtonItem = UIBarButtonItem(image: UIImage(named: "backbutton.png"), style: .plain, target: self, action: nil)
 //        let backbutton = UIBarButtonItem()
 //        backbutton.title = "뒤로가기"
@@ -35,8 +35,8 @@ class NewFeedViewController: UIViewController, UISearchBarDelegate, UITableViewD
     }
     
     @IBAction func backAction(_ sender: UIButton) {
-//        self.navigationController?.popViewController(animated: true)
-        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
+//        self.dismiss(animated: true, completion: nil)
     }
     
     // init
@@ -99,7 +99,7 @@ class NewFeedViewController: UIViewController, UISearchBarDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //self.navigationController?.pushViewController(GradeViewController(), animated: true)
+        self.navigationController?.pushViewController(StoreGradeViewController(), animated: true)
     }
    
 }
