@@ -86,6 +86,9 @@ class MypageCommonViewController: UIViewController {
         
         let nibName_0 = UINib(nibName: "CommonStoreTableViewCell", bundle: nil)
         myTableView.register(nibName_0, forCellReuseIdentifier: "CommonStoreCell")
+        
+        let nibName_1 = UINib(nibName: "StoreCommonTableViewCell", bundle: nil)
+        myTableView.register(nibName_1, forCellReuseIdentifier: "StoreCommonCell")
     }
 
 
@@ -130,9 +133,9 @@ extension MypageCommonViewController: UITableViewDataSource {
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CommonStoreCell") as! CommonStoreTableViewCell
-        cell.ratingLabel?.text = "4.3"
-        cell.cosmosView.rating = 4.3
+        let cell = tableView.dequeueReusableCell(withIdentifier: "StoreCommonCell") as! StoreCommonTableViewCell
+        cell.StoreFooterUIView.ratingLabel?.text = "2.8"
+        cell.StoreFooterUIView.cosmosView.rating = 2.8
         
         return cell
     }
