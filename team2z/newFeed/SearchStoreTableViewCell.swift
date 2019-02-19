@@ -35,6 +35,7 @@ class SearchStoreTableViewCell: UITableViewCell {
         snapKitLayout()
     }
     
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
