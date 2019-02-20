@@ -51,15 +51,15 @@ class StoreCommonTableViewCell: UITableViewCell {
         centerLineView.snp.makeConstraints { (make) in
             make.width.equalTo(self.snp.width).multipliedBy(0.9)
             make.height.equalTo(1)
-            make.top.equalTo(addressLabel.snp.bottom).offset(11)
+            make.top.equalTo(addressLabel.snp.bottom).offset(7)
             make.centerX.equalTo(self.snp.centerX)
         }
         // footer view 설정
         StoreFooterUIView.snp.makeConstraints { (make) in
             make.width.equalTo(self.snp.width).multipliedBy(0.9)
             make.height.equalTo(self.snp.height).multipliedBy(0.21)
-//            make.top.equalTo(centerLineView.snp.bottom).offset(11)
-            make.bottom.equalTo(self.snp.bottom).offset(-10)
+            make.top.equalTo(addressLabel.snp.bottom).offset(12)
+//            make.bottom.equalTo(self.snp.bottom).offset(-10)
             make.centerX.equalTo(self.snp.centerX)
         }
         

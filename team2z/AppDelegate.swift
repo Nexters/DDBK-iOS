@@ -78,14 +78,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AppSplashController {
         let splashView = self.splashView
 //        splashView.backgroundColor = UIColor(cgColor: )
         window!.addSubview(splashView)
-        
-        let logoImage = UIImageView(image: UIImage(named: "sample_splash.png"))
-        splashView.addSubview(logoImage)
-        
         splashView.snp.makeConstraints { make in
             make.edges.equalTo(window!)
         }
         
+//        let circleView = UIView(frame: CGRect(x: CGFloat(0), y: CGFloat(0), width: CGFloat(259), height: CGFloat(259)))
+//        circleView.backgroundColor = .white
+//        circleView.layer.borderWidth = 0
+//        circleView.layer.masksToBounds = false
+//        circleView.layer.cornerRadius = circleView.frame.height/2
+//        circleView.clipsToBounds = true
+//        //0.675
+//        splashView.addSubview(circleView)
+//        circleView.snp.makeConstraints { make in
+//            make.center.equalTo(splashView)
+//        }
+        
+        let logoImage = UIImageView(image: UIImage(named: "logo_image"))
+        splashView.addSubview(logoImage)
         logoImage.snp.makeConstraints { make in
             make.center.equalTo(splashView)
         }

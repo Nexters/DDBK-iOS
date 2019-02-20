@@ -11,6 +11,7 @@ target 'team2z' do
   pod 'SMSegmentView'
   pod 'UITextView+Placeholder'
   pod 'IQKeyboardManagerSwift'
+  pod "Floaty", "~> 4.1.0"
 
   target 'team2zTests' do
     inherit! :search_paths

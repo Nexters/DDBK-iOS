@@ -127,11 +127,13 @@ extension MyPageViewController: UITableViewDataSource, UITableViewDelegate {
             case 0:
                 let vc = MypageCommonViewController(nibName: "MypageCommonViewController", bundle: nil)
                 vc.customTitle = "떡볶이일진" + "님의 갔다왔어요"
+                vc.cellType = "갔다왔어요"
                 self.navigationController?.pushViewController(vc, animated: true)
                 break
             case 1:
                 let vc = MypageCommonViewController(nibName: "MypageCommonViewController", bundle: nil)
                 vc.customTitle = "떡볶이일진" + "님의 가고싶어요"
+                vc.cellType = "가고싶어요"
                 self.navigationController?.pushViewController(vc, animated: true)
                 break
             default:

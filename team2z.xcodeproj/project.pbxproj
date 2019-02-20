@@ -61,6 +61,15 @@
 		C5ECA483221D30AB00BFFBD7 /* ProfileInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5ECA481221D30AB00BFFBD7 /* ProfileInfoTableViewCell.xib */; };
 		C5ECA486221D46F800BFFBD7 /* IntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ECA484221D46F800BFFBD7 /* IntroductionViewController.swift */; };
 		C5ECA487221D46F800BFFBD7 /* IntroductionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5ECA485221D46F800BFFBD7 /* IntroductionViewController.xib */; };
+		C5ECA48B221D923500BFFBD7 /* DummyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ECA489221D923500BFFBD7 /* DummyViewController.swift */; };
+		C5ECA48C221D923500BFFBD7 /* DummyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5ECA48A221D923500BFFBD7 /* DummyViewController.xib */; };
+		C5ECA48F221DB52300BFFBD7 /* ReviewUserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ECA48E221DB52300BFFBD7 /* ReviewUserInfoView.swift */; };
+		C5ECA494221DBAB200BFFBD7 /* ReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ECA492221DBAB200BFFBD7 /* ReviewTableViewCell.swift */; };
+		C5ECA495221DBAB200BFFBD7 /* ReviewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5ECA493221DBAB200BFFBD7 /* ReviewTableViewCell.xib */; };
+		C5ECA497221DC51800BFFBD7 /* ReviewRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ECA496221DC51800BFFBD7 /* ReviewRatingView.swift */; };
+		C5ECA499221DC60F00BFFBD7 /* ReviewStoreInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ECA498221DC60F00BFFBD7 /* ReviewStoreInfoView.swift */; };
+		C5ECA49B221DC68D00BFFBD7 /* ReviewMoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ECA49A221DC68D00BFFBD7 /* ReviewMoreView.swift */; };
+		C5ECA49D221DC6C100BFFBD7 /* ReviewLikeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ECA49C221DC6C100BFFBD7 /* ReviewLikeView.swift */; };
 		DABF8A5DA998B0CA3E116233 /* Pods_team2zTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D94A64219EBE7665305B0C /* Pods_team2zTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -148,6 +157,15 @@
 		C5ECA481221D30AB00BFFBD7 /* ProfileInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileInfoTableViewCell.xib; sourceTree = "<group>"; };
 		C5ECA484221D46F800BFFBD7 /* IntroductionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionViewController.swift; sourceTree = "<group>"; };
 		C5ECA485221D46F800BFFBD7 /* IntroductionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IntroductionViewController.xib; sourceTree = "<group>"; };
+		C5ECA489221D923500BFFBD7 /* DummyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyViewController.swift; sourceTree = "<group>"; };
+		C5ECA48A221D923500BFFBD7 /* DummyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DummyViewController.xib; sourceTree = "<group>"; };
+		C5ECA48E221DB52300BFFBD7 /* ReviewUserInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewUserInfoView.swift; sourceTree = "<group>"; };
+		C5ECA492221DBAB200BFFBD7 /* ReviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTableViewCell.swift; sourceTree = "<group>"; };
+		C5ECA493221DBAB200BFFBD7 /* ReviewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewTableViewCell.xib; sourceTree = "<group>"; };
+		C5ECA496221DC51800BFFBD7 /* ReviewRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewRatingView.swift; sourceTree = "<group>"; };
+		C5ECA498221DC60F00BFFBD7 /* ReviewStoreInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewStoreInfoView.swift; sourceTree = "<group>"; };
+		C5ECA49A221DC68D00BFFBD7 /* ReviewMoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewMoreView.swift; sourceTree = "<group>"; };
+		C5ECA49C221DC6C100BFFBD7 /* ReviewLikeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewLikeView.swift; sourceTree = "<group>"; };
 		DF3E6B8BB15948E54AB8058D /* Pods_team2zUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_team2zUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -219,6 +237,8 @@
 		97AA108021F4A0F900357553 /* team2z */ = {
 			isa = PBXGroup;
 			children = (
+				C5ECA48D221DB33C00BFFBD7 /* review */,
+				C5ECA488221D91FB00BFFBD7 /* dummy */,
 				C5ECA46D221C07F400BFFBD7 /* store */,
 				C5ECA456221B113200BFFBD7 /* common */,
 				C5ECA453221B060400BFFBD7 /* util */,
@@ -357,6 +377,29 @@
 			path = profile_modify;
 			sourceTree = "<group>";
 		};
+		C5ECA488221D91FB00BFFBD7 /* dummy */ = {
+			isa = PBXGroup;
+			children = (
+				C5ECA489221D923500BFFBD7 /* DummyViewController.swift */,
+				C5ECA48A221D923500BFFBD7 /* DummyViewController.xib */,
+			);
+			path = dummy;
+			sourceTree = "<group>";
+		};
+		C5ECA48D221DB33C00BFFBD7 /* review */ = {
+			isa = PBXGroup;
+			children = (
+				C5ECA48E221DB52300BFFBD7 /* ReviewUserInfoView.swift */,
+				C5ECA496221DC51800BFFBD7 /* ReviewRatingView.swift */,
+				C5ECA498221DC60F00BFFBD7 /* ReviewStoreInfoView.swift */,
+				C5ECA49A221DC68D00BFFBD7 /* ReviewMoreView.swift */,
+				C5ECA49C221DC6C100BFFBD7 /* ReviewLikeView.swift */,
+				C5ECA492221DBAB200BFFBD7 /* ReviewTableViewCell.swift */,
+				C5ECA493221DBAB200BFFBD7 /* ReviewTableViewCell.xib */,
+			);
+			path = review;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -475,11 +518,13 @@
 				C5ECA479221C869000BFFBD7 /* UserFollowTableViewCell.xib in Resources */,
 				C5945A6D2217F78A0095FAB4 /* MyTableViewCell.xib in Resources */,
 				C5945A78221835370095FAB4 /* GradeViewController.xib in Resources */,
+				C5ECA495221DBAB200BFFBD7 /* ReviewTableViewCell.xib in Resources */,
 				C5ECA483221D30AB00BFFBD7 /* ProfileInfoTableViewCell.xib in Resources */,
 				C5945A712218175D0095FAB4 /* MypageDefaultTableViewCell.xib in Resources */,
 				C5ECA449221898CC00BFFBD7 /* TableViewCell.xib in Resources */,
 				C5ECA468221BED8900BFFBD7 /* CustomStoreUIView.xib in Resources */,
 				97AA10B021F4CBC400357553 /* Carthage in Resources */,
+				C5ECA48C221D923500BFFBD7 /* DummyViewController.xib in Resources */,
 				C5ECA464221B1A9500BFFBD7 /* MypageCommonViewController.xib in Resources */,
 				C5945A73221821DF0095FAB4 /* Assets.xcassets in Resources */,
 			);
@@ -597,6 +642,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-team2z/Pods-team2z-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework",
+				"${BUILT_PRODUCTS_DIR}/Floaty/Floaty.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SMSegmentView/SMSegmentView.framework",
 				"${BUILT_PRODUCTS_DIR}/UITextView+Placeholder/UITextView_Placeholder.framework",
@@ -607,6 +653,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DropDown.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Floaty.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SMSegmentView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UITextView_Placeholder.framework",
@@ -632,6 +679,7 @@
 				B8E11A48221BE189007FBD5E /* StoreGradeViewController.swift in Sources */,
 				C5ECA448221898CC00BFFBD7 /* TableViewCell.swift in Sources */,
 				97AA108221F4A0F900357553 /* AppDelegate.swift in Sources */,
+				C5ECA49D221DC6C100BFFBD7 /* ReviewLikeView.swift in Sources */,
 				C5ECA455221B063400BFFBD7 /* CustomBackButtonMaker.swift in Sources */,
 				97E437B52217CAE30063419A /* HomeViewController.swift in Sources */,
 				C5945A77221835370095FAB4 /* GradeViewController.swift in Sources */,
@@ -646,15 +694,21 @@
 				B8E11A4A221BE8E3007FBD5E /* ResultStoreTableViewCell.swift in Sources */,
 				97E437AD2216B6950063419A /* TestThreeViewController.swift in Sources */,
 				C5ECA486221D46F800BFFBD7 /* IntroductionViewController.swift in Sources */,
+				C5ECA48F221DB52300BFFBD7 /* ReviewUserInfoView.swift in Sources */,
 				97E437BB2217CB170063419A /* NewFeedViewController.swift in Sources */,
+				C5ECA494221DBAB200BFFBD7 /* ReviewTableViewCell.swift in Sources */,
 				C5ECA450221AA3FB00BFFBD7 /* SetupViewController.swift in Sources */,
 				97E437AF2216C1F40063419A /* BaseViewController.swift in Sources */,
 				C5ECA482221D30AB00BFFBD7 /* ProfileInfoTableViewCell.swift in Sources */,
 				C5ECA463221B1A9500BFFBD7 /* MypageCommonViewController.swift in Sources */,
+				C5ECA499221DC60F00BFFBD7 /* ReviewStoreInfoView.swift in Sources */,
 				C5ECA466221BEC4600BFFBD7 /* CustomStoreUIView.swift in Sources */,
+				C5ECA48B221D923500BFFBD7 /* DummyViewController.swift in Sources */,
 				C5ECA46B221BF5E700BFFBD7 /* StoreCommonTableViewCell.swift in Sources */,
 				97E437C32217E00E0063419A /* AddViewController.swift in Sources */,
+				C5ECA497221DC51800BFFBD7 /* ReviewRatingView.swift in Sources */,
 				97E437B72217CAF00063419A /* DiscoveryViewController.swift in Sources */,
+				C5ECA49B221DC68D00BFFBD7 /* ReviewMoreView.swift in Sources */,
 				B8E11A43221819F2007FBD5E /* NewFeedGoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

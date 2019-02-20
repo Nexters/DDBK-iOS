@@ -8,10 +8,16 @@
 
 import UIKit
 import SMSegmentView
+import Floaty
 
 class StoreDetailViewController: UIViewController {
     let myTableView: UITableView = UITableView(frame: CGRect.zero, style: .grouped)
     var segmentView: SMSegmentView?
+    let floaty = Floaty()
+    
+    let orangeColor = UIColor(red: 241.0/255.0, green: 90.0/255.0, blue: 36.0/255.0, alpha: 1.0)
+    
+    var isAddedWantToGo = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +28,7 @@ class StoreDetailViewController: UIViewController {
         self.navigationController?.navigationBar.backgroundColor = .white
         // White color Background + Red Color Title
         self.navigationController?.navigationBar.barTintColor = .white
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor(red: 241.0/255.0, green: 90.0/255.0, blue: 36.0/255.0, alpha: 1.0)]
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: orangeColor]
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: makeBackButton())
         
         // 테이블뷰 생성 및 설정
@@ -37,13 +43,28 @@ class StoreDetailViewController: UIViewController {
         // 테이블 뷰 border 없애기
 //        self.myTableView.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: myTableView.frame.size.width, height: 1))
         
+        // 플로팅 액션 버튼 설정
+        floaty.buttonImage = UIImage(named: "floating_review")!
+        floaty.buttonColor = orangeColor
+        floaty.addItem("", icon: UIImage(named: "mypage_ddbk")!)
+        floaty.fabDelegate = self
+        self.view.addSubview(floaty)
+        
         // 세그먼트 뷰 초기화
         self.initializeSegmentView()
         
+        // xib 커스텀 셀 등록
         let nibName_0 = UINib(nibName: "StoreCommonTableViewCell", bundle: nil)
         myTableView.register(nibName_0, forCellReuseIdentifier: "StoreCommonCell")
         let nibName_1 = UINib(nibName: "UserFollowTableViewCell", bundle: nil)
         myTableView.register(nibName_1, forCellReuseIdentifier: "UserFollowCell")
+        let nibName_2 = UINib(nibName: "ReviewTableViewCell", bundle: nil)
+        myTableView.register(nibName_2, forCellReuseIdentifier: "ReviewTableViewCell")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: orangeColor]
+        floaty.close()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -64,17 +85,30 @@ class StoreDetailViewController: UIViewController {
         //        dismiss(animated: true, completion: nil)
         navigationController?.popViewController(animated: true)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    @objc func addWantToGoAction(sender: UIButton) {
+        // 가고싶어요 목록에 가게 추가
+        
+        // 성공하면 버튼 이미지, 타이틀 색깔 변경
+        if isAddedWantToGo {
+            isAddedWantToGo = false
+            sender.setImage(UIImage(named: "pin_white"), for: .normal)
+            sender.setTitle(" 가고싶어요에 추가", for: .normal)
+            sender.setTitleColor(.white, for: .normal)
+            sender.backgroundColor = orangeColor
+            sender.layer.borderColor = UIColor.clear.cgColor
+        } else {
+            isAddedWantToGo = true
+            sender.setImage(UIImage(named: "pin_gray"), for: .normal)
+            sender.setTitleColor(UIColor(red: 155.0/255.0, green: 155.0/255.0, blue: 155.0/255.0, alpha: 1.0), for: .normal)
+            sender.setTitle(" 가고싶어요에 추가됨", for: .normal)
+//            sender.tintColor = UIColor(red: 155.0/255.0, green: 155.0/255.0, blue: 155.0/255.0, alpha: 1.0)
+            sender.backgroundColor = .white
+            sender.layer.borderColor = UIColor(red: 155.0/255.0, green: 155.0/255.0, blue: 155.0/255.0, alpha: 1.0).cgColor
+        }
+        
+        
     }
-    */
-
 }
 
 extension StoreDetailViewController: UITableViewDelegate {
@@ -105,6 +139,7 @@ extension StoreDetailViewController: UITableViewDataSource {
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
             let headerCell = tableView.dequeueReusableCell(withIdentifier: "StoreCommonCell") as! StoreCommonTableViewCell
+            headerCell.selectionStyle = .none
             headerCell.StoreFooterUIView.ratingLabel?.text = "2.8"
             headerCell.StoreFooterUIView.cosmosView.rating = 2.8
             headerCell.nameLabel.textColor = UIColor(red: 241.0/255.0, green: 90.0/255.0, blue: 36.0/255.0, alpha: 1.0)
@@ -113,21 +148,47 @@ extension StoreDetailViewController: UITableViewDataSource {
             headerCell.verticalLineView.backgroundColor = UIColor(red: 243.0/255.0, green: 243.0/255.0, blue: 243.0/255.0, alpha: 1.0)
             headerCell.phoneNumberLabel?.text = "02-123-1234"
             headerCell.arrowLabel.textColor = .clear
+            headerCell.centerLineView.backgroundColor = .clear
+            
+            // 가고싶어요 추가 버튼 생성 및 설정
+            let addWantToGoButton = UIButton()
+            addWantToGoButton.setImage(UIImage(named: "pin_white"), for: .normal)
+            addWantToGoButton.setTitle(" 가고싶어요에 추가", for: .normal)
+            addWantToGoButton.tintColor = .white
+            addWantToGoButton.backgroundColor = orangeColor
+            // 둥근 버튼 만들기
+            addWantToGoButton.layer.cornerRadius = 5
+            addWantToGoButton.layer.borderWidth = 1
+            addWantToGoButton.layer.borderColor = UIColor.clear.cgColor
+            headerCell.addSubview(addWantToGoButton)
+            addWantToGoButton.snp.makeConstraints { (make) in
+                make.width.equalTo(headerCell.centerLineView.snp.width)
+                make.height.equalTo(headerCell.snp.height).multipliedBy(0.22)
+                make.centerX.equalTo(headerCell.snp.centerX)
+                make.bottom.equalTo(headerCell.snp.bottom).offset(-11)
+            }
+            
+            addWantToGoButton.addTarget(self, action: #selector(self.addWantToGoAction), for: .touchUpInside)
             
             return headerCell
         }
         
         switch segmentView!.selectedSegmentIndex {
         case 0: // 왔다갔어요
-            let cell = tableView.dequeueReusableCell(withIdentifier: "StoreCommonCell") as! StoreCommonTableViewCell
-            cell.StoreFooterUIView.ratingLabel?.text = "2.8"
-            cell.StoreFooterUIView.cosmosView.rating = 2.8
-            cell.nameLabel.textColor = UIColor(red: 241.0/255.0, green: 90.0/255.0, blue: 36.0/255.0, alpha: 1.0)
-            cell.nameLabel.font = cell.nameLabel.font.withSize(22)
-            cell.addressLabel.textColor = UIColor(red: 74.0/255.0, green: 74.0/255.0, blue: 74.0/255.0, alpha: 1.0)
-            cell.verticalLineView.backgroundColor = UIColor(red: 243.0/255.0, green: 243.0/255.0, blue: 243.0/255.0, alpha: 1.0)
-            cell.phoneNumberLabel?.text = "02-123-1234"
-            cell.arrowLabel.textColor = .clear
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ReviewTableViewCell") as! ReviewTableViewCell
+            cell.selectionStyle = .none
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "UserFollowCell") as! UserFollowTableViewCell
+//            cell.profileImageView.image = UIImage(named: "profile_default_male")
+            
+            
+//            cell.StoreFooterUIView.ratingLabel?.text = "2.8"
+//            cell.StoreFooterUIView.cosmosView.rating = 2.8
+//            cell.nameLabel.textColor = UIColor(red: 241.0/255.0, green: 90.0/255.0, blue: 36.0/255.0, alpha: 1.0)
+//            cell.nameLabel.font = cell.nameLabel.font.withSize(22)
+//            cell.addressLabel.textColor = UIColor(red: 74.0/255.0, green: 74.0/255.0, blue: 74.0/255.0, alpha: 1.0)
+//            cell.verticalLineView.backgroundColor = UIColor(red: 243.0/255.0, green: 243.0/255.0, blue: 243.0/255.0, alpha: 1.0)
+//            cell.phoneNumberLabel?.text = "02-123-1234"
+//            cell.arrowLabel.textColor = .clear
             
             return cell
         default: // 인생떡볶이집
@@ -156,39 +217,6 @@ extension StoreDetailViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        //Create Button with title "Popular".
-//        let b1 = UIButton()
-//        b1.setTitle("왔다갔어요", for: .normal)
-//        b1.frame = CGRect(x: CGFloat(0), y: CGFloat(0), width: CGFloat(95), height: CGFloat(35))
-//        b1.setTitleColor(UIColor.black, for: .normal)
-//
-//
-//        //Create Button with title "Latest".
-//        let b2 = UIButton()
-//        b2.setTitle("인생떡볶이집", for: .normal)
-//        b2.frame = CGRect(x: CGFloat(105), y: CGFloat(0), width: CGFloat(95), height: CGFloat(35))
-//        b2.setTitleColor(UIColor.black, for: .normal)
-//
-//
-//        //Create UIView and Setup UIView
-//        let view = UIView()
-//        view.frame = CGRect(x: CGFloat(0), y: CGFloat(0), width: CGFloat(365), height: CGFloat(60))
-//        view.backgroundColor = UIColor.white
-//
-//
-//        //Add Button In UIView
-//        view.addSubview(b1)
-//        view.addSubview(b2)
-//
-//        b1.snp.makeConstraints { (make) in
-//            make.width.equalTo(view.snp.width).multipliedBy(0.5)
-//            make.leading.equalTo(view.snp.leading)
-//        }
-//        b2.snp.makeConstraints { (make) in
-//            make.width.equalTo(view.snp.width).multipliedBy(0.5)
-//            make.leading.equalTo(b1.snp.trailing)
-//        }
-        
         //Return UiView
         return segmentView
     }
@@ -206,14 +234,15 @@ extension StoreDetailViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
         switch indexPath.section {
-        case 0:
-            return 114.0
+        case 0: // 가게정보 셀
+            return 160.0
         default:
             switch segmentView!.selectedSegmentIndex {
-            case 0: // 왔다갔어요
-                return 200.0
-            default: // 인생떡볶이집
+            case 0: // 왔다갔어요 세그먼트
+                return UIScreen.main.bounds.width * 1.2347
+            default: // 인생떡볶이집 세그먼트
                 return 60.0
             }
         }
@@ -270,5 +299,26 @@ extension StoreDetailViewController: UITableViewDataSource {
         segmentView!.addTarget(self, action: #selector(selectSegmentInSegmentView(segmentView:)), for: .valueChanged)
         
         segmentView!.selectedSegmentIndex = 0
+    }
+}
+
+extension StoreDetailViewController: FloatyDelegate {
+    // MARK: - Floaty Delegate Methods
+    func floatyWillOpen(_ floaty: Floaty) {
+        print("Floaty Will Open")
+        
+    }
+    
+    func floatyDidOpen(_ floaty: Floaty) {
+        print("Floaty Did Open")
+        self.navigationController?.pushViewController(DummyViewController(), animated: true)
+    }
+    
+    func floatyWillClose(_ floaty: Floaty) {
+        print("Floaty Will Close")
+    }
+    
+    func floatyDidClose(_ floaty: Floaty) {
+        print("Floaty Did Close")
     }
 }
