@@ -55,6 +55,12 @@
 		C5ECA471221C0E9800BFFBD7 /* StoreDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5ECA46F221C0E9800BFFBD7 /* StoreDetailViewController.xib */; };
 		C5ECA478221C869000BFFBD7 /* UserFollowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ECA476221C869000BFFBD7 /* UserFollowTableViewCell.swift */; };
 		C5ECA479221C869000BFFBD7 /* UserFollowTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5ECA477221C869000BFFBD7 /* UserFollowTableViewCell.xib */; };
+		C5ECA47E221D223B00BFFBD7 /* ProfileModifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ECA47C221D223B00BFFBD7 /* ProfileModifyViewController.swift */; };
+		C5ECA47F221D223B00BFFBD7 /* ProfileModifyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5ECA47D221D223B00BFFBD7 /* ProfileModifyViewController.xib */; };
+		C5ECA482221D30AB00BFFBD7 /* ProfileInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ECA480221D30AB00BFFBD7 /* ProfileInfoTableViewCell.swift */; };
+		C5ECA483221D30AB00BFFBD7 /* ProfileInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5ECA481221D30AB00BFFBD7 /* ProfileInfoTableViewCell.xib */; };
+		C5ECA486221D46F800BFFBD7 /* IntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ECA484221D46F800BFFBD7 /* IntroductionViewController.swift */; };
+		C5ECA487221D46F800BFFBD7 /* IntroductionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5ECA485221D46F800BFFBD7 /* IntroductionViewController.xib */; };
 		DABF8A5DA998B0CA3E116233 /* Pods_team2zTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D94A64219EBE7665305B0C /* Pods_team2zTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -136,6 +142,12 @@
 		C5ECA46F221C0E9800BFFBD7 /* StoreDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoreDetailViewController.xib; sourceTree = "<group>"; };
 		C5ECA476221C869000BFFBD7 /* UserFollowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFollowTableViewCell.swift; sourceTree = "<group>"; };
 		C5ECA477221C869000BFFBD7 /* UserFollowTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserFollowTableViewCell.xib; sourceTree = "<group>"; };
+		C5ECA47C221D223B00BFFBD7 /* ProfileModifyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModifyViewController.swift; sourceTree = "<group>"; };
+		C5ECA47D221D223B00BFFBD7 /* ProfileModifyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileModifyViewController.xib; sourceTree = "<group>"; };
+		C5ECA480221D30AB00BFFBD7 /* ProfileInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInfoTableViewCell.swift; sourceTree = "<group>"; };
+		C5ECA481221D30AB00BFFBD7 /* ProfileInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileInfoTableViewCell.xib; sourceTree = "<group>"; };
+		C5ECA484221D46F800BFFBD7 /* IntroductionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionViewController.swift; sourceTree = "<group>"; };
+		C5ECA485221D46F800BFFBD7 /* IntroductionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IntroductionViewController.xib; sourceTree = "<group>"; };
 		DF3E6B8BB15948E54AB8058D /* Pods_team2zUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_team2zUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -276,6 +288,7 @@
 		C5945A74221835120095FAB4 /* mypage */ = {
 			isa = PBXGroup;
 			children = (
+				C5ECA47B221D205A00BFFBD7 /* profile_modify */,
 				C5ECA452221ACF7700BFFBD7 /* setup */,
 				C5945A6A2217F78A0095FAB4 /* MyTableViewCell.swift */,
 				C5945A6B2217F78A0095FAB4 /* MyTableViewCell.xib */,
@@ -329,6 +342,19 @@
 				C5ECA46F221C0E9800BFFBD7 /* StoreDetailViewController.xib */,
 			);
 			path = store;
+			sourceTree = "<group>";
+		};
+		C5ECA47B221D205A00BFFBD7 /* profile_modify */ = {
+			isa = PBXGroup;
+			children = (
+				C5ECA47C221D223B00BFFBD7 /* ProfileModifyViewController.swift */,
+				C5ECA47D221D223B00BFFBD7 /* ProfileModifyViewController.xib */,
+				C5ECA480221D30AB00BFFBD7 /* ProfileInfoTableViewCell.swift */,
+				C5ECA481221D30AB00BFFBD7 /* ProfileInfoTableViewCell.xib */,
+				C5ECA484221D46F800BFFBD7 /* IntroductionViewController.swift */,
+				C5ECA485221D46F800BFFBD7 /* IntroductionViewController.xib */,
+			);
+			path = profile_modify;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -440,6 +466,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5ECA487221D46F800BFFBD7 /* IntroductionViewController.xib in Resources */,
+				C5ECA47F221D223B00BFFBD7 /* ProfileModifyViewController.xib in Resources */,
 				C5ECA451221AA3FB00BFFBD7 /* SetupViewController.xib in Resources */,
 				97AA108C21F4A0FD00357553 /* LaunchScreen.storyboard in Resources */,
 				C5ECA471221C0E9800BFFBD7 /* StoreDetailViewController.xib in Resources */,
@@ -447,6 +475,7 @@
 				C5ECA479221C869000BFFBD7 /* UserFollowTableViewCell.xib in Resources */,
 				C5945A6D2217F78A0095FAB4 /* MyTableViewCell.xib in Resources */,
 				C5945A78221835370095FAB4 /* GradeViewController.xib in Resources */,
+				C5ECA483221D30AB00BFFBD7 /* ProfileInfoTableViewCell.xib in Resources */,
 				C5945A712218175D0095FAB4 /* MypageDefaultTableViewCell.xib in Resources */,
 				C5ECA449221898CC00BFFBD7 /* TableViewCell.xib in Resources */,
 				C5ECA468221BED8900BFFBD7 /* CustomStoreUIView.xib in Resources */,
@@ -568,7 +597,9 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-team2z/Pods-team2z-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SMSegmentView/SMSegmentView.framework",
+				"${BUILT_PRODUCTS_DIR}/UITextView+Placeholder/UITextView_Placeholder.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -576,7 +607,9 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DropDown.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SMSegmentView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UITextView_Placeholder.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -591,6 +624,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				97E437B32217C7C90063419A /* BaseTabBarController.swift in Sources */,
+				C5ECA47E221D223B00BFFBD7 /* ProfileModifyViewController.swift in Sources */,
 				C5945A702218175D0095FAB4 /* MypageDefaultTableViewCell.swift in Sources */,
 				B8E11A4C221BF41B007FBD5E /* WriteReviewView.swift in Sources */,
 				97E437B12217255B0063419A /* TestViewController.swift in Sources */,
@@ -611,9 +645,11 @@
 				B8E11A45221A9668007FBD5E /* SearchStoreTableViewCell.swift in Sources */,
 				B8E11A4A221BE8E3007FBD5E /* ResultStoreTableViewCell.swift in Sources */,
 				97E437AD2216B6950063419A /* TestThreeViewController.swift in Sources */,
+				C5ECA486221D46F800BFFBD7 /* IntroductionViewController.swift in Sources */,
 				97E437BB2217CB170063419A /* NewFeedViewController.swift in Sources */,
 				C5ECA450221AA3FB00BFFBD7 /* SetupViewController.swift in Sources */,
 				97E437AF2216C1F40063419A /* BaseViewController.swift in Sources */,
+				C5ECA482221D30AB00BFFBD7 /* ProfileInfoTableViewCell.swift in Sources */,
 				C5ECA463221B1A9500BFFBD7 /* MypageCommonViewController.swift in Sources */,
 				C5ECA466221BEC4600BFFBD7 /* CustomStoreUIView.swift in Sources */,
 				C5ECA46B221BF5E700BFFBD7 /* StoreCommonTableViewCell.swift in Sources */,

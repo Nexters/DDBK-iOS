@@ -9,6 +9,8 @@ target 'team2z' do
   pod 'Alamofire', '~> 5.0.0.beta.1'
   pod 'DropDown'
   pod 'SMSegmentView'
+  pod 'UITextView+Placeholder'
+  pod 'IQKeyboardManagerSwift'
 
   target 'team2zTests' do
     inherit! :search_paths
