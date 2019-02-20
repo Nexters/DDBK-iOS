@@ -9,6 +9,10 @@
 import UIKit
 import SnapKit
 
+protocol YourCellDelegate : class {
+    func didPressButton(_ tag: Int)
+}
+
 class MyTableViewCell: UITableViewCell {
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var profileNameLabel: UILabel!
@@ -20,6 +24,8 @@ class MyTableViewCell: UITableViewCell {
     @IBOutlet var subImageViews: [UIImageView]!
     @IBOutlet var subImageLabels: [UILabel]!
     @IBOutlet var subVarLabels: [UILabel]!
+    
+    var cellDelegate: YourCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -87,7 +93,11 @@ class MyTableViewCell: UITableViewCell {
     }
     
     @IBAction func modifyAction(_ sender: UIButton) {
-        
+//        self.navigationController?.pushViewController(ProfileModifyViewController(), animated: true)
+//        delegate?.didTapButton()
+        cellDelegate?.didPressButton(sender.tag)
     }
     
 }
+
+

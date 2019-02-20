@@ -85,9 +85,6 @@ class MypageCommonViewController: UIViewController {
             make.width.equalTo(self.view.snp.width)
         }
         
-        let nibName_0 = UINib(nibName: "CommonStoreTableViewCell", bundle: nil)
-        myTableView.register(nibName_0, forCellReuseIdentifier: "CommonStoreCell")
-        
         let nibName_1 = UINib(nibName: "StoreCommonTableViewCell", bundle: nil)
         myTableView.register(nibName_1, forCellReuseIdentifier: "StoreCommonCell")
     }

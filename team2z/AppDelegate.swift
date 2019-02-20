@@ -9,6 +9,7 @@
 import UIKit
 import SnapKit
 import DropDown
+import IQKeyboardManagerSwift
 
 protocol AppSplashController {
     var splashView: UIView { get }
@@ -40,6 +41,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AppSplashController {
         window?.makeKeyAndVisible()
         
 //        displaySplashAnimation()
+        
+        IQKeyboardManager.shared.enable = true
+        IQKeyboardManager.shared.toolbarTintColor = .white
+        IQKeyboardManager.shared.shouldShowToolbarPlaceholder = true
+        IQKeyboardManager.shared.placeholderFont = UIFont(name: "Times New Roman", size: 13)
+//        IQKeyboardManager.shared.text
         
         return true
     }

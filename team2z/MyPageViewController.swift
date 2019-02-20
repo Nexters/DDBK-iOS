@@ -15,7 +15,6 @@ class MyPageViewController: UIViewController {
     let menuIcons: [String] = ["mypage_went.png", "mypage_pin.png", "mypage_like.png", "mypage_setup.png"]
     let menuLabels: [String] = ["갔다 왔어요", "가고 싶어요", "좋아요한 리뷰", "설정"]
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -83,6 +82,10 @@ extension MyPageViewController: UITableViewDataSource, UITableViewDelegate {
             } catch {
                 
             }
+            
+            cell.cellDelegate = self
+            cell.profileModifyButton.tag = indexPath.row
+            
             cell.profileNameLabel?.text = "떡볶이일진"
             cell.profileNameLabel?.sizeToFit()
             cell.profileDescLabel?.text = "만 3세부터 떡볶이를 먹은 떡볶이 영재.\n밀떡파. 안매운 떡볶이파. 강남역 인근에 많이 출몰해요!"
@@ -175,4 +178,13 @@ extension MyPageViewController: UITableViewDataSource, UITableViewDelegate {
         print("tap2 in mpvc")
         self.navigationController?.pushViewController(GradeViewController(), animated: true)
     }
+    
+}
+
+extension MyPageViewController: YourCellDelegate {
+    func didPressButton(_ tag: Int) {
+       print("I have pressed a button with a tag: \(tag)")
+        self.navigationController?.pushViewController(ProfileModifyViewController(), animated: true)
+    }
+    
 }
