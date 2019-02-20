@@ -11,6 +11,7 @@ import DropDown
 
 class MypageCommonViewController: UIViewController {
     var customTitle: String?
+    var cellType: String?
     
 //    let filterView = UIView()
     @IBOutlet weak var filterView: UIView!
@@ -87,6 +88,9 @@ class MypageCommonViewController: UIViewController {
         
         let nibName_1 = UINib(nibName: "StoreCommonTableViewCell", bundle: nil)
         myTableView.register(nibName_1, forCellReuseIdentifier: "StoreCommonCell")
+        
+        let nibName_2 = UINib(nibName: "ReviewTableViewCell", bundle: nil)
+        myTableView.register(nibName_2, forCellReuseIdentifier: "ReviewTableViewCell")
     }
 
 
@@ -130,12 +134,23 @@ extension MypageCommonViewController: UITableViewDataSource {
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        switch cellType {
+        case "갔다왔어요":
+            // 갔다왔어요
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ReviewTableViewCell") as! ReviewTableViewCell
+            cell.selectionStyle = .none
+            
+            return cell
+        default:
+            // 가고싶어요
+            let cell2 = tableView.dequeueReusableCell(withIdentifier: "StoreCommonCell") as! StoreCommonTableViewCell
+            cell2.StoreFooterUIView.ratingLabel?.text = "2.8"
+            cell2.StoreFooterUIView.cosmosView.rating = 2.8
+            cell2.selectionStyle = .none
+            
+            return cell2
+        }
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "StoreCommonCell") as! StoreCommonTableViewCell
-        cell.StoreFooterUIView.ratingLabel?.text = "2.8"
-        cell.StoreFooterUIView.cosmosView.rating = 2.8
-        
-        return cell
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -147,7 +162,7 @@ extension MypageCommonViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         
-        let view:UIView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: self.view.bounds.size.width, height: 10))
+        let view:UIView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: self.view.bounds.size.width, height: 5))
         view.backgroundColor = .clear
         
         return view
@@ -157,7 +172,16 @@ extension MypageCommonViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 114.0
+        
+        switch cellType {
+        case "갔다왔어요":
+            // 갔다왔어요
+            return UIScreen.main.bounds.width * 1.2347
+        default:
+            // 가고싶어요
+            return 98.0
+        }
+        
     }
     
     @objc func handleTap_0(sender: UITapGestureRecognizer) {
