@@ -53,6 +53,11 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vSi-QC-0ht">
+                        <rect key="frame" x="44" y="388" width="240" height="23"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
                 </subviews>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -65,6 +70,7 @@
                 <outlet property="reviewRatingView" destination="ycd-Xq-iFr" id="twu-eg-jtL"/>
                 <outlet property="reviewStoreInfoView" destination="dq8-F6-TNN" id="WEE-qh-duD"/>
                 <outlet property="reviewUserInfoView" destination="oGq-yW-fEg" id="2cU-T5-MxT"/>
+                <outlet property="secondLineView" destination="vSi-QC-0ht" id="Y07-bm-PQf"/>
             </connections>
             <point key="canvasLocation" x="137.59999999999999" y="331.0344827586207"/>
         </tableViewCell>

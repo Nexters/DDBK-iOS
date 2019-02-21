@@ -26,7 +26,13 @@ class ReviewUserInfoView: UIView {
     var reviewCreationDateLabel: UILabel?
     var reviewMenuButton: UIButton?
     
+    let picker = UIImagePickerController()
+    
+    var isFollowed = false
+    
     let orangeColor = UIColor(red: 241.0/255.0, green: 90.0/255.0, blue: 36.0/255.0, alpha: 1.0)
+    
+    let greenColor = UIColor(red: 107.0/255.0, green: 160.0/255.0, blue: 75.0/255.0, alpha: 1.0)
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -96,7 +102,7 @@ class ReviewUserInfoView: UIView {
         }
 //        followButton.titleLabel?.adjustsFontSizeToFitWidth = true
 //        followButton.titleLabel?.minimumScaleFactor = 0.5
-//        followButton.addTarget(self, action: #selector(self.addWantToGoAction), for: .touchUpInside)
+        followButton.addTarget(self, action: #selector(self.followButtonPressed), for: .touchUpInside)
         
         // 리뷰 메뉴 버튼 생성 및 설정 reviewMenuButton
         let reviewMenuButton = UIButton()
@@ -108,6 +114,7 @@ class ReviewUserInfoView: UIView {
             make.centerY.equalTo(self.snp.centerY)
             make.trailing.equalTo(self.snp.trailing)
         }
+        reviewMenuButton.addTarget(self, action: #selector(self.reviewMenuButtonPressed), for: .touchUpInside)
         
         // 리뷰 작성 날짜 레이블 생성 및 설정
         reviewCreationDateLabel = UILabel(frame: CGRect(x: CGFloat(0), y: CGFloat(0), width: CGFloat(250), height: CGFloat(28)))
@@ -124,5 +131,63 @@ class ReviewUserInfoView: UIView {
         }
         
     }
+    
+    @objc func followButtonPressed(sender: UIButton) {
+        if isFollowed { // 팔로잉 상태
+            isFollowed = false
+            sender.setTitle("팔로잉", for: .normal)
+            sender.setTitleColor(greenColor, for: .normal)
+        } else { // 팔로우 상태
+            isFollowed = true
+            sender.setTitle("팔로우", for: .normal)
+            sender.setTitleColor(orangeColor, for: .normal)
+        }
+    }
 
+    @objc func reviewMenuButtonPressed() {
+        print("리뷰 메뉴 버튼 ... 선택했습니다.")
+        let alert =  UIAlertController(title: "리뷰 메뉴 더보기", message: "", preferredStyle: .actionSheet)
+        
+        let library =  UIAlertAction(title: "수정하기", style: .default) { (action) in self.openLibrary()
+        }
+        let camera =  UIAlertAction(title: "삭제하기", style: .default) { (action) in
+            self.openCamera()
+        }
+        let cancel = UIAlertAction(title: "취소", style: .cancel, handler: nil)
+        
+        alert.addAction(library)
+        alert.addAction(camera)
+        alert.addAction(cancel)
+        
+//        present(alert, animated: true, completion: nil)
+//        delegate?.showReviewMenu(vc: alert)
+        self.window?.rootViewController?.present(alert, animated: true, completion: nil)
+    }
+}
+
+extension ReviewUserInfoView: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func openLibrary(){
+        
+        picker.sourceType = .photoLibrary
+        
+        self.window?.rootViewController?.present(picker, animated: true, completion: nil)
+        
+    }
+    
+    func openCamera(){
+        if(UIImagePickerController .isSourceTypeAvailable(.camera)){
+            picker.sourceType = .camera
+            self.window?.rootViewController?.present(picker, animated: true, completion: nil)
+        } else{
+            print("Camera not available")
+        }
+        
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        self.window?.rootViewController?.dismiss(animated: true, completion: nil)
+    }
+    
+    
 }
