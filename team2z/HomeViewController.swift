@@ -7,13 +7,28 @@
 //
 
 import UIKit
+import SnapKit
 
 class HomeViewController: UIViewController {
+    
+//    var newUserUIView = NewUserUIView(frame: self.view.frame)
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.navigationItem.titleView =  navTitleWithImageAndText(titleText: " 떡슐랭", imageName: "home_title_icon")
+        self.navigationItem.titleView = navTitleWithImageAndText(titleText: " 떡슐랭", imageName: "home_title_icon")        
+        self.navigationController?.navigationBar.backgroundColor = .white
+        self.navigationController?.navigationBar.barTintColor = .white
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: makeSearchButton())
+        
+        let newUserUIView = NewUserHomeView(frame: self.view.frame)
+        self.view.addSubview(newUserUIView)
+        newUserUIView.snp.makeConstraints { (make) in
+            
+            make.top.bottom.left.right.equalTo(self.view)
+        }
+        
+
         
     }
     
@@ -57,5 +72,16 @@ class HomeViewController: UIViewController {
         
         return titleView
         
+    }
+    
+    func makeSearchButton() -> UIButton {
+        let backButton = UIButton(type: .custom)
+        backButton.setImage(UIImage(named: "home_search"), for: .normal)
+        backButton.addTarget(self, action: #selector(self.searchButtonPressed), for: .touchUpInside)
+        return backButton
+    }
+    
+    @objc func searchButtonPressed() {
+        print("홈 네비게이션 검색 버튼 눌름")
     }
 }
