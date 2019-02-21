@@ -83,5 +83,7 @@ class HomeViewController: UIViewController {
     
     @objc func searchButtonPressed() {
         print("홈 네비게이션 검색 버튼 눌름")
+//        show(SearchViewController(), sender: <#T##Any?#>)
+        self.present(SearchViewController(), animated: true, completion: nil)
     }
 }
