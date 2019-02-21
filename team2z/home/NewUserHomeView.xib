@@ -46,12 +46,8 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo_image" translatesAutoresizingMaskIntoConstraints="NO" id="rz9-y1-YiU">
-                    <rect key="frame" x="97" y="311" width="75" height="109"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo_image" translatesAutoresizingMaskIntoConstraints="NO" id="vmq-hf-eTu">
-                    <rect key="frame" x="194" y="311" width="75" height="109"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="home_logo_icon" translatesAutoresizingMaskIntoConstraints="NO" id="vmq-hf-eTu">
+                    <rect key="frame" x="112" y="260" width="150" height="160"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
             </subviews>
@@ -61,6 +57,6 @@
         </view>
     </objects>
     <resources>
-        <image name="logo_image" width="76" height="118"/>
+        <image name="home_logo_icon" width="150" height="160"/>
     </resources>
 </document>

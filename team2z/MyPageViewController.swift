@@ -19,6 +19,8 @@ class MyPageViewController: UIViewController {
         super.viewDidLoad()
 
         self.title = "마이페이지"
+        self.navigationController?.navigationBar.backgroundColor = .white
+        self.navigationController?.navigationBar.barTintColor = .white
         
         // 테이블뷰 생성 및 설정
         self.myTableView.dataSource = self
