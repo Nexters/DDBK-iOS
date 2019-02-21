@@ -137,6 +137,10 @@ extension MyPageViewController: UITableViewDataSource, UITableViewDelegate {
                 self.navigationController?.pushViewController(vc, animated: true)
                 break
             default:
+                let vc = MypageCommonViewController(nibName: "MypageCommonViewController", bundle: nil)
+                vc.customTitle = "좋아요한 리뷰"
+                vc.cellType = "좋아요한리뷰"
+                self.navigationController?.pushViewController(vc, animated: true)
                 break
             }
 //            self.hidesBottomBarWhenPushed = true

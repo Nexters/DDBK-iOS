@@ -70,6 +70,8 @@
 		C5ECA499221DC60F00BFFBD7 /* ReviewStoreInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ECA498221DC60F00BFFBD7 /* ReviewStoreInfoView.swift */; };
 		C5ECA49B221DC68D00BFFBD7 /* ReviewMoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ECA49A221DC68D00BFFBD7 /* ReviewMoreView.swift */; };
 		C5ECA49D221DC6C100BFFBD7 /* ReviewLikeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ECA49C221DC6C100BFFBD7 /* ReviewLikeView.swift */; };
+		C5ECA4A0221EB54300BFFBD7 /* ImageTouchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ECA49E221EB54300BFFBD7 /* ImageTouchViewController.swift */; };
+		C5ECA4A1221EB54300BFFBD7 /* ImageTouchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5ECA49F221EB54300BFFBD7 /* ImageTouchViewController.xib */; };
 		DABF8A5DA998B0CA3E116233 /* Pods_team2zTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D94A64219EBE7665305B0C /* Pods_team2zTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -166,6 +168,8 @@
 		C5ECA498221DC60F00BFFBD7 /* ReviewStoreInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewStoreInfoView.swift; sourceTree = "<group>"; };
 		C5ECA49A221DC68D00BFFBD7 /* ReviewMoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewMoreView.swift; sourceTree = "<group>"; };
 		C5ECA49C221DC6C100BFFBD7 /* ReviewLikeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewLikeView.swift; sourceTree = "<group>"; };
+		C5ECA49E221EB54300BFFBD7 /* ImageTouchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTouchViewController.swift; sourceTree = "<group>"; };
+		C5ECA49F221EB54300BFFBD7 /* ImageTouchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageTouchViewController.xib; sourceTree = "<group>"; };
 		DF3E6B8BB15948E54AB8058D /* Pods_team2zUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_team2zUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -396,6 +400,8 @@
 				C5ECA49C221DC6C100BFFBD7 /* ReviewLikeView.swift */,
 				C5ECA492221DBAB200BFFBD7 /* ReviewTableViewCell.swift */,
 				C5ECA493221DBAB200BFFBD7 /* ReviewTableViewCell.xib */,
+				C5ECA49E221EB54300BFFBD7 /* ImageTouchViewController.swift */,
+				C5ECA49F221EB54300BFFBD7 /* ImageTouchViewController.xib */,
 			);
 			path = review;
 			sourceTree = "<group>";
@@ -523,6 +529,7 @@
 				C5945A712218175D0095FAB4 /* MypageDefaultTableViewCell.xib in Resources */,
 				C5ECA449221898CC00BFFBD7 /* TableViewCell.xib in Resources */,
 				C5ECA468221BED8900BFFBD7 /* CustomStoreUIView.xib in Resources */,
+				C5ECA4A1221EB54300BFFBD7 /* ImageTouchViewController.xib in Resources */,
 				97AA10B021F4CBC400357553 /* Carthage in Resources */,
 				C5ECA48C221D923500BFFBD7 /* DummyViewController.xib in Resources */,
 				C5ECA464221B1A9500BFFBD7 /* MypageCommonViewController.xib in Resources */,
@@ -705,6 +712,7 @@
 				C5ECA466221BEC4600BFFBD7 /* CustomStoreUIView.swift in Sources */,
 				C5ECA48B221D923500BFFBD7 /* DummyViewController.swift in Sources */,
 				C5ECA46B221BF5E700BFFBD7 /* StoreCommonTableViewCell.swift in Sources */,
+				C5ECA4A0221EB54300BFFBD7 /* ImageTouchViewController.swift in Sources */,
 				97E437C32217E00E0063419A /* AddViewController.swift in Sources */,
 				C5ECA497221DC51800BFFBD7 /* ReviewRatingView.swift in Sources */,
 				97E437B72217CAF00063419A /* DiscoveryViewController.swift in Sources */,

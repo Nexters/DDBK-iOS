@@ -126,7 +126,7 @@ extension MypageCommonViewController: UITableViewDelegate {
 extension MypageCommonViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 4
     }
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -135,13 +135,7 @@ extension MypageCommonViewController: UITableViewDataSource {
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch cellType {
-        case "갔다왔어요":
-            // 갔다왔어요
-            let cell = tableView.dequeueReusableCell(withIdentifier: "ReviewTableViewCell") as! ReviewTableViewCell
-            cell.selectionStyle = .none
-            
-            return cell
-        default:
+        case "가고싶어요":
             // 가고싶어요
             let cell2 = tableView.dequeueReusableCell(withIdentifier: "StoreCommonCell") as! StoreCommonTableViewCell
             cell2.StoreFooterUIView.ratingLabel?.text = "2.8"
@@ -149,6 +143,19 @@ extension MypageCommonViewController: UITableViewDataSource {
             cell2.selectionStyle = .none
             
             return cell2
+        default:
+            // 갔다왔어요 & 좋아요한 리뷰
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ReviewTableViewCell") as! ReviewTableViewCell
+            cell.selectionStyle = .none
+            // uiview tap 제어
+            let tapGesture_0 = UITapGestureRecognizer(target: self, action: #selector(goToStoreDetail))
+            //            let tapGesture_1 = UITapGestureRecognizer(target: self, action: #selector(goToStoreDetail))
+            let tapGesture_2 = UITapGestureRecognizer(target: self, action: #selector(goToImageTouchView(tapGestureRecognizer:)))
+            cell.reviewStoreInfoView.addGestureRecognizer(tapGesture_0)
+            cell.reviewImageView.addGestureRecognizer(tapGesture_2)
+            cell.reviewImageView.isUserInteractionEnabled = true
+            
+            return cell
         }
         
     }
@@ -168,23 +175,41 @@ extension MypageCommonViewController: UITableViewDataSource {
         return view
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.navigationController?.pushViewController(StoreDetailViewController(), animated: true)
+        
+        switch cellType {
+        case "갔다왔어요":
+            // 갔다왔어요
+            break
+        case "가고싶어요":
+            // 가고싶어요
+            self.navigationController?.pushViewController(StoreDetailViewController(), animated: true)
+            break
+        default:
+            // 좋아요한 리뷰
+            break
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         switch cellType {
-        case "갔다왔어요":
-            // 갔다왔어요
-            return UIScreen.main.bounds.width * 1.2347
-        default:
+        case "가고싶어요":
             // 가고싶어요
             return 98.0
+        default:
+            // 갔다왔어요 & 좋아요한 리뷰
+            return UIScreen.main.bounds.width * 1.2347
         }
         
     }
     
-    @objc func handleTap_0(sender: UITapGestureRecognizer) {
-        self.navigationController?.pushViewController(GradeViewController(), animated: true)
+    @objc func goToStoreDetail(sender: UITapGestureRecognizer) {
+       self.navigationController?.pushViewController(StoreDetailViewController(), animated: true)
+    }
+    @objc func goToImageTouchView(tapGestureRecognizer: UITapGestureRecognizer) {
+        let tappedImage = tapGestureRecognizer.view as! UIImageView
+        let vc = ImageTouchViewController()
+        vc.reviewImageView = tappedImage
+        self.present(vc, animated: true, completion: nil)
     }
 }
