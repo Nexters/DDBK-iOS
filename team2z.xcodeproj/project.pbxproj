@@ -32,6 +32,8 @@
 		B8E11A48221BE189007FBD5E /* StoreGradeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E11A47221BE189007FBD5E /* StoreGradeViewController.swift */; };
 		B8E11A4A221BE8E3007FBD5E /* ResultStoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E11A49221BE8E3007FBD5E /* ResultStoreTableViewCell.swift */; };
 		B8E11A4C221BF41B007FBD5E /* WriteReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E11A4B221BF41B007FBD5E /* WriteReviewView.swift */; };
+		C514EFFB221F03FC009876D6 /* NewUserHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C514EFFA221F03FC009876D6 /* NewUserHomeView.swift */; };
+		C514EFFD221F0418009876D6 /* NewUserHomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C514EFFC221F0418009876D6 /* NewUserHomeView.xib */; };
 		C5945A6C2217F78A0095FAB4 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5945A6A2217F78A0095FAB4 /* MyTableViewCell.swift */; };
 		C5945A6D2217F78A0095FAB4 /* MyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5945A6B2217F78A0095FAB4 /* MyTableViewCell.xib */; };
 		C5945A702218175D0095FAB4 /* MypageDefaultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5945A6E2218175D0095FAB4 /* MypageDefaultTableViewCell.swift */; };
@@ -72,6 +74,9 @@
 		C5ECA49D221DC6C100BFFBD7 /* ReviewLikeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ECA49C221DC6C100BFFBD7 /* ReviewLikeView.swift */; };
 		C5ECA4A0221EB54300BFFBD7 /* ImageTouchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ECA49E221EB54300BFFBD7 /* ImageTouchViewController.swift */; };
 		C5ECA4A1221EB54300BFFBD7 /* ImageTouchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5ECA49F221EB54300BFFBD7 /* ImageTouchViewController.xib */; };
+		C5ECA4A4221EC3F000BFFBD7 /* NewUserUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ECA4A3221EC3F000BFFBD7 /* NewUserUIView.swift */; };
+		C5ECA4A6221EC42900BFFBD7 /* NewUserUIView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5ECA4A5221EC42900BFFBD7 /* NewUserUIView.xib */; };
+		C5ECA4A8221ECF3300BFFBD7 /* NewUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ECA4A7221ECF3300BFFBD7 /* NewUserView.swift */; };
 		DABF8A5DA998B0CA3E116233 /* Pods_team2zTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D94A64219EBE7665305B0C /* Pods_team2zTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -130,6 +135,8 @@
 		B8E11A47221BE189007FBD5E /* StoreGradeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreGradeViewController.swift; sourceTree = "<group>"; };
 		B8E11A49221BE8E3007FBD5E /* ResultStoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultStoreTableViewCell.swift; sourceTree = "<group>"; };
 		B8E11A4B221BF41B007FBD5E /* WriteReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteReviewView.swift; sourceTree = "<group>"; };
+		C514EFFA221F03FC009876D6 /* NewUserHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserHomeView.swift; sourceTree = "<group>"; };
+		C514EFFC221F0418009876D6 /* NewUserHomeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewUserHomeView.xib; sourceTree = "<group>"; };
 		C5945A6A2217F78A0095FAB4 /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 		C5945A6B2217F78A0095FAB4 /* MyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTableViewCell.xib; sourceTree = "<group>"; };
 		C5945A6E2218175D0095FAB4 /* MypageDefaultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageDefaultTableViewCell.swift; sourceTree = "<group>"; };
@@ -170,6 +177,9 @@
 		C5ECA49C221DC6C100BFFBD7 /* ReviewLikeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewLikeView.swift; sourceTree = "<group>"; };
 		C5ECA49E221EB54300BFFBD7 /* ImageTouchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTouchViewController.swift; sourceTree = "<group>"; };
 		C5ECA49F221EB54300BFFBD7 /* ImageTouchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageTouchViewController.xib; sourceTree = "<group>"; };
+		C5ECA4A3221EC3F000BFFBD7 /* NewUserUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserUIView.swift; sourceTree = "<group>"; };
+		C5ECA4A5221EC42900BFFBD7 /* NewUserUIView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewUserUIView.xib; sourceTree = "<group>"; };
+		C5ECA4A7221ECF3300BFFBD7 /* NewUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserView.swift; sourceTree = "<group>"; };
 		DF3E6B8BB15948E54AB8058D /* Pods_team2zUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_team2zUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -241,6 +251,7 @@
 		97AA108021F4A0F900357553 /* team2z */ = {
 			isa = PBXGroup;
 			children = (
+				C5ECA4A2221EC39700BFFBD7 /* home */,
 				C5ECA48D221DB33C00BFFBD7 /* review */,
 				C5ECA488221D91FB00BFFBD7 /* dummy */,
 				C5ECA46D221C07F400BFFBD7 /* store */,
@@ -406,6 +417,18 @@
 			path = review;
 			sourceTree = "<group>";
 		};
+		C5ECA4A2221EC39700BFFBD7 /* home */ = {
+			isa = PBXGroup;
+			children = (
+				C5ECA4A3221EC3F000BFFBD7 /* NewUserUIView.swift */,
+				C5ECA4A5221EC42900BFFBD7 /* NewUserUIView.xib */,
+				C5ECA4A7221ECF3300BFFBD7 /* NewUserView.swift */,
+				C514EFFA221F03FC009876D6 /* NewUserHomeView.swift */,
+				C514EFFC221F0418009876D6 /* NewUserHomeView.xib */,
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -527,6 +550,7 @@
 				C5ECA495221DBAB200BFFBD7 /* ReviewTableViewCell.xib in Resources */,
 				C5ECA483221D30AB00BFFBD7 /* ProfileInfoTableViewCell.xib in Resources */,
 				C5945A712218175D0095FAB4 /* MypageDefaultTableViewCell.xib in Resources */,
+				C5ECA4A6221EC42900BFFBD7 /* NewUserUIView.xib in Resources */,
 				C5ECA449221898CC00BFFBD7 /* TableViewCell.xib in Resources */,
 				C5ECA468221BED8900BFFBD7 /* CustomStoreUIView.xib in Resources */,
 				C5ECA4A1221EB54300BFFBD7 /* ImageTouchViewController.xib in Resources */,
@@ -534,6 +558,7 @@
 				C5ECA48C221D923500BFFBD7 /* DummyViewController.xib in Resources */,
 				C5ECA464221B1A9500BFFBD7 /* MypageCommonViewController.xib in Resources */,
 				C5945A73221821DF0095FAB4 /* Assets.xcassets in Resources */,
+				C514EFFD221F0418009876D6 /* NewUserHomeView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -685,6 +710,7 @@
 				97E437A92216B67F0063419A /* TestOneViewController.swift in Sources */,
 				B8E11A48221BE189007FBD5E /* StoreGradeViewController.swift in Sources */,
 				C5ECA448221898CC00BFFBD7 /* TableViewCell.swift in Sources */,
+				C5ECA4A8221ECF3300BFFBD7 /* NewUserView.swift in Sources */,
 				97AA108221F4A0F900357553 /* AppDelegate.swift in Sources */,
 				C5ECA49D221DC6C100BFFBD7 /* ReviewLikeView.swift in Sources */,
 				C5ECA455221B063400BFFBD7 /* CustomBackButtonMaker.swift in Sources */,
@@ -699,6 +725,7 @@
 				C5ECA470221C0E9800BFFBD7 /* StoreDetailViewController.swift in Sources */,
 				B8E11A45221A9668007FBD5E /* SearchStoreTableViewCell.swift in Sources */,
 				B8E11A4A221BE8E3007FBD5E /* ResultStoreTableViewCell.swift in Sources */,
+				C5ECA4A4221EC3F000BFFBD7 /* NewUserUIView.swift in Sources */,
 				97E437AD2216B6950063419A /* TestThreeViewController.swift in Sources */,
 				C5ECA486221D46F800BFFBD7 /* IntroductionViewController.swift in Sources */,
 				C5ECA48F221DB52300BFFBD7 /* ReviewUserInfoView.swift in Sources */,
@@ -712,6 +739,7 @@
 				C5ECA466221BEC4600BFFBD7 /* CustomStoreUIView.swift in Sources */,
 				C5ECA48B221D923500BFFBD7 /* DummyViewController.swift in Sources */,
 				C5ECA46B221BF5E700BFFBD7 /* StoreCommonTableViewCell.swift in Sources */,
+				C514EFFB221F03FC009876D6 /* NewUserHomeView.swift in Sources */,
 				C5ECA4A0221EB54300BFFBD7 /* ImageTouchViewController.swift in Sources */,
 				97E437C32217E00E0063419A /* AddViewController.swift in Sources */,
 				C5ECA497221DC51800BFFBD7 /* ReviewRatingView.swift in Sources */,
