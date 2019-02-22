@@ -10,7 +10,14 @@ import UIKit
 import SMSegmentView
 import Floaty
 
+protocol HomeSearchDelegate : class {
+    func didSelectTag(selectedSegmentIndex: Int)
+}
+
 class StoreDetailViewController: UIViewController {
+    var segmentIndexFromHomeSearch: Int?
+    var homeSearchDelegate: HomeSearchDelegate?
+    
     let myTableView: UITableView = UITableView(frame: CGRect.zero, style: .grouped)
     var segmentView: SMSegmentView?
     let floaty = Floaty()
@@ -18,6 +25,7 @@ class StoreDetailViewController: UIViewController {
     let orangeColor = UIColor(red: 241.0/255.0, green: 90.0/255.0, blue: 36.0/255.0, alpha: 1.0)
     
     var isAddedWantToGo = false
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -82,7 +90,9 @@ class StoreDetailViewController: UIViewController {
     }
     
     @objc func backButtonPressed() {
-        //        dismiss(animated: true, completion: nil)
+        if segmentIndexFromHomeSearch != nil {
+            homeSearchDelegate?.didSelectTag(selectedSegmentIndex: segmentIndexFromHomeSearch!)
+        }
         navigationController?.popViewController(animated: true)
     }
     
@@ -241,9 +251,9 @@ extension StoreDetailViewController: UITableViewDataSource {
             return 160.0
         default:
             switch segmentView!.selectedSegmentIndex {
-            case 0: // 왔다갔어요 세그먼트
+            case 0: // 왔다갔어요 세그먼트,
                 return UIScreen.main.bounds.width * 1.2347
-            default: // 인생떡볶이집 세그먼트
+            default: // 인생떡볶이집 세그먼트, 유저 정보 팔로우 셀
                 return 60.0
             }
 //            return 60.0

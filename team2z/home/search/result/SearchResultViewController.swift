@@ -9,6 +9,7 @@
 import UIKit
 
 class SearchResultViewController: UIViewController {
+    var delegateHomeSearchControllerDelegate: HomeSearchControllerDelegate?
     var searchKeyword: String?
     
     override func viewDidLoad() {
@@ -24,7 +25,9 @@ class SearchResultViewController: UIViewController {
         self.navigationController?.navigationBar.backgroundColor = .white
         self.navigationController?.navigationBar.barTintColor = .white
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: makeBackButton())
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: makeSaveButton())
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: makeCloseButton())
+        
+        
     }
 
     func makeBackButton() -> UIButton {
@@ -37,19 +40,18 @@ class SearchResultViewController: UIViewController {
         return backButton
     }
     
-    func makeSaveButton() -> UIButton {
+    func makeCloseButton() -> UIButton {
         let backButton = UIButton(type: .custom)
         backButton.setImage(UIImage(named: "clear_cell_icon"), for: .normal)
-        backButton.addTarget(self, action: #selector(self.saveButtonPressed), for: .touchUpInside)
+        backButton.addTarget(self, action: #selector(self.closeButtonPressed), for: .touchUpInside)
         return backButton
     }
 
     @objc func backButtonPressed() {
-        //        dismiss(animated: true, completion: nil)
-        navigationController?.popViewController(animated: true)
+//        delegateHomeSearchControllerDelegate?.didPressReturnButton(controller: self)
     }
     
-    @objc func saveButtonPressed() {
-        
+    @objc func closeButtonPressed() {
+        navigationController?.popViewController(animated: true)
     }
 }

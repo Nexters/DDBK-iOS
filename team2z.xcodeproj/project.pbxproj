@@ -49,6 +49,9 @@
 		C514F009221FCCA3009876D6 /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C514F007221FCCA3009876D6 /* SearchTableViewCell.xib */; };
 		C514F00E22201CEB009876D6 /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C514F00C22201CEB009876D6 /* SearchResultViewController.swift */; };
 		C514F00F22201CEB009876D6 /* SearchResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C514F00D22201CEB009876D6 /* SearchResultViewController.xib */; };
+		C514F01122204FD0009876D6 /* ResultSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C514F01022204FD0009876D6 /* ResultSearchViewController.swift */; };
+		C514F0132220501E009876D6 /* ScrollSegmented.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C514F0122220501E009876D6 /* ScrollSegmented.storyboard */; };
+		C514F01522206273009876D6 /* SegmentedScroll.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C514F01422206273009876D6 /* SegmentedScroll.storyboard */; };
 		C5945A6C2217F78A0095FAB4 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5945A6A2217F78A0095FAB4 /* MyTableViewCell.swift */; };
 		C5945A6D2217F78A0095FAB4 /* MyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5945A6B2217F78A0095FAB4 /* MyTableViewCell.xib */; };
 		C5945A702218175D0095FAB4 /* MypageDefaultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5945A6E2218175D0095FAB4 /* MypageDefaultTableViewCell.swift */; };
@@ -164,6 +167,9 @@
 		C514F007221FCCA3009876D6 /* SearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
 		C514F00C22201CEB009876D6 /* SearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
 		C514F00D22201CEB009876D6 /* SearchResultViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultViewController.xib; sourceTree = "<group>"; };
+		C514F01022204FD0009876D6 /* ResultSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultSearchViewController.swift; sourceTree = "<group>"; };
+		C514F0122220501E009876D6 /* ScrollSegmented.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ScrollSegmented.storyboard; sourceTree = "<group>"; };
+		C514F01422206273009876D6 /* SegmentedScroll.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SegmentedScroll.storyboard; sourceTree = "<group>"; };
 		C5945A6A2217F78A0095FAB4 /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 		C5945A6B2217F78A0095FAB4 /* MyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTableViewCell.xib; sourceTree = "<group>"; };
 		C5945A6E2218175D0095FAB4 /* MypageDefaultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageDefaultTableViewCell.swift; sourceTree = "<group>"; };
@@ -288,7 +294,9 @@
 				97E437AE2216C1F40063419A /* BaseViewController.swift */,
 				97E437B22217C7C90063419A /* BaseTabBarController.swift */,
 				97AA108A21F4A0FD00357553 /* LaunchScreen.storyboard */,
+				C514F0122220501E009876D6 /* ScrollSegmented.storyboard */,
 				97AA108D21F4A0FD00357553 /* Info.plist */,
+				C514F01422206273009876D6 /* SegmentedScroll.storyboard */,
 				97E437A82216B67F0063419A /* TestOneViewController.swift */,
 				97E437AA2216B68C0063419A /* TestTwoViewController.swift */,
 				97E437AC2216B6950063419A /* TestThreeViewController.swift */,
@@ -343,6 +351,7 @@
 				B8996DB3222000C80019E431 /* NewFeedRealViewController.xib */,
 				B8996DB62220040D0019E431 /* WriteReviewReal.swift */,
 				B8996DB8222004310019E431 /* WriteReviewReal.xib */,
+				B8996DBA22200C630019E431 /* WriteReviewReal2.swift */,
 				B80CA285222021B2000B8F49 /* WriteReviewNext.swift */,
 				B80CA287222021F1000B8F49 /* WriteReviewNext.xib */,
 				B80CA289222058AD000B8F49 /* WriteReviewFinal.swift */,
@@ -370,6 +379,7 @@
 			children = (
 				C514F00C22201CEB009876D6 /* SearchResultViewController.swift */,
 				C514F00D22201CEB009876D6 /* SearchResultViewController.xib */,
+				C514F01022204FD0009876D6 /* ResultSearchViewController.swift */,
 			);
 			path = result;
 			sourceTree = "<group>";
@@ -598,6 +608,8 @@
 				B8996DB9222004310019E431 /* WriteReviewReal.xib in Resources */,
 				C514F009221FCCA3009876D6 /* SearchTableViewCell.xib in Resources */,
 				C5ECA46C221BF5E700BFFBD7 /* StoreCommonTableViewCell.xib in Resources */,
+				C514F01522206273009876D6 /* SegmentedScroll.storyboard in Resources */,
+				C514F0132220501E009876D6 /* ScrollSegmented.storyboard in Resources */,
 				B80CA288222021F1000B8F49 /* WriteReviewNext.xib in Resources */,
 				C5ECA479221C869000BFFBD7 /* UserFollowTableViewCell.xib in Resources */,
 				C5945A6D2217F78A0095FAB4 /* MyTableViewCell.xib in Resources */,
@@ -729,7 +741,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-team2z/Pods-team2z-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-team2z/Pods-team2z-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework",
 				"${BUILT_PRODUCTS_DIR}/Floaty/Floaty.framework",
@@ -750,7 +762,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-team2z/Pods-team2z-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-team2z/Pods-team2z-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -780,6 +792,7 @@
 				97E437BD2217CB200063419A /* MyPageViewController.swift in Sources */,
 				C5ECA478221C869000BFFBD7 /* UserFollowTableViewCell.swift in Sources */,
 				C5ECA460221B168900BFFBD7 /* CosmosDistrib.swift in Sources */,
+				C514F01122204FD0009876D6 /* ResultSearchViewController.swift in Sources */,
 				C5ECA470221C0E9800BFFBD7 /* StoreDetailViewController.swift in Sources */,
 				B8E11A45221A9668007FBD5E /* SearchStoreTableViewCell.swift in Sources */,
 				B8E11A4A221BE8E3007FBD5E /* ResultStoreTableViewCell.swift in Sources */,

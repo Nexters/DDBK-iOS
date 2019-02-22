@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Result Search View Controller-->
+        <scene sceneID="q3e-gg-w9C">
+            <objects>
+                <viewController storyboardIdentifier="ResultSearchVC" id="zh3-rX-GSp" customClass="ResultSearchViewController" customModule="team2z" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HIa-6k-Feu"/>
+                        <viewControllerLayoutGuide type="bottom" id="uQQ-5o-gaj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CkI-VW-KL9">
+                        <rect key="frame" x="0.0" y="0.0" width="750" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="LMo-B7-jpl">
+                                <rect key="frame" x="20" y="11" width="710" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="zJG-5l-Tx2"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="떡후"/>
+                                    <segment title="스토어"/>
+                                </segments>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="segments:" destination="zh3-rX-GSp" eventType="valueChanged" id="gnh-Es-M1O"/>
+                                </connections>
+                            </segmentedControl>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" bounces="NO" pagingEnabled="YES" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="It9-Ea-GNB">
+                                <rect key="frame" x="0.0" y="45" width="750" height="622"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zam-bW-J3A">
+                                        <rect key="frame" x="375" y="0.0" width="375" height="622"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableView>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2E5-4E-4os">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="622"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <sections/>
+                                    </tableView>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="It9-Ea-GNB" firstAttribute="leading" secondItem="CkI-VW-KL9" secondAttribute="leading" id="89C-eR-bZE"/>
+                            <constraint firstItem="LMo-B7-jpl" firstAttribute="top" secondItem="CkI-VW-KL9" secondAttribute="topMargin" constant="-9" id="A3X-o6-2Um"/>
+                            <constraint firstItem="It9-Ea-GNB" firstAttribute="top" secondItem="LMo-B7-jpl" secondAttribute="bottom" constant="27" id="ARX-aO-AWr"/>
+                            <constraint firstItem="LMo-B7-jpl" firstAttribute="leading" secondItem="CkI-VW-KL9" secondAttribute="leadingMargin" id="IcM-Wb-0AW"/>
+                            <constraint firstAttribute="trailing" secondItem="It9-Ea-GNB" secondAttribute="trailing" id="JAM-9w-m7S"/>
+                            <constraint firstItem="It9-Ea-GNB" firstAttribute="bottom" secondItem="uQQ-5o-gaj" secondAttribute="top" id="pUR-hE-7EJ"/>
+                            <constraint firstItem="LMo-B7-jpl" firstAttribute="centerX" secondItem="It9-Ea-GNB" secondAttribute="centerX" id="rJ0-Bb-dz3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rsm-eA-1pf"/>
+                    </view>
+                    <size key="freeformSize" width="750" height="667"/>
+                    <connections>
+                        <outlet property="leftTableView" destination="2E5-4E-4os" id="Vex-Ck-piK"/>
+                        <outlet property="rightTableView" destination="zam-bW-J3A" id="2T5-sD-i8n"/>
+                        <outlet property="scrollView" destination="It9-Ea-GNB" id="bFp-WZ-DSO"/>
+                        <outlet property="segment" destination="LMo-B7-jpl" id="LVw-tD-uj3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LKe-L3-2bR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="585.60000000000002" y="-578.86056971514245"/>
+        </scene>
+    </scenes>
+</document>

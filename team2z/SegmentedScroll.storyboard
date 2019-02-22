@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="Ahv-fY-tiZ">
+            <objects>
+                <viewController id="2AK-kT-h6J" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="egV-kA-bbt">
+                        <rect key="frame" x="0.0" y="0.0" width="750" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="OQe-vb-61V">
+                                <rect key="frame" x="315" y="59" width="121" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="6lw-Fm-Lvk"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                            </segmentedControl>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CYo-QJ-r2l">
+                                <rect key="frame" x="0.0" y="99" width="750" height="568"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="CYo-QJ-r2l" firstAttribute="leading" secondItem="egV-kA-bbt" secondAttribute="leading" id="FS4-fr-ydf"/>
+                            <constraint firstItem="CYo-QJ-r2l" firstAttribute="top" secondItem="OQe-vb-61V" secondAttribute="bottom" constant="13" id="GM4-yD-elm"/>
+                            <constraint firstItem="OQe-vb-61V" firstAttribute="top" secondItem="dah-VW-CEA" secondAttribute="top" constant="39" id="RUz-XA-Wis"/>
+                            <constraint firstItem="CYo-QJ-r2l" firstAttribute="bottom" secondItem="dah-VW-CEA" secondAttribute="bottom" id="Sje-DD-eBi"/>
+                            <constraint firstItem="OQe-vb-61V" firstAttribute="centerX" secondItem="CYo-QJ-r2l" secondAttribute="centerX" id="cHw-Bt-zD0"/>
+                            <constraint firstAttribute="trailing" secondItem="CYo-QJ-r2l" secondAttribute="trailing" id="e7U-Se-bAi"/>
+                            <constraint firstItem="OQe-vb-61V" firstAttribute="leading" secondItem="dah-VW-CEA" secondAttribute="leading" constant="315" id="wJn-g8-6QE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dah-VW-CEA"/>
+                    </view>
+                    <size key="freeformSize" width="750" height="667"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bml-Om-M5b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="148.80000000000001" y="161.46926536731635"/>
+        </scene>
+    </scenes>
+</document>
