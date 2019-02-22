@@ -7,12 +7,12 @@
 //
 
 import UIKit
-import SMSegmentView
+//import SMSegmentView
 import Floaty
 
 class StoreDetailViewController: UIViewController {
     let myTableView: UITableView = UITableView(frame: CGRect.zero, style: .grouped)
-    var segmentView: SMSegmentView?
+//    var segmentView: SMSegmentView?
     let floaty = Floaty()
     
     let orangeColor = UIColor(red: 241.0/255.0, green: 90.0/255.0, blue: 36.0/255.0, alpha: 1.0)
@@ -51,7 +51,7 @@ class StoreDetailViewController: UIViewController {
         self.view.addSubview(floaty)
         
         // 세그먼트 뷰 초기화
-        self.initializeSegmentView()
+//        self.initializeSegmentView()
         
         // xib 커스텀 셀 등록
         let nibName_0 = UINib(nibName: "StoreCommonTableViewCell", bundle: nil)
@@ -125,14 +125,15 @@ extension StoreDetailViewController: UITableViewDataSource {
         case 0:
             return 1
         default:
-            switch segmentView!.selectedSegmentIndex {
-            case 0:
-                print("왔다갔어요 테이블 셀을 만듭니다.")
-                return 5
-            default:
-                print("인생떡볶이집 테이블 셀을 만듭니다.")
-                return 10
-            }
+//            switch segmentView!.selectedSegmentIndex {
+//            case 0:
+//                print("왔다갔어요 테이블 셀을 만듭니다.")
+//                return 5
+//            default:
+//                print("인생떡볶이집 테이블 셀을 만듭니다.")
+//                return 10
+//            }
+            return 1
         }
     }
     
@@ -172,32 +173,32 @@ extension StoreDetailViewController: UITableViewDataSource {
             
             return headerCell
         }
-        
-        switch segmentView!.selectedSegmentIndex {
-        case 0: // 왔다갔어요
-            let cell = tableView.dequeueReusableCell(withIdentifier: "ReviewTableViewCell") as! ReviewTableViewCell
-            cell.selectionStyle = .none
-//            let cell = tableView.dequeueReusableCell(withIdentifier: "UserFollowCell") as! UserFollowTableViewCell
-//            cell.profileImageView.image = UIImage(named: "profile_default_male")
-            
-            
-//            cell.StoreFooterUIView.ratingLabel?.text = "2.8"
-//            cell.StoreFooterUIView.cosmosView.rating = 2.8
-//            cell.nameLabel.textColor = UIColor(red: 241.0/255.0, green: 90.0/255.0, blue: 36.0/255.0, alpha: 1.0)
-//            cell.nameLabel.font = cell.nameLabel.font.withSize(22)
-//            cell.addressLabel.textColor = UIColor(red: 74.0/255.0, green: 74.0/255.0, blue: 74.0/255.0, alpha: 1.0)
-//            cell.verticalLineView.backgroundColor = UIColor(red: 243.0/255.0, green: 243.0/255.0, blue: 243.0/255.0, alpha: 1.0)
-//            cell.phoneNumberLabel?.text = "02-123-1234"
-//            cell.arrowLabel.textColor = .clear
-            
-            return cell
-        default: // 인생떡볶이집
-            let cell2 = tableView.dequeueReusableCell(withIdentifier: "UserFollowCell") as! UserFollowTableViewCell
-            cell2.profileImageView.image = UIImage(named: "profile_default_male")
-            
-            return cell2
-        }
-        
+        return UITableViewCell() // 제거해
+//        switch segmentView!.selectedSegmentIndex {
+//        case 0: // 왔다갔어요
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "ReviewTableViewCell") as! ReviewTableViewCell
+//            cell.selectionStyle = .none
+////            let cell = tableView.dequeueReusableCell(withIdentifier: "UserFollowCell") as! UserFollowTableViewCell
+////            cell.profileImageView.image = UIImage(named: "profile_default_male")
+//
+//
+////            cell.StoreFooterUIView.ratingLabel?.text = "2.8"
+////            cell.StoreFooterUIView.cosmosView.rating = 2.8
+////            cell.nameLabel.textColor = UIColor(red: 241.0/255.0, green: 90.0/255.0, blue: 36.0/255.0, alpha: 1.0)
+////            cell.nameLabel.font = cell.nameLabel.font.withSize(22)
+////            cell.addressLabel.textColor = UIColor(red: 74.0/255.0, green: 74.0/255.0, blue: 74.0/255.0, alpha: 1.0)
+////            cell.verticalLineView.backgroundColor = UIColor(red: 243.0/255.0, green: 243.0/255.0, blue: 243.0/255.0, alpha: 1.0)
+////            cell.phoneNumberLabel?.text = "02-123-1234"
+////            cell.arrowLabel.textColor = .clear
+//
+//            return cell
+//        default: // 인생떡볶이집
+//            let cell2 = tableView.dequeueReusableCell(withIdentifier: "UserFollowCell") as! UserFollowTableViewCell
+//            cell2.profileImageView.image = UIImage(named: "profile_default_male")
+//
+//            return cell2
+//        }
+//
     }
     
 //    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -216,10 +217,10 @@ extension StoreDetailViewController: UITableViewDataSource {
         return CGFloat.leastNormalMagnitude
     }
     
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        //Return UiView
-        return segmentView
-    }
+//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//        //Return UiView
+//        return segmentView
+//    }
     
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
 
@@ -239,12 +240,13 @@ extension StoreDetailViewController: UITableViewDataSource {
         case 0: // 가게정보 셀
             return 160.0
         default:
-            switch segmentView!.selectedSegmentIndex {
-            case 0: // 왔다갔어요 세그먼트
-                return UIScreen.main.bounds.width * 1.2347
-            default: // 인생떡볶이집 세그먼트
-                return 60.0
-            }
+//            switch segmentView!.selectedSegmentIndex {
+//            case 0: // 왔다갔어요 세그먼트
+//                return UIScreen.main.bounds.width * 1.2347
+//            default: // 인생떡볶이집 세그먼트
+//                return 60.0
+//            }
+            return 60.0
         }
     }
     
@@ -266,40 +268,40 @@ extension StoreDetailViewController: UITableViewDataSource {
 //        }
 //    }
     
-    @objc func selectSegmentInSegmentView(segmentView: SMSegmentView) {
-        /*
-         Replace the following line to implement what you want the app to do after the segment gets tapped.
-         */
-        print("Select segment at index: \(segmentView.selectedSegmentIndex)")
-        myTableView.reloadData()
-        switch segmentView.selectedSegmentIndex {
-        case 0:
-            break
-        default:
-            break
-        }
-    }
-    
-    private func initializeSegmentView() {
-        let appearance = SMSegmentAppearance()
-        appearance.segmentOnSelectionColour = UIColor(red: 241.0/255.0, green: 90.0/255.0, blue: 36.0/255.0, alpha: 1.0)
-        appearance.segmentOffSelectionColour = .white
-        appearance.titleOnSelectionFont = UIFont.systemFont(ofSize: 13.0)
-        appearance.titleOffSelectionFont = UIFont.systemFont(ofSize: 13.0)
-        appearance.contentVerticalMargin = 10.0
-        
-        let segmentFrame = CGRect(x: 0, y: 120.0, width: self.view.frame.size.width - 0*2, height: 40.0)
-        segmentView = SMSegmentView(frame: segmentFrame, dividerColour: UIColor(white: 0.95, alpha: 0.3), dividerWidth: 1.0, segmentAppearance: appearance)
-        //        segmentView.backgroundColor = UIColor.clear
-        //        segmentView.layer.cornerRadius = 5.0
-        //        segmentView.layer.borderColor = UIColor(white: 0.85, alpha: 1.0).cgColor
-        //        segmentView.layer.borderWidth = 1.0
-        segmentView!.addSegmentWithTitle("왔다갔어요", onSelectionImage: UIImage(named: "store_detail_seg_2_selected"), offSelectionImage: UIImage(named: "store_detail_seg_1"))
-        segmentView!.addSegmentWithTitle("인생떡볶이집", onSelectionImage: UIImage(named: "store_detail_seg_2_selected"), offSelectionImage: UIImage(named: "store_detail_seg_1"))
-        segmentView!.addTarget(self, action: #selector(selectSegmentInSegmentView(segmentView:)), for: .valueChanged)
-        
-        segmentView!.selectedSegmentIndex = 0
-    }
+//    @objc func selectSegmentInSegmentView(segmentView: SMSegmentView) {
+//        /*
+//         Replace the following line to implement what you want the app to do after the segment gets tapped.
+//         */
+//        print("Select segment at index: \(segmentView.selectedSegmentIndex)")
+//        myTableView.reloadData()
+//        switch segmentView.selectedSegmentIndex {
+//        case 0:
+//            break
+//        default:
+//            break
+//        }
+//    }
+//
+//    private func initializeSegmentView() {
+//        let appearance = SMSegmentAppearance()
+//        appearance.segmentOnSelectionColour = UIColor(red: 241.0/255.0, green: 90.0/255.0, blue: 36.0/255.0, alpha: 1.0)
+//        appearance.segmentOffSelectionColour = .white
+//        appearance.titleOnSelectionFont = UIFont.systemFont(ofSize: 13.0)
+//        appearance.titleOffSelectionFont = UIFont.systemFont(ofSize: 13.0)
+//        appearance.contentVerticalMargin = 10.0
+//
+//        let segmentFrame = CGRect(x: 0, y: 120.0, width: self.view.frame.size.width - 0*2, height: 40.0)
+//        segmentView = SMSegmentView(frame: segmentFrame, dividerColour: UIColor(white: 0.95, alpha: 0.3), dividerWidth: 1.0, segmentAppearance: appearance)
+//        //        segmentView.backgroundColor = UIColor.clear
+//        //        segmentView.layer.cornerRadius = 5.0
+//        //        segmentView.layer.borderColor = UIColor(white: 0.85, alpha: 1.0).cgColor
+//        //        segmentView.layer.borderWidth = 1.0
+//        segmentView!.addSegmentWithTitle("왔다갔어요", onSelectionImage: UIImage(named: "store_detail_seg_2_selected"), offSelectionImage: UIImage(named: "store_detail_seg_1"))
+//        segmentView!.addSegmentWithTitle("인생떡볶이집", onSelectionImage: UIImage(named: "store_detail_seg_2_selected"), offSelectionImage: UIImage(named: "store_detail_seg_1"))
+//        segmentView!.addTarget(self, action: #selector(selectSegmentInSegmentView(segmentView:)), for: .valueChanged)
+//
+//        segmentView!.selectedSegmentIndex = 0
+//    }
 }
 
 extension StoreDetailViewController: FloatyDelegate {

@@ -8,7 +8,7 @@ target 'team2z' do
   # Pods for team2z
   pod 'Alamofire', '~> 5.0.0.beta.1'
   pod 'DropDown'
-  pod 'SMSegmentView'
+  # pod 'SMSegmentView'
   pod 'UITextView+Placeholder'
   pod 'IQKeyboardManagerSwift'
   pod "Floaty", "~> 4.1.0"
