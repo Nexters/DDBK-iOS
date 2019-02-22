@@ -38,6 +38,8 @@
 		C514F001221F18D7009876D6 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C514EFFF221F18D7009876D6 /* SearchViewController.xib */; };
 		C514F003221F2D74009876D6 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C514F002221F2D74009876D6 /* MainView.swift */; };
 		C514F005221F2EF1009876D6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C514F004221F2EF1009876D6 /* MainViewController.swift */; };
+		C514F008221FCCA3009876D6 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C514F006221FCCA3009876D6 /* SearchTableViewCell.swift */; };
+		C514F009221FCCA3009876D6 /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C514F007221FCCA3009876D6 /* SearchTableViewCell.xib */; };
 		C5945A6C2217F78A0095FAB4 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5945A6A2217F78A0095FAB4 /* MyTableViewCell.swift */; };
 		C5945A6D2217F78A0095FAB4 /* MyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5945A6B2217F78A0095FAB4 /* MyTableViewCell.xib */; };
 		C5945A702218175D0095FAB4 /* MypageDefaultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5945A6E2218175D0095FAB4 /* MypageDefaultTableViewCell.swift */; };
@@ -142,6 +144,8 @@
 		C514EFFF221F18D7009876D6 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
 		C514F002221F2D74009876D6 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		C514F004221F2EF1009876D6 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		C514F006221FCCA3009876D6 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		C514F007221FCCA3009876D6 /* SearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
 		C5945A6A2217F78A0095FAB4 /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 		C5945A6B2217F78A0095FAB4 /* MyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTableViewCell.xib; sourceTree = "<group>"; };
 		C5945A6E2218175D0095FAB4 /* MypageDefaultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageDefaultTableViewCell.swift; sourceTree = "<group>"; };
@@ -428,6 +432,8 @@
 				C514EFFF221F18D7009876D6 /* SearchViewController.xib */,
 				C514F002221F2D74009876D6 /* MainView.swift */,
 				C514F004221F2EF1009876D6 /* MainViewController.swift */,
+				C514F006221FCCA3009876D6 /* SearchTableViewCell.swift */,
+				C514F007221FCCA3009876D6 /* SearchTableViewCell.xib */,
 			);
 			path = home;
 			sourceTree = "<group>";
@@ -546,6 +552,7 @@
 				C5ECA451221AA3FB00BFFBD7 /* SetupViewController.xib in Resources */,
 				97AA108C21F4A0FD00357553 /* LaunchScreen.storyboard in Resources */,
 				C5ECA471221C0E9800BFFBD7 /* StoreDetailViewController.xib in Resources */,
+				C514F009221FCCA3009876D6 /* SearchTableViewCell.xib in Resources */,
 				C5ECA46C221BF5E700BFFBD7 /* StoreCommonTableViewCell.xib in Resources */,
 				C5ECA479221C869000BFFBD7 /* UserFollowTableViewCell.xib in Resources */,
 				C5945A6D2217F78A0095FAB4 /* MyTableViewCell.xib in Resources */,
@@ -736,6 +743,7 @@
 				C5ECA494221DBAB200BFFBD7 /* ReviewTableViewCell.swift in Sources */,
 				C5ECA450221AA3FB00BFFBD7 /* SetupViewController.swift in Sources */,
 				C514F003221F2D74009876D6 /* MainView.swift in Sources */,
+				C514F008221FCCA3009876D6 /* SearchTableViewCell.swift in Sources */,
 				97E437AF2216C1F40063419A /* BaseViewController.swift in Sources */,
 				C5ECA482221D30AB00BFFBD7 /* ProfileInfoTableViewCell.swift in Sources */,
 				C5ECA463221B1A9500BFFBD7 /* MypageCommonViewController.swift in Sources */,
