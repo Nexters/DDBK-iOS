@@ -35,6 +35,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AppSplashController {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        // 사용자 검색 기록 초기화
+        if UserDefaults.standard.array(forKey: "homeSearchHistory") == nil {
+            UserDefaults.standard.set([], forKey: "homeSearchHistory")
+            print("사용자 검색 기록 배열을 초기화 하였습니다.")
+        }
+        
         window = UIWindow(frame: UIScreen.main.bounds)
         
         window?.rootViewController = baseViewController

@@ -24,6 +24,15 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var firstLineView: UIView!
     
     var myTableView: UITableView = UITableView(frame: CGRect.zero, style: .grouped)
+    var homeSearchHistory = UserDefaults.standard.array(forKey: "homeSearchHistory"){
+        didSet {
+            print("Saving homeSearchHistory which is now \(String(describing: homeSearchHistory))")
+            DispatchQueue.main.async {
+                UserDefaults.standard.set(self.homeSearchHistory, forKey: "homeSearchHistory")
+            }
+            
+        }
+    }
     
     var candies = [
         Candy(category:"Chocolate", name:"Chocolate Bar"),
@@ -129,7 +138,7 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
         if searching {
             return searchCandies.count
         } else {
-            return historyCandies.count
+            return homeSearchHistory!.count
         }
         
     }
@@ -140,7 +149,9 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
             cell.keywordLabel?.text = searchCandies[indexPath.row].name
         } else {
             // 최근 검색어 보여주기
-            
+            cell.cellDelegate = self
+            cell.keywordLabel?.text = (homeSearchHistory![indexPath.row] as! String)
+            cell.keywordIndexOfHistory = indexPath.row
         }
         
         
@@ -205,6 +216,30 @@ extension SearchViewController: UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         print("searchButtonClicked" +  searchBar.text!)
+        let filteredIndices = homeSearchHistory?.indices.filter ({homeSearchHistory?[$0] as! String == searchBar.text!})
+        
+        if (filteredIndices?.count)! > 0{
+            print("이미 히스토리에 존재하는 검색어입니다.")
+            homeSearchHistory?.remove(at: filteredIndices![0])
+            homeSearchHistory?.insert(searchBar.text!, at: 0)
+            
+        } else {
+            print("히스토리에 존재하지 않으므로 히스토리에 추가합니다.")
+            homeSearchHistory?.insert(searchBar.text!, at: 0)
+        }
         
     }
+}
+
+extension SearchViewController: HomeSearchCellDelegate {
+    func didPressButton(_ tag: Int) {
+        print("I have pressed a delete button(검색어 지우기) with a tag: \(tag)")
+    }
+    
+    func didPressDeleteButton(cell: SearchTableViewCell) {
+//        print(cell.keywordIndexOfHistory)
+        homeSearchHistory?.remove(at: cell.keywordIndexOfHistory!)
+        myTableView.reloadData()
+    }
+    
 }
