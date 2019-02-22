@@ -204,6 +204,7 @@ extension SearchViewController: UISearchBarDelegate {
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        print("searchButtonClicked")
+        print("searchButtonClicked" +  searchBar.text!)
+        
     }
 }
