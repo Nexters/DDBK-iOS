@@ -42,7 +42,7 @@
                     </connections>
                 </button>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9ke-eT-8bY">
-                    <rect key="frame" x="0.0" y="96" width="375" height="44"/>
+                    <rect key="frame" x="0.0" y="96" width="375" height="7"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.60784313725490191" green="0.60784313725490191" blue="0.60784313725490191" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                 </view>

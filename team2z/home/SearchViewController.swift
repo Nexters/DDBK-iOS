@@ -8,6 +8,16 @@
 
 import UIKit
 
+class Candy {
+    var category: String
+    var name: String
+    
+    init(category: String, name: String) {
+        self.category = category
+        self.name = name
+    }
+}
+
 class SearchViewController: UIViewController {
     @IBOutlet weak var backButton: UIButton! // 0.146
     @IBOutlet weak var searchBar: UISearchBar! // 0.854
@@ -15,10 +25,35 @@ class SearchViewController: UIViewController {
     
     var myTableView: UITableView = UITableView(frame: CGRect.zero, style: .grouped)
     
+    var candies = [
+        Candy(category:"Chocolate", name:"Chocolate Bar"),
+        Candy(category:"Chocolate", name:"Chocolate Chip"),
+        Candy(category:"Chocolate", name:"Dark Chocolate"),
+        Candy(category:"Hard", name:"Lollipop"),
+        Candy(category:"Hard", name:"Candy Cane"),
+        Candy(category:"Hard", name:"Jaw Breaker"),
+        Candy(category:"Other", name:"Caramel"),
+        Candy(category:"Other", name:"Sour Chew"),
+        Candy(category:"Other", name:"Gummi Bear"),
+        Candy(category:"Other", name:"Candy Floss"),
+        Candy(category:"Chocolate", name:"Chocolate Coin"),
+        Candy(category:"Chocolate", name:"Chocolate Egg"),
+        Candy(category:"Other", name:"Jelly Beans"),
+        Candy(category:"Other", name:"Liquorice"),
+        Candy(category:"Hard", name:"Toffee Apple")
+    ]
+    
+    var historyCandies = [Candy]()
+    var searchCandies = [Candy]()
+    var searching = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.myTableView.backgroundColor = .white
+        
         searchBar.layoutIfNeeded()
+        searchBar.delegate = self
         
         let searchTextField:UITextField = searchBar.subviews[0].subviews.last as! UITextField
         searchTextField.font = UIFont(name: "AppleSDGothicNeo-Bold", size: 13.0)
@@ -62,12 +97,17 @@ class SearchViewController: UIViewController {
             make.top.equalTo(firstLineView.snp.bottom)
             make.bottom.left.right.equalTo(self.view)
         }
-//        backButton.backgroundColor = .red
+        
         backButton.snp.makeConstraints { (make) in
             make.width.equalTo(self.view.snp.width).multipliedBy(0.09)
             make.height.equalTo(40)
             make.bottom.equalTo(myTableView.snp.top)
         }
+        
+        
+        // xib 커스텀 셀 등록
+        let nibName_0 = UINib(nibName: "SearchTableViewCell", bundle: nil)
+        myTableView.register(nibName_0, forCellReuseIdentifier: "SearchTableViewCell")
     }
 
     
@@ -86,17 +126,25 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 15
+        if searching {
+            return searchCandies.count
+        } else {
+            return historyCandies.count
+        }
+        
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch indexPath.section {
-        case 0:
-            return UITableViewCell()
-        default://myPageDefaultCell
-            return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SearchTableViewCell") as! SearchTableViewCell
+        if searching {
+            cell.keywordLabel?.text = searchCandies[indexPath.row].name
+        } else {
+            // 최근 검색어 보여주기
+            
         }
         
+        
+        return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -104,14 +152,28 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
         case 1:
             break
         case 2:
-            self.navigationController?.pushViewController(SetupViewController(), animated: true)
+            break
         default:
-            print("hello")
+            print("셀 선택")
         }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 60.0
+        return 45.0
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView()
+        let headerLabel = UILabel()
+        headerLabel.text = "최근 검색"
+        headerView.addSubview(headerLabel)
+        headerLabel.snp.makeConstraints { (make) in
+            make.width.equalTo(headerView.snp.width).multipliedBy(0.5)
+            make.leading.equalTo(headerView.snp.leading).offset(21)
+            make.centerY.equalTo(headerView.snp.centerY)
+        }
+        //Return UiView
+        return headerView
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -119,7 +181,29 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 60.0
+        if searching {
+            return CGFloat.leastNormalMagnitude
+        } else {
+            return 40.0
+        }
     }
     
+}
+
+
+extension SearchViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText.count == 0 {
+            searching = false
+        } else {
+            searchCandies = candies.filter( { $0.name.prefix(searchText.count) == searchText} )
+            searching = true
+        }
+        
+        myTableView.reloadData()
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        print("searchButtonClicked")
+    }
 }
