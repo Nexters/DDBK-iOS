@@ -27,14 +27,14 @@
 		97E437BF2217CB9E0063419A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E437BE2217CB9E0063419A /* MapViewController.swift */; };
 		97E437C32217E00E0063419A /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E437C22217E00E0063419A /* AddViewController.swift */; };
 		AD7478074A96C40DD655C2E7 /* Pods_team2z.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A90DE216234C44BC4B6D73E6 /* Pods_team2z.framework */; };
-		B80CA2842220215C000B8F49 /* WriteReviewReal2.xib in Resources */ = {isa = PBXBuildFile; fileRef = B80CA2832220215C000B8F49 /* WriteReviewReal2.xib */; };
 		B80CA286222021B2000B8F49 /* WriteReviewNext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80CA285222021B2000B8F49 /* WriteReviewNext.swift */; };
 		B80CA288222021F1000B8F49 /* WriteReviewNext.xib in Resources */ = {isa = PBXBuildFile; fileRef = B80CA287222021F1000B8F49 /* WriteReviewNext.xib */; };
+		B80CA28A222058AD000B8F49 /* WriteReviewFinal.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80CA289222058AD000B8F49 /* WriteReviewFinal.swift */; };
+		B80CA28E22206202000B8F49 /* WriteReviewFinal.xib in Resources */ = {isa = PBXBuildFile; fileRef = B80CA28D22206202000B8F49 /* WriteReviewFinal.xib */; };
 		B8996DB4222000C80019E431 /* NewFeedRealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8996DB2222000C80019E431 /* NewFeedRealViewController.swift */; };
 		B8996DB5222000C80019E431 /* NewFeedRealViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8996DB3222000C80019E431 /* NewFeedRealViewController.xib */; };
 		B8996DB72220040D0019E431 /* WriteReviewReal.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8996DB62220040D0019E431 /* WriteReviewReal.swift */; };
 		B8996DB9222004310019E431 /* WriteReviewReal.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8996DB8222004310019E431 /* WriteReviewReal.xib */; };
-		B8996DBB22200C630019E431 /* WriteReviewReal2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8996DBA22200C630019E431 /* WriteReviewReal2.swift */; };
 		B8E11A43221819F2007FBD5E /* NewFeedGoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E11A42221819F2007FBD5E /* NewFeedGoViewController.swift */; };
 		B8E11A45221A9668007FBD5E /* SearchStoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E11A44221A9668007FBD5E /* SearchStoreTableViewCell.swift */; };
 		B8E11A48221BE189007FBD5E /* StoreGradeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E11A47221BE189007FBD5E /* StoreGradeViewController.swift */; };
@@ -142,14 +142,14 @@
 		97E437C22217E00E0063419A /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		A5F23959D8E89D52535E34EB /* Pods-team2zUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-team2zUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-team2zUITests/Pods-team2zUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A90DE216234C44BC4B6D73E6 /* Pods_team2z.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_team2z.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B80CA2832220215C000B8F49 /* WriteReviewReal2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WriteReviewReal2.xib; path = ../../../../.Trash/WriteReviewReal2.xib; sourceTree = "<group>"; };
 		B80CA285222021B2000B8F49 /* WriteReviewNext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteReviewNext.swift; sourceTree = "<group>"; };
 		B80CA287222021F1000B8F49 /* WriteReviewNext.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WriteReviewNext.xib; sourceTree = "<group>"; };
+		B80CA289222058AD000B8F49 /* WriteReviewFinal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteReviewFinal.swift; sourceTree = "<group>"; };
+		B80CA28D22206202000B8F49 /* WriteReviewFinal.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WriteReviewFinal.xib; sourceTree = "<group>"; };
 		B8996DB2222000C80019E431 /* NewFeedRealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFeedRealViewController.swift; sourceTree = "<group>"; };
 		B8996DB3222000C80019E431 /* NewFeedRealViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewFeedRealViewController.xib; sourceTree = "<group>"; };
 		B8996DB62220040D0019E431 /* WriteReviewReal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteReviewReal.swift; sourceTree = "<group>"; };
 		B8996DB8222004310019E431 /* WriteReviewReal.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WriteReviewReal.xib; sourceTree = "<group>"; };
-		B8996DBA22200C630019E431 /* WriteReviewReal2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteReviewReal2.swift; sourceTree = "<group>"; };
 		B8E11A42221819F2007FBD5E /* NewFeedGoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFeedGoViewController.swift; sourceTree = "<group>"; };
 		B8E11A44221A9668007FBD5E /* SearchStoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchStoreTableViewCell.swift; sourceTree = "<group>"; };
 		B8E11A47221BE189007FBD5E /* StoreGradeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreGradeViewController.swift; sourceTree = "<group>"; };
@@ -343,10 +343,10 @@
 				B8996DB3222000C80019E431 /* NewFeedRealViewController.xib */,
 				B8996DB62220040D0019E431 /* WriteReviewReal.swift */,
 				B8996DB8222004310019E431 /* WriteReviewReal.xib */,
-				B8996DBA22200C630019E431 /* WriteReviewReal2.swift */,
-				B80CA2832220215C000B8F49 /* WriteReviewReal2.xib */,
 				B80CA285222021B2000B8F49 /* WriteReviewNext.swift */,
 				B80CA287222021F1000B8F49 /* WriteReviewNext.xib */,
+				B80CA289222058AD000B8F49 /* WriteReviewFinal.swift */,
+				B80CA28D22206202000B8F49 /* WriteReviewFinal.xib */,
 			);
 			path = newFeed;
 			sourceTree = "<group>";
@@ -605,7 +605,6 @@
 				C5ECA495221DBAB200BFFBD7 /* ReviewTableViewCell.xib in Resources */,
 				C5ECA483221D30AB00BFFBD7 /* ProfileInfoTableViewCell.xib in Resources */,
 				C5945A712218175D0095FAB4 /* MypageDefaultTableViewCell.xib in Resources */,
-				B80CA2842220215C000B8F49 /* WriteReviewReal2.xib in Resources */,
 				C5ECA449221898CC00BFFBD7 /* TableViewCell.xib in Resources */,
 				C5ECA468221BED8900BFFBD7 /* CustomStoreUIView.xib in Resources */,
 				C5ECA4A1221EB54300BFFBD7 /* ImageTouchViewController.xib in Resources */,
@@ -615,6 +614,7 @@
 				C5ECA464221B1A9500BFFBD7 /* MypageCommonViewController.xib in Resources */,
 				C514F00F22201CEB009876D6 /* SearchResultViewController.xib in Resources */,
 				C5945A73221821DF0095FAB4 /* Assets.xcassets in Resources */,
+				B80CA28E22206202000B8F49 /* WriteReviewFinal.xib in Resources */,
 				C514EFFD221F0418009876D6 /* NewUserHomeView.xib in Resources */,
 				C514F001221F18D7009876D6 /* SearchViewController.xib in Resources */,
 			);
@@ -796,9 +796,9 @@
 				97E437AF2216C1F40063419A /* BaseViewController.swift in Sources */,
 				C5ECA482221D30AB00BFFBD7 /* ProfileInfoTableViewCell.swift in Sources */,
 				C5ECA463221B1A9500BFFBD7 /* MypageCommonViewController.swift in Sources */,
-				B8996DBB22200C630019E431 /* WriteReviewReal2.swift in Sources */,
 				B80CA286222021B2000B8F49 /* WriteReviewNext.swift in Sources */,
 				C5ECA499221DC60F00BFFBD7 /* ReviewStoreInfoView.swift in Sources */,
+				B80CA28A222058AD000B8F49 /* WriteReviewFinal.swift in Sources */,
 				C5ECA466221BEC4600BFFBD7 /* CustomStoreUIView.swift in Sources */,
 				C5ECA48B221D923500BFFBD7 /* DummyViewController.swift in Sources */,
 				C5ECA46B221BF5E700BFFBD7 /* StoreCommonTableViewCell.swift in Sources */,
