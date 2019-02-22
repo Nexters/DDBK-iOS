@@ -12,7 +12,7 @@ import SnapKit
 class StoreGradeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     private var searchResultTableView: UITableView!
-    private var writeReviewView: WriteReviewView!
+    private var writeReviewView: WriteReviewNext!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,9 +48,10 @@ class StoreGradeViewController: UIViewController, UITableViewDelegate, UITableVi
 //        self.searchResultTableView.tableFooterView = writeReviewView
 //        self.searchResultTableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         
-        writeReviewView = WriteReviewView(frame: CGRect(x: 0, y: 0, width: self.searchResultTableView.frame.width, height: 250))
+        writeReviewView = WriteReviewNext(frame: CGRect(x: 0, y: 0, width: self.searchResultTableView.frame.width, height: 300))
         self.searchResultTableView.tableFooterView = writeReviewView
         writeReviewView.backgroundColor = UIColor.white
+        //self.view.addSubview(writeReviewView)
         self.view.addSubview(searchResultTableView)
 
     }
@@ -61,6 +62,11 @@ class StoreGradeViewController: UIViewController, UITableViewDelegate, UITableVi
             make.top.equalTo(self.view).offset(50)
             make.left.width.height.equalTo(self.view)
         }
+        
+//        self.writeReviewView.snp.makeConstraints { (make) in
+//            make.top.equalTo(self.searchResultTableView).offset(30)
+//            make.left.width.height.equalTo(self.view)
+//        }
         
 
     }

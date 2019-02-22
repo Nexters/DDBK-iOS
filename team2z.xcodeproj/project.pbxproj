@@ -27,11 +27,18 @@
 		97E437BF2217CB9E0063419A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E437BE2217CB9E0063419A /* MapViewController.swift */; };
 		97E437C32217E00E0063419A /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E437C22217E00E0063419A /* AddViewController.swift */; };
 		AD7478074A96C40DD655C2E7 /* Pods_team2z.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A90DE216234C44BC4B6D73E6 /* Pods_team2z.framework */; };
+		B80CA2842220215C000B8F49 /* WriteReviewReal2.xib in Resources */ = {isa = PBXBuildFile; fileRef = B80CA2832220215C000B8F49 /* WriteReviewReal2.xib */; };
+		B80CA286222021B2000B8F49 /* WriteReviewNext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80CA285222021B2000B8F49 /* WriteReviewNext.swift */; };
+		B80CA288222021F1000B8F49 /* WriteReviewNext.xib in Resources */ = {isa = PBXBuildFile; fileRef = B80CA287222021F1000B8F49 /* WriteReviewNext.xib */; };
+		B8996DB4222000C80019E431 /* NewFeedRealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8996DB2222000C80019E431 /* NewFeedRealViewController.swift */; };
+		B8996DB5222000C80019E431 /* NewFeedRealViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8996DB3222000C80019E431 /* NewFeedRealViewController.xib */; };
+		B8996DB72220040D0019E431 /* WriteReviewReal.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8996DB62220040D0019E431 /* WriteReviewReal.swift */; };
+		B8996DB9222004310019E431 /* WriteReviewReal.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8996DB8222004310019E431 /* WriteReviewReal.xib */; };
+		B8996DBB22200C630019E431 /* WriteReviewReal2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8996DBA22200C630019E431 /* WriteReviewReal2.swift */; };
 		B8E11A43221819F2007FBD5E /* NewFeedGoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E11A42221819F2007FBD5E /* NewFeedGoViewController.swift */; };
 		B8E11A45221A9668007FBD5E /* SearchStoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E11A44221A9668007FBD5E /* SearchStoreTableViewCell.swift */; };
 		B8E11A48221BE189007FBD5E /* StoreGradeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E11A47221BE189007FBD5E /* StoreGradeViewController.swift */; };
 		B8E11A4A221BE8E3007FBD5E /* ResultStoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E11A49221BE8E3007FBD5E /* ResultStoreTableViewCell.swift */; };
-		B8E11A4C221BF41B007FBD5E /* WriteReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E11A4B221BF41B007FBD5E /* WriteReviewView.swift */; };
 		C514EFFB221F03FC009876D6 /* NewUserHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C514EFFA221F03FC009876D6 /* NewUserHomeView.swift */; };
 		C514EFFD221F0418009876D6 /* NewUserHomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C514EFFC221F0418009876D6 /* NewUserHomeView.xib */; };
 		C514F000221F18D7009876D6 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C514EFFE221F18D7009876D6 /* SearchViewController.swift */; };
@@ -133,11 +140,18 @@
 		97E437C22217E00E0063419A /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		A5F23959D8E89D52535E34EB /* Pods-team2zUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-team2zUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-team2zUITests/Pods-team2zUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A90DE216234C44BC4B6D73E6 /* Pods_team2z.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_team2z.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B80CA2832220215C000B8F49 /* WriteReviewReal2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WriteReviewReal2.xib; path = ../../../../.Trash/WriteReviewReal2.xib; sourceTree = "<group>"; };
+		B80CA285222021B2000B8F49 /* WriteReviewNext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteReviewNext.swift; sourceTree = "<group>"; };
+		B80CA287222021F1000B8F49 /* WriteReviewNext.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WriteReviewNext.xib; sourceTree = "<group>"; };
+		B8996DB2222000C80019E431 /* NewFeedRealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFeedRealViewController.swift; sourceTree = "<group>"; };
+		B8996DB3222000C80019E431 /* NewFeedRealViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewFeedRealViewController.xib; sourceTree = "<group>"; };
+		B8996DB62220040D0019E431 /* WriteReviewReal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteReviewReal.swift; sourceTree = "<group>"; };
+		B8996DB8222004310019E431 /* WriteReviewReal.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WriteReviewReal.xib; sourceTree = "<group>"; };
+		B8996DBA22200C630019E431 /* WriteReviewReal2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteReviewReal2.swift; sourceTree = "<group>"; };
 		B8E11A42221819F2007FBD5E /* NewFeedGoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFeedGoViewController.swift; sourceTree = "<group>"; };
 		B8E11A44221A9668007FBD5E /* SearchStoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchStoreTableViewCell.swift; sourceTree = "<group>"; };
 		B8E11A47221BE189007FBD5E /* StoreGradeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreGradeViewController.swift; sourceTree = "<group>"; };
 		B8E11A49221BE8E3007FBD5E /* ResultStoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultStoreTableViewCell.swift; sourceTree = "<group>"; };
-		B8E11A4B221BF41B007FBD5E /* WriteReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteReviewView.swift; sourceTree = "<group>"; };
 		C514EFFA221F03FC009876D6 /* NewUserHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserHomeView.swift; sourceTree = "<group>"; };
 		C514EFFC221F0418009876D6 /* NewUserHomeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewUserHomeView.xib; sourceTree = "<group>"; };
 		C514EFFE221F18D7009876D6 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -321,7 +335,14 @@
 				97E437BA2217CB170063419A /* NewFeedViewController.swift */,
 				B8E11A47221BE189007FBD5E /* StoreGradeViewController.swift */,
 				B8E11A49221BE8E3007FBD5E /* ResultStoreTableViewCell.swift */,
-				B8E11A4B221BF41B007FBD5E /* WriteReviewView.swift */,
+				B8996DB2222000C80019E431 /* NewFeedRealViewController.swift */,
+				B8996DB3222000C80019E431 /* NewFeedRealViewController.xib */,
+				B8996DB62220040D0019E431 /* WriteReviewReal.swift */,
+				B8996DB8222004310019E431 /* WriteReviewReal.xib */,
+				B8996DBA22200C630019E431 /* WriteReviewReal2.swift */,
+				B80CA2832220215C000B8F49 /* WriteReviewReal2.xib */,
+				B80CA285222021B2000B8F49 /* WriteReviewNext.swift */,
+				B80CA287222021F1000B8F49 /* WriteReviewNext.xib */,
 			);
 			path = newFeed;
 			sourceTree = "<group>";
@@ -552,17 +573,21 @@
 				C5ECA451221AA3FB00BFFBD7 /* SetupViewController.xib in Resources */,
 				97AA108C21F4A0FD00357553 /* LaunchScreen.storyboard in Resources */,
 				C5ECA471221C0E9800BFFBD7 /* StoreDetailViewController.xib in Resources */,
+				B8996DB9222004310019E431 /* WriteReviewReal.xib in Resources */,
 				C514F009221FCCA3009876D6 /* SearchTableViewCell.xib in Resources */,
 				C5ECA46C221BF5E700BFFBD7 /* StoreCommonTableViewCell.xib in Resources */,
+				B80CA288222021F1000B8F49 /* WriteReviewNext.xib in Resources */,
 				C5ECA479221C869000BFFBD7 /* UserFollowTableViewCell.xib in Resources */,
 				C5945A6D2217F78A0095FAB4 /* MyTableViewCell.xib in Resources */,
 				C5945A78221835370095FAB4 /* GradeViewController.xib in Resources */,
 				C5ECA495221DBAB200BFFBD7 /* ReviewTableViewCell.xib in Resources */,
 				C5ECA483221D30AB00BFFBD7 /* ProfileInfoTableViewCell.xib in Resources */,
 				C5945A712218175D0095FAB4 /* MypageDefaultTableViewCell.xib in Resources */,
+				B80CA2842220215C000B8F49 /* WriteReviewReal2.xib in Resources */,
 				C5ECA449221898CC00BFFBD7 /* TableViewCell.xib in Resources */,
 				C5ECA468221BED8900BFFBD7 /* CustomStoreUIView.xib in Resources */,
 				C5ECA4A1221EB54300BFFBD7 /* ImageTouchViewController.xib in Resources */,
+				B8996DB5222000C80019E431 /* NewFeedRealViewController.xib in Resources */,
 				97AA10B021F4CBC400357553 /* Carthage in Resources */,
 				C5ECA48C221D923500BFFBD7 /* DummyViewController.xib in Resources */,
 				C5ECA464221B1A9500BFFBD7 /* MypageCommonViewController.xib in Resources */,
@@ -681,7 +706,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-team2z/Pods-team2z-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-team2z/Pods-team2z-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework",
 				"${BUILT_PRODUCTS_DIR}/Floaty/Floaty.framework",
@@ -702,7 +727,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-team2z/Pods-team2z-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-team2z/Pods-team2z-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -715,7 +740,6 @@
 				97E437B32217C7C90063419A /* BaseTabBarController.swift in Sources */,
 				C5ECA47E221D223B00BFFBD7 /* ProfileModifyViewController.swift in Sources */,
 				C5945A702218175D0095FAB4 /* MypageDefaultTableViewCell.swift in Sources */,
-				B8E11A4C221BF41B007FBD5E /* WriteReviewView.swift in Sources */,
 				97E437B12217255B0063419A /* TestViewController.swift in Sources */,
 				97E437A92216B67F0063419A /* TestOneViewController.swift in Sources */,
 				B8E11A48221BE189007FBD5E /* StoreGradeViewController.swift in Sources */,
@@ -729,6 +753,7 @@
 				97E437AB2216B68C0063419A /* TestTwoViewController.swift in Sources */,
 				C514F000221F18D7009876D6 /* SearchViewController.swift in Sources */,
 				C5945A6C2217F78A0095FAB4 /* MyTableViewCell.swift in Sources */,
+				B8996DB72220040D0019E431 /* WriteReviewReal.swift in Sources */,
 				97E437BD2217CB200063419A /* MyPageViewController.swift in Sources */,
 				C5ECA478221C869000BFFBD7 /* UserFollowTableViewCell.swift in Sources */,
 				C5ECA460221B168900BFFBD7 /* CosmosDistrib.swift in Sources */,
@@ -736,6 +761,7 @@
 				B8E11A45221A9668007FBD5E /* SearchStoreTableViewCell.swift in Sources */,
 				B8E11A4A221BE8E3007FBD5E /* ResultStoreTableViewCell.swift in Sources */,
 				97E437AD2216B6950063419A /* TestThreeViewController.swift in Sources */,
+				B8996DB4222000C80019E431 /* NewFeedRealViewController.swift in Sources */,
 				C514F005221F2EF1009876D6 /* MainViewController.swift in Sources */,
 				C5ECA486221D46F800BFFBD7 /* IntroductionViewController.swift in Sources */,
 				C5ECA48F221DB52300BFFBD7 /* ReviewUserInfoView.swift in Sources */,
@@ -747,6 +773,8 @@
 				97E437AF2216C1F40063419A /* BaseViewController.swift in Sources */,
 				C5ECA482221D30AB00BFFBD7 /* ProfileInfoTableViewCell.swift in Sources */,
 				C5ECA463221B1A9500BFFBD7 /* MypageCommonViewController.swift in Sources */,
+				B8996DBB22200C630019E431 /* WriteReviewReal2.swift in Sources */,
+				B80CA286222021B2000B8F49 /* WriteReviewNext.swift in Sources */,
 				C5ECA499221DC60F00BFFBD7 /* ReviewStoreInfoView.swift in Sources */,
 				C5ECA466221BEC4600BFFBD7 /* CustomStoreUIView.swift in Sources */,
 				C5ECA48B221D923500BFFBD7 /* DummyViewController.swift in Sources */,
