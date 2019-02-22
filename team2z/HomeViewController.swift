@@ -94,18 +94,25 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: HomeSearchControllerDelegate {
     func didPressButton(controller: SearchViewController) {
-//        dismiss(animated: true, completion: nil)
-//        self.navigationController?.pushViewController(SearchResultViewController(), animated: true)
+
+        let storyboard = UIStoryboard(name: "ScrollSegmented", bundle: nil)
+        let openNewVC = storyboard.instantiateViewController(withIdentifier: "ResultSearchVC") as! ResultSearchViewController
         
-        let openNewVC = SearchResultViewController(nibName: "SearchResultViewController", bundle: nil)
+//        let openNewVC = SearchResultViewController(nibName: "SearchResultViewController", bundle: nil)
+        openNewVC.delegateHomeSearchControllerDelegate = self
         openNewVC.searchKeyword = controller.searchKeyword
+//        self.navigationController?.pushViewController(openNewVC, animated: true)
         controller.dismiss(animated: true) { () -> Void in
             //Perform segue or push some view with your code
             self.navigationController?.pushViewController(openNewVC, animated: true)
         }
     }
+    
+    func didPressReturnButton(controller: ResultSearchViewController) {
+        navigationController?.popViewController(animated: true)
+        let openNewVC = SearchViewController(nibName: "SearchViewController", bundle: nil)
+        openNewVC.delegateHomeSearchControllerDelegate = self
+        //        self.delegate?.pushViewController(openNewVC)
+        self.present(openNewVC, animated: true, completion: nil)
+    }
 }
-
-//protocol HomeSearchControllerDelegate : class {
-//    func didPressButton(_ tag: Int)
-//}

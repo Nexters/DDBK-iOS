@@ -22,11 +22,12 @@ class UserFollowTableViewCell: UITableViewCell {
         // Initialization code
         self.selectionStyle = .none
         // 프로필 사진 이미지 뷰
-        profileImageView.layer.borderWidth = 2
+        profileImageView.layer.borderWidth = 0
         profileImageView.layer.masksToBounds = false
         profileImageView.layer.borderColor = UIColor(red: 241.0/255.0, green: 90.0/255.0, blue: 36.0/255.0, alpha: 1.0).cgColor
         profileImageView.layer.cornerRadius = profileImageView.frame.height/2
         profileImageView.clipsToBounds = true
+
         // 팔로우 버튼
 //        followButton.backgroundColor = .clear
         followButton.layer.cornerRadius = 5

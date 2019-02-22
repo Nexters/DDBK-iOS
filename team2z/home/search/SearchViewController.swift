@@ -10,6 +10,8 @@ import UIKit
 
 protocol HomeSearchControllerDelegate : class {
     func didPressButton(controller: SearchViewController)
+//    func didPressReturnButton(controller: SearchResultViewController)
+    func didPressReturnButton(controller: ResultSearchViewController)
 }
 
 class Candy {
@@ -167,14 +169,9 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        switch indexPath.section {
-        case 1:
-            break
-        case 2:
-            break
-        default:
-            print("셀 선택")
-        }
+        
+        goToSearchResultAction(searchBarText: homeSearchHistory?[indexPath.row] as! String)
+        
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -224,22 +221,24 @@ extension SearchViewController: UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         print("searchButtonClicked" +  searchBar.text!)
-        let filteredIndices = homeSearchHistory?.indices.filter ({homeSearchHistory?[$0] as! String == searchBar.text!})
+        goToSearchResultAction(searchBarText: searchBar.text!)
+    }
+    
+    func goToSearchResultAction(searchBarText: String) {
+        let filteredIndices = homeSearchHistory?.indices.filter ({homeSearchHistory?[$0] as! String == searchBarText})
         
         if (filteredIndices?.count)! > 0{
             print("이미 히스토리에 존재하는 검색어입니다.")
             homeSearchHistory?.remove(at: filteredIndices![0])
-            homeSearchHistory?.insert(searchBar.text!, at: 0)
+            homeSearchHistory?.insert(searchBarText, at: 0)
             
         } else {
             print("히스토리에 존재하지 않으므로 히스토리에 추가합니다.")
-            homeSearchHistory?.insert(searchBar.text!, at: 0)
+            homeSearchHistory?.insert(searchBarText, at: 0)
         }
         
-        searchKeyword = searchBar.text!
+        searchKeyword = searchBarText
         delegateHomeSearchControllerDelegate?.didPressButton(controller: self)
-//        self.navigationController?.pushViewController(SearchResultViewController(), animated: true)
-//        dismiss(animated: true, completion: nil)
     }
 }
 
