@@ -18,7 +18,7 @@ class MyPageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.title = "마이페이지"
+        self.navigationItem.title = "마이페이지"
         self.navigationController?.navigationBar.backgroundColor = .white
         self.navigationController?.navigationBar.barTintColor = .white
         

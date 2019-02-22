@@ -12,7 +12,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewUserHomeView" customModule="team2z" customModuleProvider="target">
             <connections>
+                <outlet property="homeLogoImageView" destination="vmq-hf-eTu" id="C5u-2b-tKf"/>
                 <outlet property="recommendDHButton" destination="TE6-ap-xlz" id="qvd-Rx-Vlg"/>
+                <outlet property="wellcomeLabel" destination="JbB-Gf-fqs" id="vgm-b2-alx"/>
+                <outlet property="wellcomeLabel_2" destination="jvz-Wm-Zr6" id="gDB-0g-ZVU"/>
+                <outlet property="wellcomeLabel_3" destination="lZK-o3-x2H" id="a8C-TX-6HQ"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
