@@ -47,6 +47,8 @@
 		C514F005221F2EF1009876D6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C514F004221F2EF1009876D6 /* MainViewController.swift */; };
 		C514F008221FCCA3009876D6 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C514F006221FCCA3009876D6 /* SearchTableViewCell.swift */; };
 		C514F009221FCCA3009876D6 /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C514F007221FCCA3009876D6 /* SearchTableViewCell.xib */; };
+		C514F00E22201CEB009876D6 /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C514F00C22201CEB009876D6 /* SearchResultViewController.swift */; };
+		C514F00F22201CEB009876D6 /* SearchResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C514F00D22201CEB009876D6 /* SearchResultViewController.xib */; };
 		C5945A6C2217F78A0095FAB4 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5945A6A2217F78A0095FAB4 /* MyTableViewCell.swift */; };
 		C5945A6D2217F78A0095FAB4 /* MyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5945A6B2217F78A0095FAB4 /* MyTableViewCell.xib */; };
 		C5945A702218175D0095FAB4 /* MypageDefaultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5945A6E2218175D0095FAB4 /* MypageDefaultTableViewCell.swift */; };
@@ -160,6 +162,8 @@
 		C514F004221F2EF1009876D6 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		C514F006221FCCA3009876D6 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		C514F007221FCCA3009876D6 /* SearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
+		C514F00C22201CEB009876D6 /* SearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
+		C514F00D22201CEB009876D6 /* SearchResultViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultViewController.xib; sourceTree = "<group>"; };
 		C5945A6A2217F78A0095FAB4 /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 		C5945A6B2217F78A0095FAB4 /* MyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTableViewCell.xib; sourceTree = "<group>"; };
 		C5945A6E2218175D0095FAB4 /* MypageDefaultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageDefaultTableViewCell.swift; sourceTree = "<group>"; };
@@ -347,6 +351,29 @@
 			path = newFeed;
 			sourceTree = "<group>";
 		};
+		C514F00A22201C6D009876D6 /* search */ = {
+			isa = PBXGroup;
+			children = (
+				C514F00B22201CD5009876D6 /* result */,
+				C514EFFE221F18D7009876D6 /* SearchViewController.swift */,
+				C514EFFF221F18D7009876D6 /* SearchViewController.xib */,
+				C514F002221F2D74009876D6 /* MainView.swift */,
+				C514F004221F2EF1009876D6 /* MainViewController.swift */,
+				C514F006221FCCA3009876D6 /* SearchTableViewCell.swift */,
+				C514F007221FCCA3009876D6 /* SearchTableViewCell.xib */,
+			);
+			path = search;
+			sourceTree = "<group>";
+		};
+		C514F00B22201CD5009876D6 /* result */ = {
+			isa = PBXGroup;
+			children = (
+				C514F00C22201CEB009876D6 /* SearchResultViewController.swift */,
+				C514F00D22201CEB009876D6 /* SearchResultViewController.xib */,
+			);
+			path = result;
+			sourceTree = "<group>";
+		};
 		C5945A74221835120095FAB4 /* mypage */ = {
 			isa = PBXGroup;
 			children = (
@@ -447,14 +474,9 @@
 		C5ECA4A2221EC39700BFFBD7 /* home */ = {
 			isa = PBXGroup;
 			children = (
+				C514F00A22201C6D009876D6 /* search */,
 				C514EFFA221F03FC009876D6 /* NewUserHomeView.swift */,
 				C514EFFC221F0418009876D6 /* NewUserHomeView.xib */,
-				C514EFFE221F18D7009876D6 /* SearchViewController.swift */,
-				C514EFFF221F18D7009876D6 /* SearchViewController.xib */,
-				C514F002221F2D74009876D6 /* MainView.swift */,
-				C514F004221F2EF1009876D6 /* MainViewController.swift */,
-				C514F006221FCCA3009876D6 /* SearchTableViewCell.swift */,
-				C514F007221FCCA3009876D6 /* SearchTableViewCell.xib */,
 			);
 			path = home;
 			sourceTree = "<group>";
@@ -591,6 +613,7 @@
 				97AA10B021F4CBC400357553 /* Carthage in Resources */,
 				C5ECA48C221D923500BFFBD7 /* DummyViewController.xib in Resources */,
 				C5ECA464221B1A9500BFFBD7 /* MypageCommonViewController.xib in Resources */,
+				C514F00F22201CEB009876D6 /* SearchResultViewController.xib in Resources */,
 				C5945A73221821DF0095FAB4 /* Assets.xcassets in Resources */,
 				C514EFFD221F0418009876D6 /* NewUserHomeView.xib in Resources */,
 				C514F001221F18D7009876D6 /* SearchViewController.xib in Resources */,
@@ -780,6 +803,7 @@
 				C5ECA48B221D923500BFFBD7 /* DummyViewController.swift in Sources */,
 				C5ECA46B221BF5E700BFFBD7 /* StoreCommonTableViewCell.swift in Sources */,
 				C514EFFB221F03FC009876D6 /* NewUserHomeView.swift in Sources */,
+				C514F00E22201CEB009876D6 /* SearchResultViewController.swift in Sources */,
 				C5ECA4A0221EB54300BFFBD7 /* ImageTouchViewController.swift in Sources */,
 				97E437C32217E00E0063419A /* AddViewController.swift in Sources */,
 				C5ECA497221DC51800BFFBD7 /* ReviewRatingView.swift in Sources */,

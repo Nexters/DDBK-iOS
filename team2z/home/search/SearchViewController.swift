@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol HomeSearchControllerDelegate : class {
+    func didPressButton(controller: SearchViewController)
+}
+
 class Candy {
     var category: String
     var name: String
@@ -19,6 +23,9 @@ class Candy {
 }
 
 class SearchViewController: UIViewController {
+    
+    var delegateHomeSearchControllerDelegate: HomeSearchControllerDelegate?
+    
     @IBOutlet weak var backButton: UIButton! // 0.146
     @IBOutlet weak var searchBar: UISearchBar! // 0.854
     @IBOutlet weak var firstLineView: UIView!
@@ -55,6 +62,7 @@ class SearchViewController: UIViewController {
     var historyCandies = [Candy]()
     var searchCandies = [Candy]()
     var searching = false
+    var searchKeyword = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -228,6 +236,10 @@ extension SearchViewController: UISearchBarDelegate {
             homeSearchHistory?.insert(searchBar.text!, at: 0)
         }
         
+        searchKeyword = searchBar.text!
+        delegateHomeSearchControllerDelegate?.didPressButton(controller: self)
+//        self.navigationController?.pushViewController(SearchResultViewController(), animated: true)
+//        dismiss(animated: true, completion: nil)
     }
 }
 
