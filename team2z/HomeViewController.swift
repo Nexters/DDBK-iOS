@@ -84,6 +84,28 @@ class HomeViewController: UIViewController {
     @objc func searchButtonPressed() {
         print("홈 네비게이션 검색 버튼 눌름")
 //        show(SearchViewController(), sender: <#T##Any?#>)
-        self.present(SearchViewController(), animated: true, completion: nil)
+        
+        let openNewVC = SearchViewController(nibName: "SearchViewController", bundle: nil)
+        openNewVC.delegateHomeSearchControllerDelegate = self
+//        self.delegate?.pushViewController(openNewVC)
+        self.present(openNewVC, animated: true, completion: nil)
     }
 }
+
+extension HomeViewController: HomeSearchControllerDelegate {
+    func didPressButton(controller: SearchViewController) {
+//        dismiss(animated: true, completion: nil)
+//        self.navigationController?.pushViewController(SearchResultViewController(), animated: true)
+        
+        let openNewVC = SearchResultViewController(nibName: "SearchResultViewController", bundle: nil)
+        openNewVC.searchKeyword = controller.searchKeyword
+        controller.dismiss(animated: true) { () -> Void in
+            //Perform segue or push some view with your code
+            self.navigationController?.pushViewController(openNewVC, animated: true)
+        }
+    }
+}
+
+//protocol HomeSearchControllerDelegate : class {
+//    func didPressButton(_ tag: Int)
+//}
