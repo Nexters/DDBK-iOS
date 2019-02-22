@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class WriteReviewReal: UIView {
     private let xibName = "WriteReviewReal"
@@ -33,10 +34,10 @@ class WriteReviewReal: UIView {
         self.commentLabel_1.numberOfLines = 2
         self.commentLabel_1.text = "방문하신 스토어\n어떠셨어요?"
         self.commentLabel_1.textAlignment = .center
-        self.commentLabel_1.font = UIFont.boldSystemFont(ofSize: 28.0)
+        self.commentLabel_1.font = UIFont.boldSystemFont(ofSize: 23.0)
         
         
-        self.starRating.starSize = 50
+        self.starRating.starSize = 40
         self.starRating.filledColor = UIColor.yellow
         self.starRating.filledBorderColor = UIColor.gray
         self.starRating.emptyColor = UIColor.gray
@@ -56,7 +57,7 @@ class WriteReviewReal: UIView {
         }
         
         self.starRating.snp.makeConstraints { (make) in
-            make.top.equalTo(self.commentLabel_1).offset(50)
+            make.top.equalTo(self.commentLabel_1).offset(80)
             make.centerX.equalTo(self)
             make.centerY.equalTo(self)
         }
