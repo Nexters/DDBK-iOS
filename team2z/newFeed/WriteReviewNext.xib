@@ -15,6 +15,10 @@
                 <outlet property="comment_1" destination="QCH-IK-mT8" id="pXB-Fu-7NI"/>
                 <outlet property="comment_2" destination="b4m-e8-bKj" id="9hQ-lo-hi2"/>
                 <outlet property="comment_3" destination="ez3-aW-L7t" id="Ypk-oT-o6m"/>
+                <outlet property="comment_4" destination="GD8-qb-9nq" id="xIf-gp-90Q"/>
+                <outlet property="comment_5" destination="eUr-oa-yLt" id="MOb-p7-cse"/>
+                <outlet property="dduckFirst" destination="rlC-eS-LFy" id="v8h-co-EaB"/>
+                <outlet property="dduckSecond" destination="ORb-pM-HDo" id="0Pl-T4-IYB"/>
                 <outlet property="lineView" destination="b6c-cv-yYQ" id="5ld-aP-7Yp"/>
                 <outlet property="spicyRating" destination="bfv-mB-hl3" id="A8y-m4-xsK"/>
             </connections>
@@ -34,6 +38,13 @@
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bfv-mB-hl3" customClass="CosmosView" customModule="team2z" customModuleProvider="target">
                     <rect key="frame" x="67" y="81" width="240" height="128"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0cm-PT-b5Q">
+                            <rect key="frame" x="8" y="-57" width="289" height="24"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                    </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="rating">
@@ -58,6 +69,30 @@
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ez3-aW-L7t">
                     <rect key="frame" x="166" y="364" width="42" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rlC-eS-LFy">
+                    <rect key="frame" x="67" y="421" width="46" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Button"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ORb-pM-HDo">
+                    <rect key="frame" x="261" y="421" width="46" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Button"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GD8-qb-9nq">
+                    <rect key="frame" x="67" y="481" width="42" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eUr-oa-yLt">
+                    <rect key="frame" x="261" y="481" width="42" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>

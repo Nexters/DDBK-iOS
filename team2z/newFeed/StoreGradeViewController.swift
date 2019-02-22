@@ -9,13 +9,25 @@
 import UIKit
 import SnapKit
 
-class StoreGradeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class StoreGradeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     private var searchResultTableView: UITableView!
-    private var writeReviewView: WriteReviewNext!
+    private var writeReviewView: WriteReviewFinal!
+    private var touchImageView: UIBarButtonItem!
+    
+    lazy var imagePicker: UIImagePickerController = {
+        let picker: UIImagePickerController = UIImagePickerController()
+        picker.sourceType = .photoLibrary
+        picker.delegate = self
+        picker.allowsEditing = true
+        return picker
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationController?.isToolbarHidden = true
+        
         self.title = "리뷰 쓰기"
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "다음", style: .plain, target: self, action: #selector(self.backAction(_:)))
         initItems()
@@ -24,11 +36,16 @@ class StoreGradeViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func initItems(){
         searchResultTableView = UITableView()
+        touchImageView = UIBarButtonItem(image: UIImage(named: "close"), style: .plain, target: self, action: #selector(add))
+        var items = [UIBarButtonItem]()
         
         self.searchResultTableView.delegate = self
         self.searchResultTableView.dataSource = self
         self.searchResultTableView.register(ResultStoreTableViewCell.self, forCellReuseIdentifier: "result")
         self.searchResultTableView.rowHeight = 60
+    
+        items.append(touchImageView)
+        self.toolbarItems = items
         
         // 왜 searchResultTableView.visibleCells가 없는가ㅏㅏㅏㅏㅜㅜㅜ
         /*let cells = self.searchResultTableView.visibleCells
@@ -48,14 +65,16 @@ class StoreGradeViewController: UIViewController, UITableViewDelegate, UITableVi
 //        self.searchResultTableView.tableFooterView = writeReviewView
 //        self.searchResultTableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         
-        writeReviewView = WriteReviewNext(frame: CGRect(x: 0, y: 0, width: self.searchResultTableView.frame.width, height: 300))
+        writeReviewView = WriteReviewFinal(frame: CGRect(x: 0, y: 0, width: self.searchResultTableView.frame.width, height: view.frame.height))
         self.searchResultTableView.tableFooterView = writeReviewView
         writeReviewView.backgroundColor = UIColor.white
-        //self.view.addSubview(writeReviewView)
         self.view.addSubview(searchResultTableView)
 
     }
     
+    @objc func add(){
+        self.present(self.imagePicker, animated: true, completion: nil)
+    }
     func setSnapKitLayout(){
         
         self.searchResultTableView.snp.makeConstraints { (make) in
