@@ -1,15 +1,15 @@
 //
-//  NewFeedViewController.swift
+//  NewFeedRealViewController.swift
 //  team2z
 //
-//  Created by 김대섭 on 2019. 2. 16..
-//  Copyright © 2019년 TeamNexters. All rights reserved.
+//  Created by MOONJUNG on 22/02/2019.
+//  Copyright © 2019 TeamNexters. All rights reserved.
 //
 
 import UIKit
 import SnapKit
 
-class NewFeedViewController: UIViewController, UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource{
+class NewFeedRealViewController:  UIViewController, UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource{
     
     // variable
     private var storeIcon: UIImageView!
@@ -20,13 +20,13 @@ class NewFeedViewController: UIViewController, UISearchBarDelegate, UITableViewD
         super.viewDidLoad()
         //self.navigationItem.title = "리뷰 쓰기"
         self.title = "리뷰 쓰기"
-//        self.navigationItem.backBarButtonItem = UIBarButtonItem(image: UIImage(named: "backbutton.png"), style: .plain, target: self, action: nil)
-//        let backbutton = UIBarButtonItem()
-//        backbutton.title = "뒤로가기"
-//        backbutton.setBackgroundImage(UIImage(named: "backbutton.png"), for: .normal, style: .plain, barMetrics: .default)
+        //        self.navigationItem.backBarButtonItem = UIBarButtonItem(image: UIImage(named: "backbutton.png"), style: .plain, target: self, action: nil)
+        //        let backbutton = UIBarButtonItem()
+        //        backbutton.title = "뒤로가기"
+        //        backbutton.setBackgroundImage(UIImage(named: "backbutton.png"), for: .normal, style: .plain, barMetrics: .default)
         
-//        backbutton.setImage(UIImage(named: "backbutton.png"), for: .normal)
-//        backbutton.addTarget(self, action: #selector(self.backAction(_:)), for: .touchUpInside)
+        //        backbutton.setImage(UIImage(named: "backbutton.png"), for: .normal)
+        //        backbutton.addTarget(self, action: #selector(self.backAction(_:)), for: .touchUpInside)
         
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "뒤로가기", style: .plain, target: self, action: #selector(self.backAction(_:)))
         
@@ -35,7 +35,7 @@ class NewFeedViewController: UIViewController, UISearchBarDelegate, UITableViewD
     }
     
     @IBAction func backAction(_ sender: UIButton) {
-//        self.navigationController?.popViewController(animated: true)
+        //        self.navigationController?.popViewController(animated: true)
         self.dismiss(animated: true, completion: nil)
     }
     
@@ -60,7 +60,7 @@ class NewFeedViewController: UIViewController, UISearchBarDelegate, UITableViewD
         self.view.addSubview(searchStoreBar)
         self.view.addSubview(searchResultTableView)
     }
-
+    
     func setSnapKitLayout(){
         
         self.searchStoreBar.snp.makeConstraints { (make) in
@@ -101,5 +101,5 @@ class NewFeedViewController: UIViewController, UISearchBarDelegate, UITableViewD
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.navigationController?.pushViewController(StoreGradeViewController(), animated: true)
     }
-   
+    
 }
