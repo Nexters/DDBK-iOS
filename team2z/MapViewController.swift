@@ -13,6 +13,8 @@ class MapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.title = "Map"
+        self.navigationItem.title = "지도"
+        
+        self.view.backgroundColor = .white
     }
 }

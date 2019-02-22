@@ -306,8 +306,8 @@ extension StoreDetailViewController: UITableViewDataSource {
         //        segmentView.layer.cornerRadius = 5.0
         //        segmentView.layer.borderColor = UIColor(white: 0.85, alpha: 1.0).cgColor
         //        segmentView.layer.borderWidth = 1.0
-        segmentView!.addSegmentWithTitle("왔다갔어요", onSelectionImage: UIImage(named: "store_detail_seg_2_selected"), offSelectionImage: UIImage(named: "store_detail_seg_1"))
-        segmentView!.addSegmentWithTitle("인생떡볶이집", onSelectionImage: UIImage(named: "store_detail_seg_2_selected"), offSelectionImage: UIImage(named: "store_detail_seg_1"))
+        segmentView!.addSegmentWithTitle("왔다갔어요", onSelectionImage: UIImage(named: "store_detail_seg_1_white"), offSelectionImage: UIImage(named: "store_detail_seg_1"))
+        segmentView!.addSegmentWithTitle("인생떡볶이집", onSelectionImage: UIImage(named: "store_detail_seg_2_white"), offSelectionImage: UIImage(named: "store_detail_seg_2"))
         segmentView!.addTarget(self, action: #selector(selectSegmentInSegmentView(segmentView:)), for: .valueChanged)
 
         segmentView!.selectedSegmentIndex = 0
