@@ -8,10 +8,19 @@
 
 import UIKit
 
+protocol HomeSearchCellDelegate : class {
+    func didPressButton(_ tag: Int)
+    func didPressDeleteButton(cell: SearchTableViewCell)
+}
+
 class SearchTableViewCell: UITableViewCell {
     @IBOutlet weak var historyIconImageView: UIImageView!
     @IBOutlet weak var keywordLabel: UILabel!
     @IBOutlet weak var deleteButton: UIButton!
+    
+    var keywordIndexOfHistory: Int?
+    
+    var cellDelegate: HomeSearchCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -40,5 +49,7 @@ class SearchTableViewCell: UITableViewCell {
     
     @IBAction func deleteButtonPressed(_ sender: UIButton) {
         print("최근 검색 내역에서 지웁니다")
+//        cellDelegate?.didPressButton(sender.tag)
+        cellDelegate?.didPressDeleteButton(cell: self)
     }
 }
