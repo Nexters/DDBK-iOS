@@ -99,7 +99,8 @@ class NewFeedRealViewController:  UIViewController, UISearchBarDelegate, UITable
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.navigationController?.pushViewController(StoreGradeViewController(), animated: true)
+        //self.navigationController?.pushViewController(StoreGradeViewController(), animated: true)
+        self.navigationController?.pushViewController(WriteStoreReviewController(), animated: true)
     }
     
 }
