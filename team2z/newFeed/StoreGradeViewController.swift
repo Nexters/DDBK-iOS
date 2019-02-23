@@ -13,15 +13,15 @@ class StoreGradeViewController: UIViewController, UITableViewDelegate, UITableVi
 
     private var searchResultTableView: UITableView!
     private var writeReviewView: WriteReviewFinal!
-    private var touchImageView: UIBarButtonItem!
+    //private var touchImageView: UIBarButtonItem!
     
-    lazy var imagePicker: UIImagePickerController = {
+    /*lazy var imagePicker: UIImagePickerController = {
         let picker: UIImagePickerController = UIImagePickerController()
         picker.sourceType = .photoLibrary
         picker.delegate = self
         picker.allowsEditing = true
         return picker
-    }()
+    }()*/
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,16 +36,16 @@ class StoreGradeViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func initItems(){
         searchResultTableView = UITableView()
-        touchImageView = UIBarButtonItem(image: UIImage(named: "close"), style: .plain, target: self, action: #selector(add))
-        var items = [UIBarButtonItem]()
+        /*touchImageView = UIBarButtonItem(image: UIImage(named: "close"), style: .plain, target: self, action: #selector(add))
+        var items = [UIBarButtonItem]()*/
         
         self.searchResultTableView.delegate = self
         self.searchResultTableView.dataSource = self
         self.searchResultTableView.register(ResultStoreTableViewCell.self, forCellReuseIdentifier: "result")
         self.searchResultTableView.rowHeight = 60
     
-        items.append(touchImageView)
-        self.toolbarItems = items
+//        items.append(touchImageView)
+//        self.toolbarItems = items
         
         // 왜 searchResultTableView.visibleCells가 없는가ㅏㅏㅏㅏㅜㅜㅜ
         /*let cells = self.searchResultTableView.visibleCells
@@ -72,9 +72,10 @@ class StoreGradeViewController: UIViewController, UITableViewDelegate, UITableVi
 
     }
     
-    @objc func add(){
-        self.present(self.imagePicker, animated: true, completion: nil)
-    }
+//    @objc func add(){
+//        self.present(self.imagePicker, animated: true, completion: nil)
+//    }
+    
     func setSnapKitLayout(){
         
         self.searchResultTableView.snp.makeConstraints { (make) in

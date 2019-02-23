@@ -30,6 +30,10 @@
 		B80CA288222021F1000B8F49 /* WriteReviewNext.xib in Resources */ = {isa = PBXBuildFile; fileRef = B80CA287222021F1000B8F49 /* WriteReviewNext.xib */; };
 		B80CA28A222058AD000B8F49 /* WriteReviewFinal.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80CA289222058AD000B8F49 /* WriteReviewFinal.swift */; };
 		B80CA28E22206202000B8F49 /* WriteReviewFinal.xib in Resources */ = {isa = PBXBuildFile; fileRef = B80CA28D22206202000B8F49 /* WriteReviewFinal.xib */; };
+		B80CA2992220C26C000B8F49 /* WriteStoreReviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80CA2972220C26C000B8F49 /* WriteStoreReviewController.swift */; };
+		B80CA29A2220C26C000B8F49 /* WriteStoreReviewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B80CA2982220C26C000B8F49 /* WriteStoreReviewController.xib */; };
+		B80CA29C2220F218000B8F49 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80CA29B2220F218000B8F49 /* test.swift */; };
+		B80CA29E2220F232000B8F49 /* test.xib in Resources */ = {isa = PBXBuildFile; fileRef = B80CA29D2220F232000B8F49 /* test.xib */; };
 		B8996DB4222000C80019E431 /* NewFeedRealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8996DB2222000C80019E431 /* NewFeedRealViewController.swift */; };
 		B8996DB5222000C80019E431 /* NewFeedRealViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8996DB3222000C80019E431 /* NewFeedRealViewController.xib */; };
 		B8996DB72220040D0019E431 /* WriteReviewReal.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8996DB62220040D0019E431 /* WriteReviewReal.swift */; };
@@ -156,6 +160,10 @@
 		B80CA287222021F1000B8F49 /* WriteReviewNext.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WriteReviewNext.xib; sourceTree = "<group>"; };
 		B80CA289222058AD000B8F49 /* WriteReviewFinal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteReviewFinal.swift; sourceTree = "<group>"; };
 		B80CA28D22206202000B8F49 /* WriteReviewFinal.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WriteReviewFinal.xib; sourceTree = "<group>"; };
+		B80CA2972220C26C000B8F49 /* WriteStoreReviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteStoreReviewController.swift; sourceTree = "<group>"; };
+		B80CA2982220C26C000B8F49 /* WriteStoreReviewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WriteStoreReviewController.xib; sourceTree = "<group>"; };
+		B80CA29B2220F218000B8F49 /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
+		B80CA29D2220F232000B8F49 /* test.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = test.xib; sourceTree = "<group>"; };
 		B8996DB2222000C80019E431 /* NewFeedRealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFeedRealViewController.swift; sourceTree = "<group>"; };
 		B8996DB3222000C80019E431 /* NewFeedRealViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewFeedRealViewController.xib; sourceTree = "<group>"; };
 		B8996DB62220040D0019E431 /* WriteReviewReal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteReviewReal.swift; sourceTree = "<group>"; };
@@ -373,6 +381,10 @@
 				B80CA287222021F1000B8F49 /* WriteReviewNext.xib */,
 				B80CA289222058AD000B8F49 /* WriteReviewFinal.swift */,
 				B80CA28D22206202000B8F49 /* WriteReviewFinal.xib */,
+				B80CA2972220C26C000B8F49 /* WriteStoreReviewController.swift */,
+				B80CA2982220C26C000B8F49 /* WriteStoreReviewController.xib */,
+				B80CA29B2220F218000B8F49 /* test.swift */,
+				B80CA29D2220F232000B8F49 /* test.xib */,
 			);
 			path = newFeed;
 			sourceTree = "<group>";
@@ -660,6 +672,7 @@
 				C514F01C22209037009876D6 /* DiscoveryViewController.xib in Resources */,
 				C514F0132220501E009876D6 /* ScrollSegmented.storyboard in Resources */,
 				B80CA288222021F1000B8F49 /* WriteReviewNext.xib in Resources */,
+				B80CA29A2220C26C000B8F49 /* WriteStoreReviewController.xib in Resources */,
 				C5ECA479221C869000BFFBD7 /* UserFollowTableViewCell.xib in Resources */,
 				C5945A6D2217F78A0095FAB4 /* MyTableViewCell.xib in Resources */,
 				C5945A78221835370095FAB4 /* GradeViewController.xib in Resources */,
@@ -674,6 +687,7 @@
 				97AA10B021F4CBC400357553 /* Carthage in Resources */,
 				C5ECA48C221D923500BFFBD7 /* DummyViewController.xib in Resources */,
 				C5ECA464221B1A9500BFFBD7 /* MypageCommonViewController.xib in Resources */,
+				B80CA29E2220F232000B8F49 /* test.xib in Resources */,
 				C514F00F22201CEB009876D6 /* SearchResultViewController.xib in Resources */,
 				C514F032222324E7009876D6 /* FollowViewController.xib in Resources */,
 				C5945A73221821DF0095FAB4 /* Assets.xcassets in Resources */,
@@ -844,6 +858,7 @@
 				C5945A6C2217F78A0095FAB4 /* MyTableViewCell.swift in Sources */,
 				B8996DB72220040D0019E431 /* WriteReviewReal.swift in Sources */,
 				97E437BD2217CB200063419A /* MyPageViewController.swift in Sources */,
+				B80CA2992220C26C000B8F49 /* WriteStoreReviewController.swift in Sources */,
 				C5ECA478221C869000BFFBD7 /* UserFollowTableViewCell.swift in Sources */,
 				C514F01822208C39009876D6 /* MySegmentControl.swift in Sources */,
 				C5ECA460221B168900BFFBD7 /* CosmosDistrib.swift in Sources */,
@@ -856,6 +871,7 @@
 				C514F005221F2EF1009876D6 /* MainViewController.swift in Sources */,
 				C5ECA486221D46F800BFFBD7 /* IntroductionViewController.swift in Sources */,
 				C5ECA48F221DB52300BFFBD7 /* ReviewUserInfoView.swift in Sources */,
+				B80CA29C2220F218000B8F49 /* test.swift in Sources */,
 				97E437BB2217CB170063419A /* NewFeedViewController.swift in Sources */,
 				C5ECA494221DBAB200BFFBD7 /* ReviewTableViewCell.swift in Sources */,
 				C514F01B22209037009876D6 /* DiscoveryViewController.swift in Sources */,

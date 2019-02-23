@@ -19,15 +19,15 @@ class WriteReviewReal: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.commonInit()
-        initItems()
-        snapKitLayout()
+//        initItems()
+//        snapKitLayout()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.commonInit()
-        initItems()
-        snapKitLayout()
+//        initItems()
+//        snapKitLayout()
     }
     
     private func initItems(){
@@ -70,10 +70,29 @@ class WriteReviewReal: UIView {
         
     }
     
+//    class func instanceFromNib() -> WriteReviewReal {
+//        return UINib(nibName: "WriteReviewReal", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! WriteReviewReal
+//    }
+    
     private func commonInit(){
-        let view = Bundle.main.loadNibNamed(xibName, owner: self, options: nil)?.first as! UIView
+        
+        let view = Bundle.main.loadNibNamed("WriteReviewReal", owner: self, options: nil)?.first as! UIView
         view.frame = self.bounds
         self.addSubview(view)
+        
+//        Bundle.main.loadNibNamed("WriteReviewReal", owner: self, options: nil)
+//        self.addSubview(self)
+//        let view = Bundle.main.loadNibNamed("WriteReviewReal", owner: self, options: nil)?.first as! UIView
+//        view.frame = self.bounds
+//        self.addSubview(view)
+        
+//        let nib = UINib(nibName: "WriteReviewReal", bundle: nil).instantiate(withOwner: self, options: nil)
+//        nib.instantiate(withOwner: self, options: nil)
+//        self.addSubview(UIView.init(frame: self.bounds))
+
+//        view.frame = self.bounds
+//        self.addSubview(nib)
+
     }
     
 }
