@@ -20,6 +20,9 @@ class MyTableViewCell: UITableViewCell {
     @IBOutlet weak var profileDescLabel: UILabel!
     @IBOutlet weak var profileNimLabel: UILabel!
     
+    @IBOutlet weak var followerLabel: UIView!
+    @IBOutlet weak var followingLabel: UIView!
+    
     @IBOutlet var profileSubViews: [UIView]!
     @IBOutlet var subImageViews: [UIImageView]!
     @IBOutlet var subImageLabels: [UILabel]!
@@ -97,6 +100,7 @@ class MyTableViewCell: UITableViewCell {
 //        delegate?.didTapButton()
         cellDelegate?.didPressButton(sender.tag)
     }
+
     
 }
 
