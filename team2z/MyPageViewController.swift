@@ -95,6 +95,8 @@ extension MyPageViewController: UITableViewDataSource, UITableViewDelegate {
             let tapGesture_0 = UITapGestureRecognizer(target: self, action: #selector(handleTap_0))
             let tapGesture_1 = UITapGestureRecognizer(target: self, action: #selector(handleTap_1))
             let tapGesture_2 = UITapGestureRecognizer(target: self, action: #selector(handleTap_2))
+            cell.followerLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(followerLabelPressed)))
+            cell.followingLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(followingLabelPressed)))
             cell.profileSubViews[0].addGestureRecognizer(tapGesture_0)
             cell.profileSubViews[1].addGestureRecognizer(tapGesture_1)
             cell.profileSubViews[2].addGestureRecognizer(tapGesture_2)
@@ -187,6 +189,17 @@ extension MyPageViewController: UITableViewDataSource, UITableViewDelegate {
         self.navigationController?.pushViewController(GradeViewController(), animated: true)
     }
     
+    @objc func followerLabelPressed(sender: UITapGestureRecognizer) {
+        let openNewVC = FollowViewController(nibName: "FollowViewController", bundle: nil)
+        openNewVC.type = 0
+        self.navigationController?.pushViewController(openNewVC, animated: true)
+    }
+    @objc func followingLabelPressed(sender: UITapGestureRecognizer) {
+        let openNewVC = FollowViewController(nibName: "FollowViewController", bundle: nil)
+        openNewVC.type = 1
+        
+        self.navigationController?.pushViewController(openNewVC, animated: true)
+    }
 }
 
 extension MyPageViewController: YourCellDelegate {

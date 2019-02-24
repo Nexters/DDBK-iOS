@@ -56,6 +56,8 @@
 		C514F01C22209037009876D6 /* DiscoveryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C514F01A22209037009876D6 /* DiscoveryViewController.xib */; };
 		C514F0202220E8A6009876D6 /* RecommendDHViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C514F01E2220E8A6009876D6 /* RecommendDHViewController.swift */; };
 		C514F0212220E8A6009876D6 /* RecommendDHViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C514F01F2220E8A6009876D6 /* RecommendDHViewController.xib */; };
+		C514F031222324E7009876D6 /* FollowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C514F02F222324E7009876D6 /* FollowViewController.swift */; };
+		C514F032222324E7009876D6 /* FollowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C514F030222324E7009876D6 /* FollowViewController.xib */; };
 		C5945A6C2217F78A0095FAB4 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5945A6A2217F78A0095FAB4 /* MyTableViewCell.swift */; };
 		C5945A6D2217F78A0095FAB4 /* MyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5945A6B2217F78A0095FAB4 /* MyTableViewCell.xib */; };
 		C5945A702218175D0095FAB4 /* MypageDefaultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5945A6E2218175D0095FAB4 /* MypageDefaultTableViewCell.swift */; };
@@ -178,6 +180,8 @@
 		C514F01A22209037009876D6 /* DiscoveryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiscoveryViewController.xib; sourceTree = "<group>"; };
 		C514F01E2220E8A6009876D6 /* RecommendDHViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendDHViewController.swift; sourceTree = "<group>"; };
 		C514F01F2220E8A6009876D6 /* RecommendDHViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendDHViewController.xib; sourceTree = "<group>"; };
+		C514F02F222324E7009876D6 /* FollowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowViewController.swift; sourceTree = "<group>"; };
+		C514F030222324E7009876D6 /* FollowViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FollowViewController.xib; sourceTree = "<group>"; };
 		C5945A6A2217F78A0095FAB4 /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 		C5945A6B2217F78A0095FAB4 /* MyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTableViewCell.xib; sourceTree = "<group>"; };
 		C5945A6E2218175D0095FAB4 /* MypageDefaultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageDefaultTableViewCell.swift; sourceTree = "<group>"; };
@@ -409,9 +413,19 @@
 			path = recommend;
 			sourceTree = "<group>";
 		};
+		C514F02E222324C8009876D6 /* follow_user */ = {
+			isa = PBXGroup;
+			children = (
+				C514F02F222324E7009876D6 /* FollowViewController.swift */,
+				C514F030222324E7009876D6 /* FollowViewController.xib */,
+			);
+			path = follow_user;
+			sourceTree = "<group>";
+		};
 		C5945A74221835120095FAB4 /* mypage */ = {
 			isa = PBXGroup;
 			children = (
+				C514F02E222324C8009876D6 /* follow_user */,
 				C5ECA47B221D205A00BFFBD7 /* profile_modify */,
 				C5ECA452221ACF7700BFFBD7 /* setup */,
 				C5945A6A2217F78A0095FAB4 /* MyTableViewCell.swift */,
@@ -654,6 +668,7 @@
 				C5ECA48C221D923500BFFBD7 /* DummyViewController.xib in Resources */,
 				C5ECA464221B1A9500BFFBD7 /* MypageCommonViewController.xib in Resources */,
 				C514F00F22201CEB009876D6 /* SearchResultViewController.xib in Resources */,
+				C514F032222324E7009876D6 /* FollowViewController.xib in Resources */,
 				C5945A73221821DF0095FAB4 /* Assets.xcassets in Resources */,
 				B80CA28E22206202000B8F49 /* WriteReviewFinal.xib in Resources */,
 				C514EFFD221F0418009876D6 /* NewUserHomeView.xib in Resources */,
@@ -804,6 +819,7 @@
 				97E437B32217C7C90063419A /* BaseTabBarController.swift in Sources */,
 				C5ECA47E221D223B00BFFBD7 /* ProfileModifyViewController.swift in Sources */,
 				C5945A702218175D0095FAB4 /* MypageDefaultTableViewCell.swift in Sources */,
+				C514F031222324E7009876D6 /* FollowViewController.swift in Sources */,
 				97E437B12217255B0063419A /* TestViewController.swift in Sources */,
 				97E437A92216B67F0063419A /* TestOneViewController.swift in Sources */,
 				B8E11A48221BE189007FBD5E /* StoreGradeViewController.swift in Sources */,
