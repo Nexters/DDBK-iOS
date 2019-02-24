@@ -30,15 +30,18 @@ class BaseViewController: UIViewController {
         
         let HomeVC = HomeViewController()
         let DiscoveryVC = DiscoveryViewController()
-        let NewFeedVC = NewFeedRealViewController()
+//        let NewFeedVC = NewFeedRealViewController()
+        let NewFeedVC = PopupViewController()
         let MapVC = MapViewController()
         let MyPageVC = MyPageViewController()
  
         let controllerArray = [HomeVC, DiscoveryVC, NewFeedVC, MapVC, MyPageVC]
         baseTabBar.viewControllers = controllerArray.map{ UINavigationController.init(rootViewController: $0) }
+
         
         var tabBarIndex = 0
         for tabBarItem in baseTabBar.tabBar.items! {
+            tabBarItem.tag = tabBarIndex
             tabBarItem.title = ""
             tabBarItem.image = UIImage(named: tabBarIcon[tabBarIndex])?.withRenderingMode(.alwaysOriginal)
             tabBarItem.selectedImage = UIImage(named: tabBarIcon[tabBarIndex] + "_active")?.withRenderingMode(.alwaysOriginal)

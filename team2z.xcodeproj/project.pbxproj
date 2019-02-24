@@ -58,6 +58,8 @@
 		C514F0212220E8A6009876D6 /* RecommendDHViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C514F01F2220E8A6009876D6 /* RecommendDHViewController.xib */; };
 		C514F031222324E7009876D6 /* FollowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C514F02F222324E7009876D6 /* FollowViewController.swift */; };
 		C514F032222324E7009876D6 /* FollowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C514F030222324E7009876D6 /* FollowViewController.xib */; };
+		C514F03422232E6C009876D6 /* Popup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C514F03322232E6C009876D6 /* Popup.storyboard */; };
+		C514F03622232F1C009876D6 /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C514F03522232F1C009876D6 /* PopupViewController.swift */; };
 		C5945A6C2217F78A0095FAB4 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5945A6A2217F78A0095FAB4 /* MyTableViewCell.swift */; };
 		C5945A6D2217F78A0095FAB4 /* MyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5945A6B2217F78A0095FAB4 /* MyTableViewCell.xib */; };
 		C5945A702218175D0095FAB4 /* MypageDefaultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5945A6E2218175D0095FAB4 /* MypageDefaultTableViewCell.swift */; };
@@ -182,6 +184,8 @@
 		C514F01F2220E8A6009876D6 /* RecommendDHViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendDHViewController.xib; sourceTree = "<group>"; };
 		C514F02F222324E7009876D6 /* FollowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowViewController.swift; sourceTree = "<group>"; };
 		C514F030222324E7009876D6 /* FollowViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FollowViewController.xib; sourceTree = "<group>"; };
+		C514F03322232E6C009876D6 /* Popup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Popup.storyboard; sourceTree = "<group>"; };
+		C514F03522232F1C009876D6 /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
 		C5945A6A2217F78A0095FAB4 /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 		C5945A6B2217F78A0095FAB4 /* MyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTableViewCell.xib; sourceTree = "<group>"; };
 		C5945A6E2218175D0095FAB4 /* MypageDefaultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageDefaultTableViewCell.swift; sourceTree = "<group>"; };
@@ -306,6 +310,7 @@
 				97E437AE2216C1F40063419A /* BaseViewController.swift */,
 				97E437B22217C7C90063419A /* BaseTabBarController.swift */,
 				97AA108A21F4A0FD00357553 /* LaunchScreen.storyboard */,
+				C514F03322232E6C009876D6 /* Popup.storyboard */,
 				C514F0122220501E009876D6 /* ScrollSegmented.storyboard */,
 				97AA108D21F4A0FD00357553 /* Info.plist */,
 				C514F01422206273009876D6 /* SegmentedScroll.storyboard */,
@@ -501,6 +506,7 @@
 			children = (
 				C5ECA489221D923500BFFBD7 /* DummyViewController.swift */,
 				C5ECA48A221D923500BFFBD7 /* DummyViewController.xib */,
+				C514F03522232F1C009876D6 /* PopupViewController.swift */,
 			);
 			path = dummy;
 			sourceTree = "<group>";
@@ -659,6 +665,7 @@
 				C5945A78221835370095FAB4 /* GradeViewController.xib in Resources */,
 				C5ECA495221DBAB200BFFBD7 /* ReviewTableViewCell.xib in Resources */,
 				C5ECA483221D30AB00BFFBD7 /* ProfileInfoTableViewCell.xib in Resources */,
+				C514F03422232E6C009876D6 /* Popup.storyboard in Resources */,
 				C5945A712218175D0095FAB4 /* MypageDefaultTableViewCell.xib in Resources */,
 				C5ECA449221898CC00BFFBD7 /* TableViewCell.xib in Resources */,
 				C5ECA468221BED8900BFFBD7 /* CustomStoreUIView.xib in Resources */,
@@ -816,6 +823,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C514F03622232F1C009876D6 /* PopupViewController.swift in Sources */,
 				97E437B32217C7C90063419A /* BaseTabBarController.swift in Sources */,
 				C5ECA47E221D223B00BFFBD7 /* ProfileModifyViewController.swift in Sources */,
 				C5945A702218175D0095FAB4 /* MypageDefaultTableViewCell.swift in Sources */,
