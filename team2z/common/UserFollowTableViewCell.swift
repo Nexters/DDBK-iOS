@@ -27,7 +27,12 @@ class UserFollowTableViewCell: UITableViewCell {
         profileImageView.layer.borderColor = UIColor(red: 241.0/255.0, green: 90.0/255.0, blue: 36.0/255.0, alpha: 1.0).cgColor
         profileImageView.layer.cornerRadius = profileImageView.frame.height/2
         profileImageView.clipsToBounds = true
-
+        profileImageView.snp.makeConstraints { (make) in
+            make.size.equalTo(CGSize(width: 44, height: 44))
+            make.centerY.equalTo(self.snp.centerY)
+            make.leading.equalTo(self.snp.leading).offset(20)
+        }
+        
         // 팔로우 버튼
 //        followButton.backgroundColor = .clear
         followButton.layer.cornerRadius = 5

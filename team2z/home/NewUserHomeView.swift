@@ -75,4 +75,9 @@ class NewUserHomeView: UIView {
             make.top.equalTo(wellcomeLabel_3.snp.bottom).offset(12)
         }
     }
+    
+    @IBAction func recommendBHButtonPressed(_ sender: UIButton) {
+    
+    }
+    
 }
