@@ -27,7 +27,7 @@ class HomeViewController: UIViewController {
             
             make.top.bottom.left.right.equalTo(self.view)
         }
-        
+        newUserUIView.recommendDHButton.addTarget(self, action: #selector(self.recommendBHButtonPressed), for: .touchUpInside)
 
         
     }
@@ -89,6 +89,10 @@ class HomeViewController: UIViewController {
         openNewVC.delegateHomeSearchControllerDelegate = self
 //        self.delegate?.pushViewController(openNewVC)
         self.present(openNewVC, animated: true, completion: nil)
+    }
+    
+    @objc func recommendBHButtonPressed() {
+        self.navigationController?.pushViewController(RecommendDHViewController(), animated: true)
     }
 }
 

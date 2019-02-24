@@ -22,10 +22,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sample_splash" translatesAutoresizingMaskIntoConstraints="NO" id="BKn-Io-wqX">
-                                <rect key="frame" x="-6.5" y="183.5" width="388" height="300"/>
+                                <rect key="frame" x="131" y="242.5" width="113" height="182"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.42446033360000002" blue="0.34325733079999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="BKn-Io-wqX" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="M1B-yR-LjB"/>
                             <constraint firstItem="BKn-Io-wqX" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="ttA-tI-vvk"/>
@@ -75,6 +75,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="sample_splash" width="388" height="300"/>
+        <image name="sample_splash" width="113" height="182"/>
     </resources>
 </document>

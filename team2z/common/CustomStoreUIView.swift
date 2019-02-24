@@ -40,8 +40,8 @@ class CustomStoreUIView: UIView {
         }
         // 별 그림 설정
         cosmosView.settings.updateOnTouch = false // 조절 못하게 설정
-        cosmosView.settings.fillMode = .precise // full, half, precise
-        cosmosView.settings.starMargin = 0.1
+        cosmosView.settings.fillMode = .half // full, half, precise
+        cosmosView.settings.starMargin = 0
         cosmosView.snp.makeConstraints { (make) in
             make.centerY.equalTo(self.snp.centerY)
             make.leading.equalTo(ratingLabel.snp.trailing).offset(5)

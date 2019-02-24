@@ -28,6 +28,9 @@
                     <rect key="frame" x="145" y="530" width="84" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="recommendBHButtonPressed:" destination="-1" eventType="touchUpInside" id="vs3-uo-WTG"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="떡후들을 팔로잉 해서" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jvz-Wm-Zr6">
                     <rect key="frame" x="79" y="474" width="217" height="21"/>

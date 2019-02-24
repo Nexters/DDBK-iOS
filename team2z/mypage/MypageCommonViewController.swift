@@ -138,8 +138,8 @@ extension MypageCommonViewController: UITableViewDataSource {
         case "가고싶어요":
             // 가고싶어요
             let cell2 = tableView.dequeueReusableCell(withIdentifier: "StoreCommonCell") as! StoreCommonTableViewCell
-            cell2.StoreFooterUIView.ratingLabel?.text = "2.8"
-            cell2.StoreFooterUIView.cosmosView.rating = 2.8
+            cell2.StoreFooterUIView.ratingLabel?.text = "3.5"
+            cell2.StoreFooterUIView.cosmosView.rating = 2.5
             cell2.selectionStyle = .none
             
             return cell2

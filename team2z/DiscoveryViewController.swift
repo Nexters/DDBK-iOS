@@ -14,8 +14,10 @@ class DiscoveryViewController: UIViewController {
     
     @IBOutlet weak var segment: UISegmentedControl!
     @IBAction func segments(_ sender: UISegmentedControl) {
+        
         UIView.animate(withDuration: 0.3) {
-            self.buttonBar.frame.origin.x = (self.segment.frame.width / CGFloat(self.segment.numberOfSegments)) * CGFloat(self.segment.selectedSegmentIndex)
+            let underlineFinalXPosition =  (self.segment.frame.width / CGFloat(self.segment.numberOfSegments)) * CGFloat(self.segment.selectedSegmentIndex)
+            self.buttonBar.frame.origin.x = underlineFinalXPosition
 //            self.buttonBar.frame.origin.x += (self.segment.frame.width / CGFloat(self.segment.numberOfSegments)) * 0.333
         }
         myTableView.reloadData()
@@ -106,8 +108,8 @@ class DiscoveryViewController: UIViewController {
         //        let segment = UIView()
         //        segment.backgroundColor = .red
         //        self.view.addSubview(segment)
-        //        segment.removeBorders() // 전 버전
-        segment.addUnderlineForSelectedSegment()
+                segment.removeBorders() // 전 버전
+//        segment.addUnderlineForSelectedSegment()
         segment.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.black, NSAttributedString.Key.font: UIFont(name: "AppleSDGothicNeo-Bold", size: 13.0)!], for: .selected)
         (segment.subviews[0] as UIView).tintColor = .gray
         (segment.subviews[1] as UIView).tintColor = .gray
