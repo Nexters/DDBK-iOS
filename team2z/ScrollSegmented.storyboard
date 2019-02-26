@@ -65,6 +65,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rsm-eA-1pf"/>
                     </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="750" height="667"/>
                     <size key="freeformSize" width="750" height="667"/>
                     <connections>
                         <outlet property="leftTableView" destination="2E5-4E-4os" id="Vex-Ck-piK"/>

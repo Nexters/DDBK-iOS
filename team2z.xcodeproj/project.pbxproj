@@ -34,6 +34,7 @@
 		B80CA29A2220C26C000B8F49 /* WriteStoreReviewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B80CA2982220C26C000B8F49 /* WriteStoreReviewController.xib */; };
 		B80CA29C2220F218000B8F49 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80CA29B2220F218000B8F49 /* test.swift */; };
 		B80CA29E2220F232000B8F49 /* test.xib in Resources */ = {isa = PBXBuildFile; fileRef = B80CA29D2220F232000B8F49 /* test.xib */; };
+		B80CA2A22220F986000B8F49 /* UserReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80CA2A12220F986000B8F49 /* UserReviewViewController.swift */; };
 		B8996DB4222000C80019E431 /* NewFeedRealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8996DB2222000C80019E431 /* NewFeedRealViewController.swift */; };
 		B8996DB5222000C80019E431 /* NewFeedRealViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8996DB3222000C80019E431 /* NewFeedRealViewController.xib */; };
 		B8996DB72220040D0019E431 /* WriteReviewReal.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8996DB62220040D0019E431 /* WriteReviewReal.swift */; };
@@ -164,6 +165,7 @@
 		B80CA2982220C26C000B8F49 /* WriteStoreReviewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WriteStoreReviewController.xib; sourceTree = "<group>"; };
 		B80CA29B2220F218000B8F49 /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
 		B80CA29D2220F232000B8F49 /* test.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = test.xib; sourceTree = "<group>"; };
+		B80CA2A12220F986000B8F49 /* UserReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserReviewViewController.swift; sourceTree = "<group>"; };
 		B8996DB2222000C80019E431 /* NewFeedRealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFeedRealViewController.swift; sourceTree = "<group>"; };
 		B8996DB3222000C80019E431 /* NewFeedRealViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewFeedRealViewController.xib; sourceTree = "<group>"; };
 		B8996DB62220040D0019E431 /* WriteReviewReal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteReviewReal.swift; sourceTree = "<group>"; };
@@ -385,6 +387,7 @@
 				B80CA2982220C26C000B8F49 /* WriteStoreReviewController.xib */,
 				B80CA29B2220F218000B8F49 /* test.swift */,
 				B80CA29D2220F232000B8F49 /* test.xib */,
+				B80CA2A12220F986000B8F49 /* UserReviewViewController.swift */,
 			);
 			path = newFeed;
 			sourceTree = "<group>";
@@ -885,6 +888,7 @@
 				C5ECA499221DC60F00BFFBD7 /* ReviewStoreInfoView.swift in Sources */,
 				B80CA28A222058AD000B8F49 /* WriteReviewFinal.swift in Sources */,
 				C5ECA466221BEC4600BFFBD7 /* CustomStoreUIView.swift in Sources */,
+				B80CA2A22220F986000B8F49 /* UserReviewViewController.swift in Sources */,
 				C5ECA48B221D923500BFFBD7 /* DummyViewController.swift in Sources */,
 				C5ECA46B221BF5E700BFFBD7 /* StoreCommonTableViewCell.swift in Sources */,
 				C514EFFB221F03FC009876D6 /* NewUserHomeView.swift in Sources */,
