@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 protocol HomeSearchControllerDelegate : class {
     func didPressButton(controller: SearchViewController)
@@ -43,6 +44,7 @@ class SearchViewController: UIViewController {
         }
     }
     
+    var storeNames = [String]()
     var candies = [
         Candy(category:"Chocolate", name:"Chocolate Bar"),
         Candy(category:"Chocolate", name:"Chocolate Chip"),
@@ -62,12 +64,14 @@ class SearchViewController: UIViewController {
     ]
     
     var historyCandies = [Candy]()
+    var searchStoreNames = [String]()
     var searchCandies = [Candy]()
     var searching = false
     var searchKeyword = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        getStoreInfomation()
         
         self.myTableView.backgroundColor = .white
         
@@ -136,6 +140,39 @@ class SearchViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    private func getStoreInfomation(){
+        AF.request("https://api.2z.kohmlab.com/stores").responseJSON { response in
+            print("Request: \(String(describing: response.request))")   // original url request
+            print("Response: \(String(describing: response.response))") // http url response
+            print("Result: \(response.result)")                         // response serialization result
+            
+            if let json = response.result.value {
+//                print("JSON: \(json)") // serialized json response
+                print("JSON type: \(type(of: json))")
+                if let array = json as? [[String : AnyObject]]{
+                    for item in array {
+                        print(item["name"])
+                        self.storeNames.append(item["name"] as! String)
+                    }
+                }
+            }
+            
+//            if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
+//                print("Data: \(utf8Text)") // original server data as UTF8 string
+//            }
+        }
+        
+//        AF.request("http://ddbk-2114139714.ap-northeast-2.elb.amazonaws.com/stores").response { response in
+//            print("Request: \(response.request)")
+//            print("Response: \(response.response)")
+//            print("Error: \(response.error)")
+//
+//            if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
+//                print("Data: \(utf8Text)")
+//            }
+//        }
+    }
+    
 }
 
 extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
@@ -146,7 +183,8 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if searching {
-            return searchCandies.count
+//            return searchCandies.count
+            return searchStoreNames.count
         } else {
             return homeSearchHistory!.count
         }
@@ -156,12 +194,15 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SearchTableViewCell") as! SearchTableViewCell
         if searching {
-            cell.keywordLabel?.text = searchCandies[indexPath.row].name
+//            cell.keywordLabel?.text = searchCandies[indexPath.row].name
+            cell.keywordLabel?.text = searchStoreNames[indexPath.row]
+            cell.deleteButton.isHidden = true
         } else {
             // 최근 검색어 보여주기
             cell.cellDelegate = self
             cell.keywordLabel?.text = (homeSearchHistory![indexPath.row] as! String)
             cell.keywordIndexOfHistory = indexPath.row
+            cell.deleteButton.isHidden = false
         }
         
         
@@ -169,8 +210,12 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if searching {
+            goToSearchResultAction(searchBarText: searchStoreNames[indexPath.row])
+        } else {
+            goToSearchResultAction(searchBarText: homeSearchHistory?[indexPath.row] as! String)
+        }
         
-        goToSearchResultAction(searchBarText: homeSearchHistory?[indexPath.row] as! String)
         
     }
     
@@ -212,7 +257,8 @@ extension SearchViewController: UISearchBarDelegate {
         if searchText.count == 0 {
             searching = false
         } else {
-            searchCandies = candies.filter( { $0.name.prefix(searchText.count) == searchText} )
+//            searchCandies = candies.filter( { $0.name.prefix(searchText.count) == searchText} )
+            searchStoreNames = storeNames.filter( { $0.prefix(searchText.count) == searchText} )
             searching = true
         }
         

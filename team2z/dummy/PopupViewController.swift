@@ -154,7 +154,7 @@ class PopupViewController: UIViewController, UISearchBarDelegate, UITableViewDel
         searchBar.snp.makeConstraints { (make) in
             make.width.equalTo(self.view.snp.width).multipliedBy(0.91)
             make.height.equalTo(40)
-            make.top.equalTo(70)
+            make.top.equalTo(self.view.snp.top)
             make.leading.equalTo(storeIcon.snp.trailing)
         }
         

@@ -10,6 +10,7 @@ import UIKit
 import SnapKit
 import DropDown
 import IQKeyboardManagerSwift
+import GoogleSignIn
 
 protocol AppSplashController {
     var splashView: UIView { get }
@@ -25,6 +26,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AppSplashController {
     private lazy var baseViewController = {
         BaseViewController()
     }()
+    
+    private lazy var loginViewController = { () -> UIViewController in
+        let storyBoard : UIStoryboard = UIStoryboard(name: "LoginStoryboard", bundle:nil)
+        return storyBoard.instantiateViewController(withIdentifier: "loginView")
+    }()
 
     var splashView: UIView = UIView()
     
@@ -34,6 +40,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AppSplashController {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        // Initialize sign-in
+//        GIDSignIn.sharedInstance().clientID = "734417615000-phtc5nkia4tdn7b30pt5k8sci9u9ospp.apps.googleusercontent.com"
+//        GIDSignIn.sharedInstance().delegate = self
         
         // 사용자 검색 기록 초기화
         if UserDefaults.standard.array(forKey: "homeSearchHistory") == nil {
@@ -43,7 +52,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AppSplashController {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         
-        window?.rootViewController = baseViewController
+        // 로그인 되어 있으면 baseViewController
+//        window?.rootViewController = baseViewController
+        // 로그인 되어 있지 않으면 loginViewController
+        
+        window?.rootViewController = loginViewController
         window?.makeKeyAndVisible()
         
 //        displaySplashAnimation()
@@ -55,6 +68,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AppSplashController {
 //        IQKeyboardManager.shared.text
         
         return true
+    }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        return GIDSignIn.sharedInstance().handle(url as URL?,
+                                                 sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String,
+                                                 annotation: options[UIApplication.OpenURLOptionsKey.annotation])
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
@@ -131,4 +150,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AppSplashController {
         }
     }
 }
+
+
+
 
