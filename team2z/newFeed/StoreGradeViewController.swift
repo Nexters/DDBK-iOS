@@ -249,7 +249,7 @@ class StoreGradeViewController: UIViewController, UITableViewDelegate, UITableVi
     }
 
     @IBAction func clickPhotoButton(_ sender:UIButton){
-        self.present(self.imagePicker, animated: true, completion: nil)
+       // self.present(self.imagePicker, animated: true, completion: nil)
     }
 
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
