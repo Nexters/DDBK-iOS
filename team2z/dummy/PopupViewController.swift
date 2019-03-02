@@ -26,6 +26,8 @@ class PopupViewController: UIViewController, UISearchBarDelegate, UITableViewDel
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         self.navigationController?.title = "리뷰쓰기"
 //        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: makeBackButton())
 //        self.navigationController?.navigationBar.isTranslucent = true
@@ -55,7 +57,8 @@ class PopupViewController: UIViewController, UISearchBarDelegate, UITableViewDel
     
         setLayout()
     }
-
+    
+    
     func makeBackButton() -> UIButton {
         //        let backButtonImage = UIImage(named: "left_arrow.png")?.withRenderingMode(.alwaysTemplate)
         let backButton = UIButton(type: .custom)
@@ -115,6 +118,19 @@ class PopupViewController: UIViewController, UISearchBarDelegate, UITableViewDel
         self.navigationController?.pushViewController(chatViewController, animated: true)
 //        show(NewViewController(), sender: nil)
     }
+    
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+//            if searchText.count == 0 {
+//            searching = false
+//            } else {
+//            searchCandies = candies.filter( { $0.name.prefix(searchText.count) == searchText} )
+//            searching = true
+//            }
+//
+//            myTableView.reloadData()
+    }
+
     
     func setLayout(){
         storeIcon.snp.makeConstraints { (make) in

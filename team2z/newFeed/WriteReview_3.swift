@@ -11,8 +11,6 @@ import UIKit
 class WriteReview_3: UIView {
 
     @IBOutlet weak var textReview: UITextView!
-    @IBOutlet weak var bottomView: UIView!
-    @IBOutlet weak var photoBtn: UIButton!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
