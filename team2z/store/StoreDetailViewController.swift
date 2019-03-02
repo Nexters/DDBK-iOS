@@ -323,7 +323,7 @@ extension StoreDetailViewController: FloatyDelegate {
     
     func floatyDidOpen(_ floaty: Floaty) {
         print("Floaty Did Open")
-        self.navigationController?.pushViewController(DummyViewController(), animated: true)
+//        self.navigationController?.pushViewController(DummyViewController(), animated: true)
     }
     
     func floatyWillClose(_ floaty: Floaty) {

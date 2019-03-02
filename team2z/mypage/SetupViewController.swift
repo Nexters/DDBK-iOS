@@ -8,10 +8,16 @@
 
 import UIKit
 import SnapKit
+import GoogleSignIn
 
 class SetupViewController: UIViewController {
     let myTableView: UITableView = UITableView(frame: CGRect.zero, style: .grouped)
     let menuLabels: [String] = ["사용가이드", "문의하기", "약관 및 정책", "로그아웃", "버전 1.6.0"]
+    
+    private lazy var loginViewController = { () -> LoginViewController in
+        let storyBoard : UIStoryboard = UIStoryboard(name: "LoginStoryboard", bundle:nil)
+        return storyBoard.instantiateViewController(withIdentifier: "loginView") as! LoginViewController
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,7 +82,17 @@ extension SetupViewController: UITableViewDataSource {
 
         let cell = tableView.dequeueReusableCell(withIdentifier: "SetupTableViewCell") as! TableViewCell
         
-        cell.setupLabel?.text = menuLabels[indexPath.row]
+        if indexPath.row == 3 {
+            if GIDSignIn.sharedInstance().hasAuthInKeychain() {
+                // Signed in
+                cell.setupLabel?.text = menuLabels[indexPath.row]
+            } else {
+                cell.setupLabel?.text = "로그인"
+            }
+            
+        } else {
+            cell.setupLabel?.text = menuLabels[indexPath.row]
+        }
         
         return cell
     }
@@ -90,7 +106,39 @@ extension SetupViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        self.navigationController?.pushViewController(SetupViewController(), animated: true)
+
+        if indexPath.row == 3 {
+            if GIDSignIn.sharedInstance().hasAuthInKeychain() {
+                // Signed in, 로그아웃 처리
+                // 로그아웃이 성공적으로 됐는지 안됐는지 어떻게 확인하지?
+                GIDSignIn.sharedInstance().signOut()
+                let cell = tableView.cellForRow(at: indexPath) as! TableViewCell
+                cell.setupLabel?.text = "로그인"
+                self.navigationController?.popToRootViewController(animated: true)
+                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                print(appDelegate.window!.rootViewController as Any)
+                let baseVC = appDelegate.window!.rootViewController as! BaseViewController
+                baseVC.baseTabBar.selectedIndex = 0
+                print("로그아웃처리끝")
+                
+            } else {
+                // 비 로그인 상태라면
+//                var window: UIWindow?
+//                window = UIWindow(frame: UIScreen.main.bounds)
+//                window?.rootViewController = loginViewController
+//                window?.makeKeyAndVisible()
+                
+                loginViewController.loginModalDelegate = self
+                loginViewController.isModallyPresented = true
+//                self.navigationController?.present(loginViewController, animated: true, completion: nil)
+               loginViewController.hidesBottomBarWhenPushed = true
+                self.navigationController?.pushViewController(loginViewController, animated: true)
+                
+//                GIDSignIn.sharedInstance()?.signIn()
+            }
+        } else {
+            
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -100,5 +148,11 @@ extension SetupViewController: UITableViewDataSource {
     @objc func handleTap_0(sender: UITapGestureRecognizer) {
         print("tap0 in mpvc")
         self.navigationController?.pushViewController(GradeViewController(), animated: true)
+    }
+}
+
+extension SetupViewController: LoginModalDelegate {
+    func didContinueAction() {
+        self.navigationController?.dismiss(animated: true, completion: nil)
     }
 }

@@ -52,7 +52,8 @@ class DiscoveryViewController: UIViewController {
         super.viewDidLoad()
         
         self.navigationItem.title = "둘러보기"
-//        self.title = "둘러보기"
+        self.navigationController?.navigationBar.backgroundColor = .white
+        self.navigationController?.navigationBar.barTintColor = .white
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: makeSearchButton())
         
         self.initSegmentLayout()

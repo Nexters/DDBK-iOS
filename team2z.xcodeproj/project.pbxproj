@@ -59,6 +59,8 @@
 		C514F032222324E7009876D6 /* FollowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C514F030222324E7009876D6 /* FollowViewController.xib */; };
 		C514F03422232E6C009876D6 /* Popup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C514F03322232E6C009876D6 /* Popup.storyboard */; };
 		C514F03622232F1C009876D6 /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C514F03522232F1C009876D6 /* PopupViewController.swift */; };
+		C514F039222A3823009876D6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C514F038222A3823009876D6 /* LoginViewController.swift */; };
+		C514F03B222A38A3009876D6 /* LoginStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C514F03A222A38A3009876D6 /* LoginStoryboard.storyboard */; };
 		C5945A6C2217F78A0095FAB4 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5945A6A2217F78A0095FAB4 /* MyTableViewCell.swift */; };
 		C5945A6D2217F78A0095FAB4 /* MyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5945A6B2217F78A0095FAB4 /* MyTableViewCell.xib */; };
 		C5945A702218175D0095FAB4 /* MypageDefaultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5945A6E2218175D0095FAB4 /* MypageDefaultTableViewCell.swift */; };
@@ -99,6 +101,9 @@
 		C5ECA49D221DC6C100BFFBD7 /* ReviewLikeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ECA49C221DC6C100BFFBD7 /* ReviewLikeView.swift */; };
 		C5ECA4A0221EB54300BFFBD7 /* ImageTouchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ECA49E221EB54300BFFBD7 /* ImageTouchViewController.swift */; };
 		C5ECA4A1221EB54300BFFBD7 /* ImageTouchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5ECA49F221EB54300BFFBD7 /* ImageTouchViewController.xib */; };
+		C5FFFC5F222A531300852572 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FFFC5E222A531300852572 /* Store.swift */; };
+		C5FFFC61222A55F100852572 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FFFC60222A55F100852572 /* User.swift */; };
+		C5FFFC63222ABC9600852572 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C5FFFC62222ABC9600852572 /* GoogleService-Info.plist */; };
 		DABF8A5DA998B0CA3E116233 /* Pods_team2zTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D94A64219EBE7665305B0C /* Pods_team2zTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -184,6 +189,8 @@
 		C514F030222324E7009876D6 /* FollowViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FollowViewController.xib; sourceTree = "<group>"; };
 		C514F03322232E6C009876D6 /* Popup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Popup.storyboard; sourceTree = "<group>"; };
 		C514F03522232F1C009876D6 /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
+		C514F038222A3823009876D6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C514F03A222A38A3009876D6 /* LoginStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginStoryboard.storyboard; sourceTree = "<group>"; };
 		C5945A6A2217F78A0095FAB4 /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 		C5945A6B2217F78A0095FAB4 /* MyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTableViewCell.xib; sourceTree = "<group>"; };
 		C5945A6E2218175D0095FAB4 /* MypageDefaultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageDefaultTableViewCell.swift; sourceTree = "<group>"; };
@@ -224,6 +231,9 @@
 		C5ECA49C221DC6C100BFFBD7 /* ReviewLikeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewLikeView.swift; sourceTree = "<group>"; };
 		C5ECA49E221EB54300BFFBD7 /* ImageTouchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTouchViewController.swift; sourceTree = "<group>"; };
 		C5ECA49F221EB54300BFFBD7 /* ImageTouchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageTouchViewController.xib; sourceTree = "<group>"; };
+		C5FFFC5E222A531300852572 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		C5FFFC60222A55F100852572 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C5FFFC62222ABC9600852572 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DF3E6B8BB15948E54AB8058D /* Pods_team2zUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_team2zUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -295,6 +305,8 @@
 		97AA108021F4A0F900357553 /* team2z */ = {
 			isa = PBXGroup;
 			children = (
+				C5FFFC5D222A52E400852572 /* model */,
+				C514F037222A3806009876D6 /* login */,
 				C5ECA4A2221EC39700BFFBD7 /* home */,
 				C5ECA48D221DB33C00BFFBD7 /* review */,
 				C5ECA488221D91FB00BFFBD7 /* dummy */,
@@ -311,6 +323,7 @@
 				B80CA2A92225C502000B8F49 /* WriteReviewStoryboard.storyboard */,
 				C514F03322232E6C009876D6 /* Popup.storyboard */,
 				C514F0122220501E009876D6 /* ScrollSegmented.storyboard */,
+				C5FFFC62222ABC9600852572 /* GoogleService-Info.plist */,
 				97AA108D21F4A0FD00357553 /* Info.plist */,
 				C514F01422206273009876D6 /* SegmentedScroll.storyboard */,
 				97E437A82216B67F0063419A /* TestOneViewController.swift */,
@@ -424,6 +437,15 @@
 			path = follow_user;
 			sourceTree = "<group>";
 		};
+		C514F037222A3806009876D6 /* login */ = {
+			isa = PBXGroup;
+			children = (
+				C514F038222A3823009876D6 /* LoginViewController.swift */,
+				C514F03A222A38A3009876D6 /* LoginStoryboard.storyboard */,
+			);
+			path = login;
+			sourceTree = "<group>";
+		};
 		C5945A74221835120095FAB4 /* mypage */ = {
 			isa = PBXGroup;
 			children = (
@@ -535,6 +557,15 @@
 			path = home;
 			sourceTree = "<group>";
 		};
+		C5FFFC5D222A52E400852572 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				C5FFFC5E222A531300852572 /* Store.swift */,
+				C5FFFC60222A55F100852572 /* User.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -548,6 +579,7 @@
 				97AA107C21F4A0F800357553 /* Resources */,
 				97AA10B421F4D25000357553 /* ShellScript */,
 				FFF69DEB6121E1D32030B7AC /* [CP] Embed Pods Frameworks */,
+				1B693D7328A7544BBB62B959 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -671,12 +703,14 @@
 				97AA10B021F4CBC400357553 /* Carthage in Resources */,
 				C5ECA48C221D923500BFFBD7 /* DummyViewController.xib in Resources */,
 				C5ECA464221B1A9500BFFBD7 /* MypageCommonViewController.xib in Resources */,
+				C5FFFC63222ABC9600852572 /* GoogleService-Info.plist in Resources */,
 				C514F00F22201CEB009876D6 /* SearchResultViewController.xib in Resources */,
 				C514F032222324E7009876D6 /* FollowViewController.xib in Resources */,
 				C5945A73221821DF0095FAB4 /* Assets.xcassets in Resources */,
 				B80CA2AA2225C502000B8F49 /* WriteReviewStoryboard.storyboard in Resources */,
 				C514EFFD221F0418009876D6 /* NewUserHomeView.xib in Resources */,
 				C514F001221F18D7009876D6 /* SearchViewController.xib in Resources */,
+				C514F03B222A38A3009876D6 /* LoginStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -697,6 +731,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1B693D7328A7544BBB62B959 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-team2z/Pods-team2z-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-team2z/Pods-team2z-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		651EDE046EE7A9B7962076E3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -789,10 +845,12 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-team2z/Pods-team2z-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-team2z/Pods-team2z-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework",
 				"${BUILT_PRODUCTS_DIR}/Floaty/Floaty.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SMSegmentView/SMSegmentView.framework",
 				"${BUILT_PRODUCTS_DIR}/UITextView+Placeholder/UITextView_Placeholder.framework",
@@ -804,13 +862,15 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DropDown.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Floaty.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SMSegmentView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UITextView_Placeholder.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-team2z/Pods-team2z-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-team2z/Pods-team2z-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -855,6 +915,7 @@
 				97E437BB2217CB170063419A /* NewFeedViewController.swift in Sources */,
 				C5ECA494221DBAB200BFFBD7 /* ReviewTableViewCell.swift in Sources */,
 				C514F01B22209037009876D6 /* DiscoveryViewController.swift in Sources */,
+				C5FFFC5F222A531300852572 /* Store.swift in Sources */,
 				C5ECA450221AA3FB00BFFBD7 /* SetupViewController.swift in Sources */,
 				C514F003221F2D74009876D6 /* MainView.swift in Sources */,
 				C514F008221FCCA3009876D6 /* SearchTableViewCell.swift in Sources */,
@@ -863,6 +924,7 @@
 				C5ECA463221B1A9500BFFBD7 /* MypageCommonViewController.swift in Sources */,
 				C5ECA499221DC60F00BFFBD7 /* ReviewStoreInfoView.swift in Sources */,
 				C5ECA466221BEC4600BFFBD7 /* CustomStoreUIView.swift in Sources */,
+				C514F039222A3823009876D6 /* LoginViewController.swift in Sources */,
 				C5ECA48B221D923500BFFBD7 /* DummyViewController.swift in Sources */,
 				C5ECA46B221BF5E700BFFBD7 /* StoreCommonTableViewCell.swift in Sources */,
 				C514EFFB221F03FC009876D6 /* NewUserHomeView.swift in Sources */,
@@ -874,6 +936,7 @@
 				C5ECA49B221DC68D00BFFBD7 /* ReviewMoreView.swift in Sources */,
 				B80CA2B422265622000B8F49 /* WriteReview_2.swift in Sources */,
 				B8E11A43221819F2007FBD5E /* NewFeedGoViewController.swift in Sources */,
+				C5FFFC61222A55F100852572 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
