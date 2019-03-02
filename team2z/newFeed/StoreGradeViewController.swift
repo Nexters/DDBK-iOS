@@ -8,6 +8,7 @@
 
 import UIKit
 import SnapKit
+import Alamofire
 
 class StoreGradeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate, UITextViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
 
@@ -27,17 +28,19 @@ class StoreGradeViewController: UIViewController, UITableViewDelegate, UITableVi
     var viewState : ViewState = ViewState.firstView
     var keyboardHeight: CGFloat = 0
     var nextButton: UIButton!
+    let containerView = UIView()
 
-    /*lazy var imagePicker: UIImagePickerController = {
+    lazy var imagePicker: UIImagePickerController = {
         let picker: UIImagePickerController = UIImagePickerController()
         picker.sourceType = .photoLibrary
         picker.delegate = self
         picker.allowsEditing = true
         return picker
-    }()*/
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         self.navigationItem.title = "리뷰쓰기"
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: makeBackButton())
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: makeNextButton())
@@ -53,6 +56,24 @@ class StoreGradeViewController: UIViewController, UITableViewDelegate, UITableVi
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
 
+    override var inputAccessoryView: UIView? {
+        
+        containerView.backgroundColor = UIColor.gray
+        containerView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 40)
+        let photoBtn = UIButton()
+        photoBtn.setBackgroundImage(UIImage(named: "left_arrow.png"), for: .normal)
+        photoBtn.addTarget(self, action: #selector(self.clickPhotoButton(_:)), for: .touchUpInside)
+        
+        self.containerView.addSubview(photoBtn)
+        
+        photoBtn.snp.makeConstraints { (make) in
+            make.centerY.equalTo(containerView.snp.centerY)
+            make.leading.equalTo(containerView.snp.leading).offset(20)
+        }
+        
+        return containerView
+    }
+    
     func makeBackButton() -> UIButton {
         let backButton = UIButton(type: .custom)
         backButton.setImage(UIImage(named: "left_arrow.png"), for: .normal)
@@ -82,6 +103,7 @@ class StoreGradeViewController: UIViewController, UITableViewDelegate, UITableVi
         self.nextButton.setTitle("건너뛰기", for: .normal)
         self.nextButton.sizeToFit()
         self.scrollView.setContentOffset(CGPoint(x: 375, y: 0), animated: true)
+        self.view.endEditing(true)
         self.viewState = ViewState.secondView
     }
 
@@ -119,7 +141,29 @@ class StoreGradeViewController: UIViewController, UITableViewDelegate, UITableVi
             loadThirdView()
 
         case .thirdView:
-            print("end")
+            let parameters: Parameters = [
+                "userId": 1,
+                "content": "한글되나용?",
+                "storeId": 1,
+                "rating" : 5,
+                "storeReportIds": [
+                    4,
+                    8
+                ]
+            ]
+            AF.request("https://api.2z.kohmlab.com/feeds", method: .post, parameters: parameters).responseJSON { response in
+                switch response.result {
+                case .success:
+                    print("Validation Successful")
+                    print("Request: \(response.request)")
+                    print("Response: \(response.response)")
+                    print("Error: \(response.error)")
+                case .failure(let error):
+                    print(error)
+                }
+            }
+            
+            
         }
     }
 
@@ -129,9 +173,9 @@ class StoreGradeViewController: UIViewController, UITableViewDelegate, UITableVi
             keyboardHeight = keyboardRectangle.height
 
 
-            if self.view.frame.origin.y == 0{
-                self.view.frame.origin.y -= keyboardHeight
-            }
+//            if self.view.frame.origin.y == 0{
+//                self.view.frame.origin.y -= keyboardHeight
+//            }
 
         }
     }
@@ -142,9 +186,9 @@ class StoreGradeViewController: UIViewController, UITableViewDelegate, UITableVi
             let keyboardRectangle = keyboardFrame.cgRectValue
             keyboardHeight = keyboardRectangle.height
 
-            if self.view.frame.origin.y != 0{
-                self.view.frame.origin.y += keyboardHeight
-            }
+//            if self.view.frame.origin.y != 0{
+//                self.view.frame.origin.y += keyboardHeight
+//            }
 
         }
     }
@@ -235,8 +279,6 @@ class StoreGradeViewController: UIViewController, UITableViewDelegate, UITableVi
 
         self.thirdView.textReview.placeholder = "리뷰를 작성해주세요"
         self.thirdView.textReview.text = ""
-        self.thirdView.textReview.inputAccessoryView = UIView()
-        self.thirdView.photoBtn.addTarget(self, action: #selector(self.clickPhotoButton(_:)), for: .touchUpInside)
 
 
         self.scrollView.addSubview(firstView)
@@ -249,7 +291,7 @@ class StoreGradeViewController: UIViewController, UITableViewDelegate, UITableVi
     }
 
     @IBAction func clickPhotoButton(_ sender:UIButton){
-       // self.present(self.imagePicker, animated: true, completion: nil)
+        self.present(self.imagePicker, animated: true, completion: nil)
     }
 
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
@@ -374,12 +416,6 @@ class StoreGradeViewController: UIViewController, UITableViewDelegate, UITableVi
             make.centerX.equalTo(self.thirdView)
             make.top.equalTo(scrollView.snp.bottom).offset(10)
             make.left.equalTo(self.thirdView).offset(10)
-        }
-
-        self.thirdView.bottomView.snp.makeConstraints { (make) in
-            make.centerX.equalTo(self.thirdView)
-            make.top.equalTo(self.thirdView).offset(455)
-            make.left.equalTo(self.thirdView)
         }
 
     }

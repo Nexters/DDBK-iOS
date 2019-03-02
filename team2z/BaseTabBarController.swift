@@ -26,16 +26,16 @@ class BaseTabBarController: UITabBarController, UITabBarControllerDelegate {
         print("didSelect..\(tabBarController.selectedIndex)")
   
         
-        /*if tabBarController.selectedIndex == 2 {
+       /* if tabBarController.selectedIndex == 2 {
             let storyboard = UIStoryboard(name: "Popup", bundle: nil)
             let popupViewController = storyboard.instantiateViewController(withIdentifier: "PopupViewController") as! PopupViewController
             let nav = UINavigationController(rootViewController: popupViewController)
+//            present(nav, animated: true, completion: nil)
             tabBarController.present(nav, animated: true, completion: nil)
-
         }else{
             return
-        }
-        */
+        }*/
+        
         
 //        tabBarController.selectedIndex = presentingTabbarIndex!
         
