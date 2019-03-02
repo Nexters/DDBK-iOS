@@ -13,7 +13,6 @@ class BaseTabBarController: UITabBarController, UITabBarControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.delegate = self
         // Do any additional setup after loading the view.
     }
@@ -22,23 +21,57 @@ class BaseTabBarController: UITabBarController, UITabBarControllerDelegate {
         print(tabBar)
     }
     
+    
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
         print("didSelect..\(tabBarController.selectedIndex)")
+  
         
-        if tabBarController.selectedIndex != 2 {
+        if tabBarController.selectedIndex == 2 {
+            let storyboard = UIStoryboard(name: "Popup", bundle: nil)
+            let popupViewController = storyboard.instantiateViewController(withIdentifier: "PopupViewController") as! PopupViewController
+            let nav = UINavigationController(rootViewController: popupViewController)
+            tabBarController.present(nav, animated: true, completion: nil)
+
+        }else{
             return
         }
-        tabBarController.selectedIndex = presentingTabbarIndex!
+        
+        
+//        tabBarController.selectedIndex = presentingTabbarIndex!
+        
+        return
+        
+//        let storyboard = UIStoryboard(name: "Popup", bundle: nil)
+//        let popupViewController = storyboard.instantiateViewController(withIdentifier: "PopupViewController") as! PopupViewController
+//        tabBarController.present(popupViewController, animated: true, completion: nil)
+
+        /*
         let storyboard = UIStoryboard(name: "Popup", bundle: nil)
         let popupViewController = storyboard.instantiateViewController(withIdentifier: "PopupViewController") as! PopupViewController
-        popupViewController.popupDelegate = self
-        popupViewController.modalPresentationStyle = .overFullScreen
+//        popupViewController.popupDelegate = self
+//        popupViewController.modalPresentationStyle = .overFullScreen
         let nav = UINavigationController(rootViewController: popupViewController)
         tabBarController.present(nav, animated: true, completion: nil)
+        */
+     
+        
     }
     
     func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
         print("should..\(tabBarController.selectedIndex)")
+        
+//        if viewController is PopupViewController {
+//            print("?????")
+//            if let newVC = tabBarController.storyboard?.instantiateViewController(withIdentifier: "PopupViewController") {
+//
+//                newVC.modalPresentationStyle = .overFullScreen
+//                let nav = UINavigationController(rootViewController: newVC)
+//
+//                tabBarController.present(nav, animated: true)
+//                return false
+//            }
+//        }
+        
         presentingTabbarIndex = tabBarController.selectedIndex
         return true
         
@@ -65,8 +98,15 @@ class BaseTabBarController: UITabBarController, UITabBarControllerDelegate {
 //    }
 }
 
+/*
+ 이거지움
 extension BaseTabBarController: PopupDelegate {
+    func movePresentingTavarr() {
+        
+    }
+    
     func movePresentingTabbar() {
         
     }
 }
+*/
