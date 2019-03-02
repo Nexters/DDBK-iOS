@@ -31,7 +31,15 @@ class BaseViewController: UIViewController {
         let HomeVC = HomeViewController()
         let DiscoveryVC = DiscoveryViewController()
 //        let NewFeedVC = NewFeedRealViewController()
-        let NewFeedVC = PopupViewController()
+        
+//        let storyboard = UIStoryboard(name: "Popup", bundle: nil)
+//        let popupViewController = storyboard.instantiateViewController(withIdentifier: "PopupViewController") as! PopupViewController
+        
+//        let storyboard = UIStoryboard(name: "Popup", bundle: nil)
+//        let NewFeedVC = storyboard.instantiateViewController(withIdentifier: "PopupViewController") as! PopupViewController
+//
+        let storyboard = UIStoryboard(name: "Popup", bundle: nil)
+        let NewFeedVC = storyboard.instantiateViewController(withIdentifier: "PopupViewController") as! PopupViewController
         let MapVC = MapViewController()
         let MyPageVC = MyPageViewController()
  

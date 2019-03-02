@@ -9,16 +9,19 @@
 import UIKit
 
 class NewFeedGoViewController: UIViewController {
-    var NewFeedView: NewFeedViewController!
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        self.view.backgroundColor = .blue
 //         NewFeedView = NewFeedViewController()
 //        self.navigationController?.pushViewController(NewFeedView, animated: true)
 //        let navc = UINavigationController(rootViewController: NewFeedView)
 //        self.present(navc, animated:true, completion: nil)
     }
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.view.backgroundColor = UIColor.white
+    }
 
 
 }

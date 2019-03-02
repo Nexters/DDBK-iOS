@@ -38,7 +38,7 @@ class ResultStoreTableViewCell: UITableViewCell {
     func snapKitLayout(){
         self.storeName.snp.makeConstraints { (make) in
             make.left.equalTo(self.contentView).offset(20)
-            make.top.equalTo(self.contentView).offset(15)
+            make.top.equalTo(self.contentView).offset(10)
             self.storeName.font = UIFont.boldSystemFont(ofSize: 16.0)
         }
         self.storeAddress.snp.makeConstraints { (make) in
