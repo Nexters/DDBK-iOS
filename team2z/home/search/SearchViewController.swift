@@ -8,6 +8,8 @@
 
 import UIKit
 import Alamofire
+import CoreSpotlight
+import MobileCoreServices
 
 protocol HomeSearchControllerDelegate : class {
     func didPressButton(controller: SearchViewController)
@@ -157,6 +159,7 @@ class SearchViewController: UIViewController {
                 }
             }
             
+            self.indexSearchableItems()
 //            if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
 //                print("Data: \(utf8Text)") // original server data as UTF8 string
 //            }
@@ -171,6 +174,34 @@ class SearchViewController: UIViewController {
 //                print("Data: \(utf8Text)")
 //            }
 //        }
+    }
+    
+    func indexSearchableItems(){
+        //let matches ...
+        var searchableItems = [CSSearchableItem]()
+        
+        let matches = storeNames
+        var i = 0
+        
+        for match in matches {
+            var matchId = match
+            matchId.append(contentsOf: String(i))
+            i += 1
+            
+            let searchItemAttributeSet = CSSearchableItemAttributeSet(itemContentType: kUTTypeText as String)
+            searchItemAttributeSet.title = match
+//            searchItemAttributeSet.contentDescription = match.content
+//            searchItemAttributeSet.thumbnailData = match.image
+            
+            let searchableItem = CSSearchableItem(uniqueIdentifier: matchId, domainIdentifier: "matches", attributeSet: searchItemAttributeSet)
+            searchableItems.append(searchableItem)
+        }
+        
+        CSSearchableIndex.default().indexSearchableItems(searchableItems) { (error) -> Void in
+            if error != nil {
+                print(error?.localizedDescription ?? "Error")
+            }
+        }
     }
     
 }

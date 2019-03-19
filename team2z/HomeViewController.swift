@@ -8,10 +8,12 @@
 
 import UIKit
 import SnapKit
+import CoreSpotlight
 
 class HomeViewController: UIViewController {
     
 //    var newUserUIView = NewUserUIView(frame: self.view.frame)
+    let testStr = "HomeViewController"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -93,6 +95,18 @@ class HomeViewController: UIViewController {
     
     @objc func recommendBHButtonPressed() {
         self.navigationController?.pushViewController(RecommendDHViewController(), animated: true)
+    }
+    
+    // Spotlight에서 아이템을 선택했을 때 호출되는 메소드
+    override func restoreUserActivityState(_ activity: NSUserActivity) {
+        if activity.activityType == CSSearchableItemActionType, let info = activity.userInfo, let selectedIdentifier = info[CSSearchableItemActivityIdentifier] as? String {
+            print("Selected Identifier: \(selectedIdentifier)")
+            let storyboard = UIStoryboard(name: "ScrollSegmented", bundle: nil)
+            let openNewVC = storyboard.instantiateViewController(withIdentifier: "ResultSearchVC") as! ResultSearchViewController
+            openNewVC.delegateHomeSearchControllerDelegate = self
+            openNewVC.searchKeyword = selectedIdentifier
+            self.navigationController?.pushViewController(openNewVC, animated: true)
+        }
     }
 }
 
