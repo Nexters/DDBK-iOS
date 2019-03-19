@@ -107,18 +107,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AppSplashController {
             make.edges.equalTo(window!)
         }
         
-//        let circleView = UIView(frame: CGRect(x: CGFloat(0), y: CGFloat(0), width: CGFloat(259), height: CGFloat(259)))
-//        circleView.backgroundColor = .white
-//        circleView.layer.borderWidth = 0
-//        circleView.layer.masksToBounds = false
-//        circleView.layer.cornerRadius = circleView.frame.height/2
-//        circleView.clipsToBounds = true
-//        //0.675
-//        splashView.addSubview(circleView)
-//        circleView.snp.makeConstraints { make in
-//            make.center.equalTo(splashView)
-//        }
-        
         let logoImage = UIImageView(image: UIImage(named: "logo_image"))
         splashView.addSubview(logoImage)
         logoImage.snp.makeConstraints { make in
@@ -148,6 +136,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AppSplashController {
         } else {
 //            browserViewController.activateUrlBarOnHomeView()
         }
+    }
+    
+    func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
+        
+        let vc = (window?.rootViewController as! BaseViewController).baseTabBar.viewControllers![0] as! UINavigationController
+        let homeVC = vc.viewControllers[0] as! HomeViewController
+        print("NSUserActivity:", homeVC.testStr)
+        homeVC.restoreUserActivityState(userActivity)
+        return true
     }
 }
 
